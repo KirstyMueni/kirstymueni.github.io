@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Penetration Testing Lab Project</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    .container{
+      width: 85%;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1,h2,h3{
+      color: #0d3b66;
+    }
+
+    h1{
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    ul{
+      padding-left: 20px;
+    }
+
+    code{
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .section{
+      margin-bottom: 40px;
+    }
+
+    .tag{
+      display: inline-block;
+      background: #0d3b66;
+      color: white;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .highlight{
+      background: #eef6ff;
+      padding: 15px;
+      border-left: 5px solid #0d3b66;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Web Application Penetration Testing Lab</h1>
+
+  <div class="section">
+    <h2>Project Overview</h2>
+    <p>
+      Designed and conducted a controlled penetration testing exercise within a virtual lab environment
+      to simulate real-world cyberattack scenarios against enterprise systems and web applications.
+      The project focused on identifying vulnerabilities, assessing security weaknesses,
+      and recommending remediation measures using industry-standard penetration testing methodologies and tools.
+    </p>
+
+    <p>
+      The lab environment was built to emulate a corporate network consisting of web servers,
+      user machines, databases, and intentionally vulnerable applications for ethical security assessment and learning purposes.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Objectives</h2>
+
+    <ul>
+      <li>Perform ethical hacking and penetration testing in a controlled environment.</li>
+      <li>Identify and exploit common web application and network vulnerabilities.</li>
+      <li>Gain hands-on experience with reconnaissance, enumeration, exploitation, and post-exploitation techniques.</li>
+      <li>Document findings and provide remediation recommendations.</li>
+      <li>Strengthen practical cybersecurity and digital forensics skills.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Lab Environment</h2>
+
+    <h3>Infrastructure</h3>
+
+    <ul>
+      <li>Kali Linux (Attacker Machine)</li>
+      <li>Metasploitable 2</li>
+      <li>OWASP Juice Shop</li>
+      <li>DVWA (Damn Vulnerable Web Application)</li>
+      <li>Windows 10 Virtual Machine</li>
+      <li>Ubuntu Server</li>
+    </ul>
+
+    <h3>Virtualization Platforms</h3>
+
+    <ul>
+      <li>VMware Workstation</li>
+      <li>VirtualBox</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Tools & Technologies Used</h2>
+
+    <h3>Reconnaissance & Enumeration</h3>
+    <ul>
+      <li>Nmap</li>
+      <li>Netdiscover</li>
+      <li>Whois</li>
+      <li>Gobuster</li>
+    </ul>
+
+    <h3>Web Application Testing</h3>
+    <ul>
+      <li>Burp Suite</li>
+      <li>OWASP ZAP</li>
+      <li>Nikto</li>
+      <li>SQLMap</li>
+    </ul>
+
+    <h3>Exploitation & Post Exploitation</h3>
+    <ul>
+      <li>Metasploit Framework</li>
+      <li>Hydra</li>
+      <li>John the Ripper</li>
+      <li>Netcat</li>
+    </ul>
+
+    <h3>Network Analysis & Monitoring</h3>
+    <ul>
+      <li>Wireshark</li>
+      <li>Tcpdump</li>
+    </ul>
+
+    <h3>Reporting & Documentation</h3>
+    <ul>
+      <li>Markdown</li>
+      <li>Microsoft Word</li>
+      <li>Screenshots and vulnerability documentation</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Methodology</h2>
+
+    <h3>1. Information Gathering</h3>
+
+    <p>
+      Performed passive and active reconnaissance to identify:
+    </p>
+
+    <ul>
+      <li>Live hosts</li>
+      <li>Open ports</li>
+      <li>Running services</li>
+      <li>Technologies used</li>
+      <li>Potential attack surfaces</li>
+    </ul>
+
+    <h3>2. Vulnerability Scanning</h3>
+
+    <p>
+      Conducted automated and manual vulnerability assessments to identify:
+    </p>
+
+    <ul>
+      <li>Misconfigurations</li>
+      <li>Weak credentials</li>
+      <li>SQL Injection vulnerabilities</li>
+      <li>Cross-Site Scripting (XSS)</li>
+      <li>Directory traversal issues</li>
+    </ul>
+
+    <p><strong>Tools Used:</strong> Nikto, Burp Suite Scanner, OWASP ZAP</p>
+
+    <h3>3. Exploitation</h3>
+
+    <p>
+      Tested identified vulnerabilities in the controlled environment to determine exploitability.
+    </p>
+
+    <ul>
+      <li>SQL Injection</li>
+      <li>Brute-force authentication testing</li>
+      <li>Remote command execution</li>
+      <li>File upload vulnerabilities</li>
+    </ul>
+
+    <h3>4. Post Exploitation</h3>
+
+    <p>
+      Performed limited post-exploitation activities to assess:
+    </p>
+
+    <ul>
+      <li>Privilege escalation opportunities</li>
+      <li>Sensitive data exposure</li>
+      <li>Persistence mechanisms</li>
+      <li>Internal network visibility</li>
+    </ul>
+
+    <h3>5. Reporting & Remediation</h3>
+
+    <p>
+      Prepared detailed vulnerability reports including:
+    </p>
+
+    <ul>
+      <li>Risk level classification</li>
+      <li>Technical findings</li>
+      <li>Screenshots</li>
+      <li>Proof of concept</li>
+      <li>Mitigation recommendations</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Key Findings</h2>
+
+    <h3>Critical Vulnerabilities Identified</h3>
+
+    <ul>
+      <li>Weak administrative passwords</li>
+      <li>SQL Injection vulnerabilities</li>
+      <li>Unpatched services</li>
+      <li>Insecure file upload functionality</li>
+      <li>Default credentials on internal services</li>
+    </ul>
+
+    <h3>Security Risks</h3>
+
+    <ul>
+      <li>Unauthorized system access</li>
+      <li>Data leakage</li>
+      <li>Privilege escalation</li>
+      <li>Remote code execution</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Recommendations</h2>
+
+    <ul>
+      <li>Enforce strong password policies and MFA.</li>
+      <li>Regularly patch and update systems.</li>
+      <li>Implement Web Application Firewalls (WAF).</li>
+      <li>Conduct periodic vulnerability assessments.</li>
+      <li>Restrict unnecessary services and ports.</li>
+      <li>Improve security awareness training.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Skills Demonstrated</h2>
+
+    <ul>
+      <li>Ethical Hacking</li>
+      <li>Vulnerability Assessment</li>
+      <li>Web Application Security Testing</li>
+      <li>Network Security Analysis</li>
+      <li>Cybersecurity Reporting</li>
+      <li>Threat Analysis</li>
+      <li>Digital Forensics Fundamentals</li>
+      <li>Security Tool Utilization</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Outcome</h2>
+
+    <p>
+      The project strengthened practical understanding of offensive security concepts
+      and improved hands-on experience with real-world penetration testing workflows,
+      vulnerability assessment methodologies, and security remediation practices
+      in a safe and ethical environment.
+    </p>
+  </div>
+
+
+</div>
+
+</body>
+</html>
