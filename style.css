@@ -583,7 +583,7 @@ body {
   border-radius: 6px;
   font-size: 1.1rem;
   font-weight: 600;
-  font-family: 'Cormorant Garamond', serif;
+ font-family: 'Nunito Sans', sans-serif; 
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
