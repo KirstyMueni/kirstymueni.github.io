@@ -1010,14 +1010,14 @@ body {
   height: 300px;
   overflow: hidden;
   border-radius: 8px 8px 0 0;
-  margin: -2.5rem -2.5rem 1.5rem -2.5rem;
+  margin: 0;
   background: #f0f0f0;
 }
 
 .blog-card-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   background: #ffffff;
   display: block;
@@ -1339,8 +1339,7 @@ body {
   }
 
  .blog-card-image {
-    height: 280px;
-    margin: -2rem -2rem 1.2rem -2rem;
+    height: 200px;
   }
 
   .blog-card-image img {
