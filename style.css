@@ -801,7 +801,7 @@ body {
 .case-study-card p {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: #FFFFFF;
+  color: var(--text-light);
   margin-bottom: 0.8rem;
 }
 
