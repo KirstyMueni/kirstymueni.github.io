@@ -518,12 +518,11 @@ body {
   background-color: var(--gallery-bg);
 }
 
-/* Gallery Title - Match other section titles */
 .gallery .section-title {
-  font-family: 'Cormorant Garamond', serif;  /* CORRECTED: Changed from Playfair Display */
-  font-size: 2.8rem;  /* CORRECTED: Increased from 2rem to match main section-title */
+  font-family: 'Cormorant Garamond', serif;  
+  font-size: 2.8rem;  
   font-weight: 700;
-  margin-bottom: 3rem;  /* CORRECTED: Increased from 1rem to match other sections */
+  margin-bottom: 3rem;  
   text-align: center;
   color: var(--text-dark);
   letter-spacing: 0.5px;
@@ -558,9 +557,8 @@ body {
   background: linear-gradient(135deg, #ffffff 0%, #faf8f5 100%);
 }
 
-/* Gallery Card Title - Match portfolio fonts */
 .gallery-card h3 {
-  font-family: 'Cormorant Garamond', serif;  /* CORRECTED: Changed from Playfair Display */
+  font-family: 'Cormorant Garamond', serif; 
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-dark);
@@ -569,7 +567,7 @@ body {
 
 /* Gallery Card Category */
 .gallery-category {
-  font-family: 'Nunito Sans', sans-serif;  /* CORRECTED: Explicitly set to match body text */
+  font-family: 'Nunito Sans', sans-serif;  
   font-size: 0.95rem;
   color: var(--text-light);
   margin-bottom: 25px;
@@ -583,9 +581,9 @@ body {
   border: none;
   padding: 12px 28px;
   border-radius: 6px;
-  font-family: 'Nunito Sans', sans-serif;  /* CORRECTED: Explicitly set font */
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
@@ -668,7 +666,7 @@ body {
 
 /* Modal Header Title - Match portfolio fonts */
 .modal-header h2 {
-  font-family: 'Cormorant Garamond', serif;  /* CORRECTED: Changed from Playfair Display */
+  font-family: 'Cormorant Garamond', serif;  
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-dark);
@@ -706,11 +704,12 @@ body {
   background: var(--bg-light-alt);
 }
 
+
 .gallery-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
 }
 
 .gallery-image-card:hover .gallery-image {
@@ -739,7 +738,7 @@ body {
 
 /* Gallery Image Description */
 .gallery-image-description {
-  font-family: 'Nunito Sans', sans-serif;  /* CORRECTED: Explicitly set font */
+  font-family: 'Nunito Sans', sans-serif;  
   color: white;
   text-align: center;
   font-size: 0.95rem;
@@ -749,7 +748,7 @@ body {
 
 /* Gallery Image Name */
 .gallery-image-name {
-  font-family: 'Nunito Sans', sans-serif;  /* CORRECTED: Explicitly set font */
+  font-family: 'Nunito Sans', sans-serif;  
   padding: 15px;
   font-size: 1rem;
   font-weight: 600;
@@ -806,7 +805,7 @@ body {
 .case-study-card p {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: var(--text-light);
+  color: #FFFFFF;
   margin-bottom: 0.8rem;
 }
 
@@ -1012,16 +1011,17 @@ body {
 
 .blog-card-image {
   width: 100%;
-  height: 200px;
+  height: 250px;
   overflow: hidden;
-  background: #e8e8e8;
+  border-radius: 6px 6px 0 0;
+  margin: -2.5rem -2.5rem 1.5rem -2.5rem;
 }
 
 .blog-card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  object-position: center;
 }
 
 .blog-card:hover .blog-card-image img {
