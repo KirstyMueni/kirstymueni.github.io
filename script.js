@@ -189,7 +189,7 @@ const galleryData = {
       {
         name: 'Penetration Testing',
         src: 'images/pentest.png',
-        description: 'Hands-on penetration testing in controlled lab environment'
+        description: 'Hands-on penetration testing in a controlled lab environment'
       },
       {
         name: 'Password Cracking',
@@ -204,7 +204,7 @@ const galleryData = {
       {
         name: 'Network Security',
         src:  'images/network security.png',
-        description: 'Network security in controlled lab environment'
+        description: 'Network security in a controlled lab environment'
       },
       {
         name: 'Threat Analysis',
