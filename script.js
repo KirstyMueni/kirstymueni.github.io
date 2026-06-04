@@ -193,8 +193,8 @@ const galleryData = {
       },
       {
         name: 'Password Cracking',
-        src: '',
-        description: 'Advanced password security analysis and testing'
+        src: 'images/password.png',
+        description: 'Password security analysis and testing in a controlled lab environment'
       },
       {
         name: 'Vulnerability Assessment',
