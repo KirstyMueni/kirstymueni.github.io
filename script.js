@@ -395,6 +395,10 @@ const galleryData = {
   }
 };
 
+/* ===================== LIGHTBOX STATE ===================== */
+let lightboxImages = [];
+let lightboxIndex = 0;
+
 // Function to open gallery modal
 function openGalleryModal(category) {
   const modal = document.getElementById('galleryModal');
@@ -405,31 +409,105 @@ function openGalleryModal(category) {
   
   if (!categoryData) return;
   
+  // Store images for lightbox use
+  lightboxImages = categoryData.images;
+  
   modalTitle.textContent = categoryData.title;
   container.innerHTML = '';
   
   categoryData.images.forEach((image, index) => {
     const imageCard = document.createElement('div');
     imageCard.className = 'gallery-image-card';
+    imageCard.setAttribute('role', 'button');
+    imageCard.setAttribute('tabindex', '0');
+    imageCard.setAttribute('aria-label', `View ${image.name}`);
     imageCard.innerHTML = `
       <div class="gallery-image-wrapper">
         <img src="${image.src}" alt="${image.name}" class="gallery-image">
         <div class="gallery-image-overlay">
           <p class="gallery-image-description">${image.description}</p>
+          <span class="gallery-view-hint">Click to view</span>
         </div>
       </div>
       <h4 class="gallery-image-name">${image.name}</h4>
     `;
+    // Open lightbox on click
+    imageCard.addEventListener('click', () => openLightbox(index));
+    imageCard.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') openLightbox(index);
+    });
     container.appendChild(imageCard);
   });
   
   modal.style.display = 'block';
+  document.body.style.overflow = 'hidden';
 }
 
 // Function to close gallery modal
 function closeGalleryModal() {
   const modal = document.getElementById('galleryModal');
   modal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+/* ===================== LIGHTBOX FUNCTIONS ===================== */
+function openLightbox(index) {
+  lightboxIndex = index;
+  const lightbox = document.getElementById('galleryLightbox');
+  updateLightbox();
+  lightbox.style.display = 'flex';
+  // Trap keyboard navigation inside lightbox
+  document.addEventListener('keydown', lightboxKeyHandler);
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('galleryLightbox');
+  lightbox.style.display = 'none';
+  document.removeEventListener('keydown', lightboxKeyHandler);
+}
+
+function closeLightboxOnBackdrop(event) {
+  // Only close if the backdrop itself (not inner content) is clicked
+  if (event.target === document.getElementById('galleryLightbox')) {
+    closeLightbox();
+  }
+}
+
+function lightboxNavigate(direction) {
+  lightboxIndex = (lightboxIndex + direction + lightboxImages.length) % lightboxImages.length;
+  updateLightbox();
+}
+
+function updateLightbox() {
+  const image = lightboxImages[lightboxIndex];
+  const imgEl = document.getElementById('lightboxImage');
+  const titleEl = document.getElementById('lightboxTitle');
+  const descEl = document.getElementById('lightboxDescription');
+  const counterEl = document.getElementById('lightboxCounter');
+
+  // Fade transition
+  imgEl.style.opacity = '0';
+  setTimeout(() => {
+    imgEl.src = image.src || '';
+    imgEl.alt = image.name;
+    imgEl.style.opacity = '1';
+  }, 150);
+
+  titleEl.textContent = image.name;
+  descEl.textContent = image.description;
+  counterEl.textContent = `${lightboxIndex + 1} / ${lightboxImages.length}`;
+
+  // Show/hide nav arrows based on image availability
+  const prevBtn = document.querySelector('.lightbox-prev');
+  const nextBtn = document.querySelector('.lightbox-next');
+  if (prevBtn) prevBtn.style.display = lightboxImages.length > 1 ? 'flex' : 'none';
+  if (nextBtn) nextBtn.style.display = lightboxImages.length > 1 ? 'flex' : 'none';
+}
+
+function lightboxKeyHandler(e) {
+  if (e.key === 'ArrowLeft') lightboxNavigate(-1);
+  else if (e.key === 'ArrowRight') lightboxNavigate(1);
+  else if (e.key === 'Escape') closeLightbox();
 }
 
 
