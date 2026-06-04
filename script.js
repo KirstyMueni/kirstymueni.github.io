@@ -197,9 +197,9 @@ const galleryData = {
         description: 'Password security analysis and testing in a controlled lab environment'
       },
       {
-        name: 'Vulnerability Assessment',
+        name: 'Vulnerability Scanning',
         src: 'images/vulnerability.png',
-        description: 'Systematic vulnerability in a controlled lab environment'
+        description: 'Systematic vulnerability scanning in a controlled lab environment'
       },
       {
         name: 'Network Security',
