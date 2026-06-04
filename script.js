@@ -203,8 +203,8 @@ const galleryData = {
       },
       {
         name: 'Network Security',
-        src: 'images/network security.png',
-        description: 'Enterprise network security infrastructure'
+        src:  'images/network security.png',
+        description: 'Network security in controlled lab environment'
       },
       {
         name: 'Threat Analysis',
