@@ -203,7 +203,7 @@ const galleryData = {
       },
       {
         name: 'Network Security',
-        src: 'network security.png',
+        src: 'images/network security.png',
         description: 'Enterprise network security infrastructure'
       },
       {
