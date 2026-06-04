@@ -213,8 +213,8 @@ const galleryData = {
       },
       {
         name: 'Firewall Configuration',
-        src: '',
-        description: 'Advanced firewall setup and management'
+        src: 'images/firewall.png',
+        description: 'Firewall setup and management in a controlled lab environment'
       }
     ]
   },
