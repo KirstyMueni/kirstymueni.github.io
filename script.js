@@ -188,7 +188,7 @@ const galleryData = {
     images: [
       {
         name: 'Penetration Testing',
-        src: '',
+        src: 'images/pentest.png',
         description: 'Hands-on penetration testing in controlled lab environment'
       },
       {
@@ -203,7 +203,7 @@ const galleryData = {
       },
       {
         name: 'Network Security',
-        src: '',
+        src: 'network security.png',
         description: 'Enterprise network security infrastructure'
       },
       {
