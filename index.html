@@ -387,6 +387,23 @@
     </div>
   </div>
 </div>
+
+<!-- LIGHTBOX FOR FULL IMAGE VIEW -->
+<div id="galleryLightbox" class="gallery-lightbox" onclick="closeLightboxOnBackdrop(event)">
+  <div class="lightbox-content">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" onclick="lightboxNavigate(-1)" aria-label="Previous image">&#8249;</button>
+    <div class="lightbox-image-wrapper">
+      <img id="lightboxImage" src="" alt="" class="lightbox-image">
+    </div>
+    <button class="lightbox-nav lightbox-next" onclick="lightboxNavigate(1)" aria-label="Next image">&#8250;</button>
+    <div class="lightbox-caption">
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxDescription"></p>
+    </div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
+</div>
   <!-- ========== CASE STUDIES ========== -->
   <section class="case-studies" id="case-studies">
     <div class="section-container">
