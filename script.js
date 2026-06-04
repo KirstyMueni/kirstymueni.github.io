@@ -198,8 +198,8 @@ const galleryData = {
       },
       {
         name: 'Vulnerability Assessment',
-        src: '',
-        description: 'Systematic vulnerability scanning and documentation'
+        src: 'images/vulnerability.png',
+        description: 'Systematic vulnerability in a controlled lab environment'
       },
       {
         name: 'Network Security',
@@ -208,8 +208,8 @@ const galleryData = {
       },
       {
         name: 'Threat Analysis',
-        src: '',
-        description: 'Security threat identification and response'
+        src: 'images/threat.png',
+        description: 'Security threat identification in a controlled lab environment'
       },
       {
         name: 'Firewall Configuration',
