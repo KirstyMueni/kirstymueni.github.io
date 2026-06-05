@@ -223,28 +223,27 @@ const galleryData = {
     images: [
       {
         name: 'Network Topology',
-        src: '',
+        src: 'images/network topology.png',
         description: 'Enterprise Multi-VLAN Network Topology implemented in Cisco Packet Tracer.'
       },
       {
         name: 'VLAN Configuration',
-        src: '',
+        src: 'images/vlan configuration.png',
         description: 'VLAN segmentation configured for Administration, Finance, and IT departments.'
       },
       {
         name: 'Trunk Configuration',
-        src: '',
+        src: 'images/trunk configuration.png',
         description: '802.1Q trunk links configured between switches and router.'
       },
       {
         name: 'Router Configuration',
-        src: '',
+        src: 'images/router configuration.png',
         description: 'Router-on-a-Stick subinterfaces configured for inter-VLAN routing.'
       },
-     
       {
         name: 'Network Troubleshooting',
-        src: '',
+        src: 'images/network troubleshooting.png',
         description: 'Network issue diagnosis and resolution'
       },
       {
