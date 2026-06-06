@@ -382,9 +382,9 @@ const galleryData = {
         description: 'Scalable backend infrastructure'
       },
       {
-        name: 'Database Design',
-        src: '',
-        description: 'Database architecture and optimization'
+        name: 'Database Design ',
+        src: 'images/database.png',
+        description: 'Database architecture and implementation'
       },
       {
         name: 'API Development',
