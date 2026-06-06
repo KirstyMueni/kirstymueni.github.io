@@ -378,13 +378,13 @@ const galleryData = {
       },
       {
         name: 'Backend Systems',
-        src: '',
-        description: 'Scalable backend infrastructure'
+        src: 'images/backend.png',
+        description: 'A SQL query performing a relational join to aggregate and retrieve unified loan data from a normalized database.'
       },
       {
         name: 'Database Design ',
         src: 'images/database.png',
-        description: 'Database architecture and implementation'
+        description: 'A relational database implementation featuring an entity relationship schema (the schema) and SQL driven data aggregation(the functional output)'
       },
       {
         name: 'API Development',
