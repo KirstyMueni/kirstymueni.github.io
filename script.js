@@ -248,7 +248,7 @@ const galleryData = {
       },
       {
         name: 'Wireless Networks',
-        src: '',
+        src: 'images/wireless.png',
         description: 'Secure wireless network deployment'
       }
     ]
