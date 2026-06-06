@@ -363,12 +363,12 @@ const galleryData = {
     images: [
       {
         name: 'Web Development',
-        src: '',
+        src: 'images/web.png',
         description: 'Modern web application development'
       },
       {
         name: 'UI/UX Design',
-        src: '',
+        src: 'images/ui.png',
         description: 'User interface and experience design'
       },
       {
