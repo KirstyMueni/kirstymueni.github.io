@@ -388,8 +388,8 @@ const galleryData = {
       },
       {
         name: 'API Development',
-        src: '',
-        description: 'RESTful API design and implementation'
+        src: 'images/api.png',
+        description: 'Developed a RESTful API using Flask and SQLite to expose library management data through JSON endpoints, demonstrating backend integration and data retrieval through HTTP requests.'
       }
     ]
   }
