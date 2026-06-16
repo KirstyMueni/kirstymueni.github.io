@@ -374,7 +374,7 @@ const galleryData = {
       {
         name: 'Mobile Apps',
         src: '',
-        description: 'Cross-platform mobile application development'
+        description: 'A cross-platform fitness application built with React, TypeScript, and Capacitor, featuring personalized workouts, meal planning, exercise favorites, and Android deployment.'
       },
       {
         name: 'Backend Systems',
