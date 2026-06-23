@@ -338,7 +338,7 @@ const galleryData = {
       },
       {
         name: 'Interactive Presentation Solutions',
-        src: 'images/presentation.jpeg',
+        src: 'images/presentation.png',
         description: 'Deployment and configuration of smart presentation systems, including interactive digital podiums and touchscreen displays, designed to enhance presentations, meetings, conferences, and training sessions through seamless content delivery and user engagement.'
       },
       {
