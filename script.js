@@ -333,13 +333,13 @@ const galleryData = {
       },
       {
         name: 'Projection Systems',
-        src: '',
-        description: 'Advanced projection and display systems'
+        src: 'images/projector.jpeg',
+        description: 'Professional projector and interactive presentation system setup featuring high-definition projection, a VTouch smart podium, and integrated audiovisual equipment designed to deliver seamless presentations, training sessions, and conference experiences'
       },
       {
-        name: 'Audio Systems',
-        src: '',
-        description: 'Professional audio system installation'
+        name: 'Interactive Presentation Solutions',
+        src: 'images/presentation.jpeg',
+        description: 'Deployment and configuration of smart presentation systems, including interactive digital podiums and touchscreen displays, designed to enhance presentations, meetings, conferences, and training sessions through seamless content delivery and user engagement.'
       },
       {
         name: 'Video Conferencing',
@@ -348,13 +348,13 @@ const galleryData = {
       },
       {
         name: 'Control Systems',
-        src: '',
-        description: 'Integrated AV control systems'
+        src: 'images/control.jpeg',
+        description: 'Professional audio control and signal management solutions featuring wireless microphone systems, powered mixers, and integrated PA equipment for seamless sound distribution, real-time audio control, and reliable event communication.'
       },
       {
         name: 'Event Setup',
-        src: '',
-        description: 'Large-scale event AV production'
+        src: 'images/setup.jpeg',
+        description: 'Professional conference event setup featuring integrated projection, display, and sound systems, designed to deliver clear presentations, effective communication, and a seamless meeting experience in a premium venue environment.'
       }
     ]
   },
