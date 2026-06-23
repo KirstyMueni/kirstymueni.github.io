@@ -372,25 +372,25 @@ const galleryData = {
         description: 'User interface and experience design'
       },
       {
-        name: 'Mobile Apps',
-        src: 'images/App development.png',
-        description: 'A cross-platform fitness application built with React, TypeScript, and Capacitor, featuring personalized workouts, meal planning, exercise favorites, and Android deployment.'
-      },
-      {
         name: 'Backend Systems',
         src: 'images/backend.png',
         description: 'A SQL query performing a relational join to aggregate and retrieve unified loan data from a normalized database.'
       },
       {
-        name: 'Database Design ',
-        src: 'images/database.png',
-        description: 'A relational database implementation featuring an entity relationship schema (the schema) and SQL driven data aggregation(the functional output)'
-      },
-      {
         name: 'API Development',
         src: 'images/api.png',
         description: 'Developed a RESTful API using Flask and SQLite to expose library management data through JSON endpoints, demonstrating backend integration and data retrieval through HTTP requests.'
-      }
+      },
+      {
+        name: 'Mobile Apps',
+        src: 'images/App development.png',
+        description: 'A cross-platform fitness application built with React, TypeScript, and Capacitor, featuring personalized workouts, meal planning, exercise favorites, and Android deployment.'
+      },
+      {
+        name: 'Database Design ',
+        src: 'images/database.png',
+        description: 'A relational database implementation featuring an entity relationship schema (the schema) and SQL driven data aggregation(the functional output)'
+      } 
     ]
   }
 };
