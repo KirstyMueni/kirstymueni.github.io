@@ -353,7 +353,7 @@ const galleryData = {
       },
       {
         name: 'Event Setup',
-        src: 'images/setup.jpeg',
+        src: 'images/setup.png',
         description: 'Professional conference event setup featuring integrated projection, display, and sound systems, designed to deliver clear presentations, effective communication, and a seamless meeting experience in a premium venue environment.'
       }
     ]
