@@ -271,15 +271,15 @@ const galleryData = {
         src: 'images/digitalliteracy.png',
         description: 'Supported technology-enabled learning environments where learners actively utilized digital devices to access educational content, complete learning activities, and build digital competencies.'
       },
+       {
+        name: 'Computer Lab Setup & Digital Learning Environment',
+        src: '',
+        description: 'Created a technology-enabled learning space that empowers students to access digital tools, educational resources and technology-enhanced learning opportunities. '
+      },
       {
         name: 'Digital Literacy Training',
         src: 'images/digital training.png',
         description: 'Conducted hands-on ARES training sessions for learners and teachers, equipping them with practical digital skills and guiding them on how to access, manage, and utilize digital learning resources effectively.'
-      },
-      {
-        name: 'Computer Lab Setup & Digital Learning Environment',
-        src: '',
-        description: 'Created a technology-enabled learning space that empowers students to access digital tools, educational resources and technology-enhanced learning opportunities. '
       },
       {
         name: 'Digital Tools',
