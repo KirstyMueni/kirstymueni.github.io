@@ -258,12 +258,12 @@ const galleryData = {
     images: [
         {
         name: 'Kolibri Installation & Configuration',
-        src: '',
+        src: 'images/kolibri.png',
         description: 'Configured and managed Kolibri offline learning servers, providing learners and teachers with access to interactive educational content and digital learning resources without internet access.'
       },
       {
         name: 'Offline Educational Content Distribution',
-        src: '',
+        src: 'images/phet.png',
         description: 'Provided learners with access to offline digital learning resources through Kolibri, including interactive simulations and educational materials that support self-paced learning without internet access.'
       },
       {
