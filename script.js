@@ -273,7 +273,7 @@ const galleryData = {
       },
        {
         name: 'Computer Lab Setup & Digital Learning Environment',
-        src: '',
+        src: 'images/lab.png',
         description: 'Created a technology-enabled learning space that empowers students to access digital tools, educational resources and technology-enhanced learning opportunities. '
       },
       {
