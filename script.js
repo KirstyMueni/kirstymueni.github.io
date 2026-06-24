@@ -267,7 +267,7 @@ const galleryData = {
         description: 'Provided learners with access to offline digital learning resources through Kolibri, including interactive simulations and educational materials that support self-paced learning without internet access.'
       },
       {
-        name: 'Training',
+        name: 'Digital Literacy Training',
         src: 'images/training.jpeg',
         description: 'Conducted hands-on ARES training sessions for learners and teachers, equipping them with practical digital skills and guiding them on how to access, manage, and utilize digital learning resources effectively.'
       },
