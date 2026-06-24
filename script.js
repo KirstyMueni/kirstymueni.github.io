@@ -256,25 +256,25 @@ const galleryData = {
   'digital-literacy': {
     title: 'Digital Literacy',
     images: [
+        {
+        name: 'Kolibri Installation & Configuration',
+        src: '',
+        description: 'Configured and managed Kolibri offline learning servers, providing learners and teachers with access to interactive educational content and digital learning resources without internet access.'
+      },
+      {
+        name: 'Offline Educational Content Distribution',
+        src: '',
+        description: 'Provided learners with access to offline digital learning resources through Kolibri, including interactive simulations and educational materials that support self-paced learning without internet access.'
+      },
       {
         name: 'Training',
         src: 'images/training.jpeg',
-        description: 'ARES Training'
+        description: 'Conducted hands-on ARES training sessions for learners and teachers, equipping them with practical digital skills and guiding them on how to access, manage, and utilize digital learning resources effectively.'
       },
       {
-        name: 'Student Learning',
+        name: 'Learner Device Engagement',
         src: 'images/digitalliteracy.png',
-        description: 'Students engaging with digital tools'
-      },
-      {
-        name: 'Online Safety',
-        src: '',
-        description: 'Online safety and privacy training'
-      },
-      {
-        name: 'Basic Computing',
-        src: '',
-        description: 'Fundamental computer skills training'
+        description: 'Supported technology-enabled learning environments where learners actively utilized digital devices to access educational content, complete learning activities, and build digital competencies.'
       },
       {
         name: 'Internet Skills',
