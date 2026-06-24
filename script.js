@@ -267,14 +267,14 @@ const galleryData = {
         description: 'Provided learners with access to offline digital learning resources through Kolibri, including interactive simulations and educational materials that support self-paced learning without internet access.'
       },
       {
-        name: 'Digital Literacy Training',
-        src: 'images/digital training.png',
-        description: 'Conducted hands-on ARES training sessions for learners and teachers, equipping them with practical digital skills and guiding them on how to access, manage, and utilize digital learning resources effectively.'
-      },
-      {
         name: 'Learner Device Engagement',
         src: 'images/digitalliteracy.png',
         description: 'Supported technology-enabled learning environments where learners actively utilized digital devices to access educational content, complete learning activities, and build digital competencies.'
+      },
+      {
+        name: 'Digital Literacy Training',
+        src: 'images/digital training.png',
+        description: 'Conducted hands-on ARES training sessions for learners and teachers, equipping them with practical digital skills and guiding them on how to access, manage, and utilize digital learning resources effectively.'
       },
       {
         name: 'Internet Skills',
