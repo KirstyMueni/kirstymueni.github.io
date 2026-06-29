@@ -268,7 +268,7 @@ const galleryData = {
       },
       {
         name: 'Resource Usage Monitoring & Learning Analytics',
-        src: '',
+        src: 'images/areslogs.jpeg',
         description: 'Analyzed platform usage data to understand learner engagement, identify popular content, and monitor the effectiveness of digital learning resources.'
       },
       {
