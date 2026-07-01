@@ -298,13 +298,13 @@ const galleryData = {
       },
       {
         name: 'PhET Interactive Simulations',
-        src: 'Integrated PhET Interactive Simulations into STEM to provide learners with virtual experiments in Physics, Chemistry, Biology, and Mathematics, enhancing conceptual understanding through inquiry-based and hands-on digital learning.',
-        description: 'Interactive coding and programming classes'
+        src: 'images/phet sim.png',
+        description: 'Integrated PhET Interactive Simulations into STEM to provide learners with virtual experiments in Physics, Chemistry, Biology, and Mathematics, enhancing conceptual understanding through inquiry-based and hands-on digital learning.'
       },
       {
-        name: 'STEM Experiments',
+        name: 'Arduino LED Traffic Light',
         src: '',
-        description: 'Hands-on STEM experiments and demonstrations'
+        description: 'Designed and programmed an Arduino-based traffic light system using LEDs to simulate real-world traffic signal operation. The project applies embedded programming concepts such as digital outputs, timing sequences, and control logic to demonstrate the fundamentals of automation and intelligent traffic management systems.'
       },
       {
         name: 'Innovation Projects',
