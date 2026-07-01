@@ -292,9 +292,9 @@ const galleryData = {
     title: 'EdTech & STEM',
     images: [
       {
-        name: 'Robotics Lab',
+        name: 'Scratch Programming',
         src: '',
-        description: 'Hands-on robotics and STEM projects'
+        description: 'Developed Math Quiz Challenge ; an interactive educational game developed in Scratch that helps learners strengthen their arithmetic skills through engaging, game-based learning. The application presents multiple mathematics questions, evaluates user responses in real time, provides immediate feedback, and tracks the learner's score using variables and conditional logic. Designed to promote computational thinking and digital literacy, the project demonstrates the use of Scratch programming to create an interactive and enjoyable classroom learning experience'
       },
       {
         name: 'Coding Workshop',
