@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * KIRSTY MUENI PORTFOLIO — script.js (FINAL VERIFIED)
+ * KIRSTY MUENI PORTFOLIO — script.js
  * ============================================================
  */
 
