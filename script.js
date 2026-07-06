@@ -168,17 +168,17 @@ const galleryData = {
       { name: 'Video Conferencing', src: '', description: 'Video conferencing room setup' }
     ]
   },
-  development: {
-    title: 'Development',
-    images: [
-      { name: 'Web Development', src: 'images/web.png', description: 'Modern web application development' },
-      { name: 'UI/UX Design', src: 'images/ui.png', description: 'User interface and experience design' },
-      { name: 'Backend Systems', src: 'images/backend.png', description: 'A SQL query performing a relational join to aggregate and retrieve unified loan data from a normalized database.' },
-      { name: 'API Development', src: 'images/api.png', description: 'Developed a RESTful API using Flask and SQLite to expose library management data through JSON endpoints, demonstrating backend integration and data retrieval through HTTP requests.' },
-      { name: 'Mobile Apps', src: 'images/App development.png', description: 'A cross-platform fitness application built with React, TypeScript, and Capacitor, featuring personalized workouts, meal planning, exercise favorites, and Android deployment.' },
-      { name: 'Database Design ', src: 'images/database.png', description: 'A relational database implementation featuring an entity relationship schema (the schema) and SQL driven data aggregation(the functional output)' }
-    ]
-  }
+ development: {
+  title: 'Development',
+  images: [
+    { name: 'Web Development', src: 'images/web.png', description: 'Developed responsive, user-centric web applications using modern JavaScript frameworks, focusing on performance, accessibility, and clean code architecture.' },
+    { name: 'User Experience (UX) Design', src: 'images/ui.png', description: 'Created intuitive user interfaces and interactive prototypes in Figma, prioritizing user-flow efficiency and consistent visual branding across all platforms.' },
+    { name: 'Relational Database Engineering', src: 'images/backend.png', description: 'Architected optimized MySQL database schemas with complex relational mapping to ensure data integrity and high-speed query performance for data-heavy applications.' },
+    { name: 'RESTful API Architecture', src: 'images/api.png', description: 'Engineered secure backend APIs using Flask, implementing JSON-based endpoints for seamless data exchange between client-side interfaces and server-side logic.' },
+    { name: 'Cross-Platform Mobile Dev', src: 'images/App development.png', description: 'Built and deployed a high-performance fitness application using React and TypeScript, leveraging Capacitor for native-like performance on both Android and iOS.' },
+    { name: 'Scalable Backend Systems', src: 'images/database.png', description: 'Designed robust server-side architectures that handle complex data aggregation and user authentication while maintaining low latency under high traffic loads.' }
+  ]
+}
 };
 
 /* ===================== GALLERY MODAL ===================== */
