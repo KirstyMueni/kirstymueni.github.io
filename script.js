@@ -124,16 +124,17 @@ const galleryData = {
     ]
   },
   networking: {
-    title: 'Networking',
-    images: [
-      { name: 'Network Topology', src: 'images/network topology.png', description: 'Enterprise Multi-VLAN Network Topology implemented in Cisco Packet Tracer.' },
-      { name: 'VLAN Configuration', src: 'images/vlan configuration.png', description: 'VLAN segmentation configured for Administration, Finance, and IT departments.' },
-      { name: 'Trunk Configuration', src: 'images/trunk configuration.png', description: '802.1Q trunk links configured between switches and router.' },
-      { name: 'Router Configuration', src: 'images/router configuration.png', description: 'Router-on-a-Stick subinterfaces configured for inter-VLAN routing.' },
-      { name: 'Network Troubleshooting', src: 'images/network troubleshooting.png', description: 'Network issue diagnosis and resolution' },
-      { name: 'Wireless Networks', src: 'images/wireless.png', description: 'Secure wireless network deployment' }
-    ]
-  },
+  title: 'Networking',
+  images: [
+    { name: 'Enterprise Topology Design', src: 'images/network topology.png', description: 'Engineered a scalable enterprise network architecture in Cisco Packet Tracer, incorporating redundancy and optimized routing protocols for high availability.' },
+    { name: 'VLAN Segmentation', src: 'images/vlan configuration.png', description: 'Implemented logical network segmentation through VLANs to enhance security and reduce broadcast traffic across departmental boundaries.' },
+    { name: 'Trunking & Link Aggregation', src: 'images/trunk configuration.png', description: 'Configured 802.1Q trunking and EtherChannel to maximize bandwidth and ensure seamless communication between core and distribution layer switches.' },
+    { name: 'Inter-VLAN Routing', src: 'images/router configuration.png', description: 'Optimized internal traffic flow using Router-on-a-Stick and Layer 3 switching techniques to provide secure, high-speed routing between isolated network segments.' },
+    { name: 'Network Troubleshooting', src: 'images/network troubleshooting.png', description: 'Diagnosed and resolved complex connectivity issues using a systematic OSI-model approach, minimizing downtime and improving overall network performance.' },
+    { name: 'Wireless Infrastructure', src: 'images/wireless.png', description: 'Deployed secure WPA3-protected wireless networks with optimized Access Point placement to ensure comprehensive coverage and seamless roaming for mobile users.' }
+  ]
+},
+
   'digital-literacy': {
     title: 'Digital Literacy',
     images: [
@@ -159,7 +160,7 @@ const galleryData = {
   'av-integration': {
     title: 'AV Integration',
     images: [
-      { name: 'Conference Room Setup', src: 'images/avsetup.jpg', description: 'Professional conference room AV installation' },
+      { name: 'Smart Conference Room', src: 'images/avsetup.jpg', description: 'Integrated high-definition video conferencing systems with automated environmental controls to create a frictionless, professional meeting experience.' },
       { name: 'Control Systems', src: 'images/control.jpeg', description: 'Professional audio control and signal management solutions featuring wireless microphone systems, powered mixers, and integrated PA equipment for seamless sound distribution, real-time audio control, and reliable event communication.' },
       { name: 'Event Setup', src: 'images/setup.png', description: 'Professional conference event setup featuring integrated projection, display, and sound systems, designed to deliver clear presentations, effective communication, and a seamless meeting experience in a premium venue environment.' },
       { name: 'Projection Systems', src: 'images/projector.jpeg', description: 'Professional projector and interactive presentation system setup featuring high-definition projection, a VTouch smart podium, and integrated audiovisual equipment designed to deliver seamless presentations, training sessions, and conference experiences' },
