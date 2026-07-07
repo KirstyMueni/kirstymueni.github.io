@@ -111,10 +111,9 @@ function showProjectCategory(project) {
 }
 
 /* ===================== GALLERY DATA===================== */
-const galleryData = {
+ const galleryData = {
   cybersecurity: {
-    title: cybersecurity: {
-  title: 'Cybersecurity',
+  title: "Cybersecurity",
   images: [
     {
       name: 'Penetration Testing',
