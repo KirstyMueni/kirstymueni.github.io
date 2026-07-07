@@ -318,7 +318,7 @@ const galleryData = {
       {
         name: 'Web Development',
         src: 'images/web.png',
-        description: 'Developed responsive, user-centric web applications using modern JavaScript frameworks, focusing on performance, accessibility, and clean code architecture.'
+        description: 'Designed and developed a responsive personal portfolio website using HTML, CSS, and JavaScript. The project showcases my professional profile, technical skills, projects, certifications, and achievements while emphasizing clean design, accessibility, and a seamless user experience across all devices.'
       },
       {
         name: 'User Experience (UX) Design',
@@ -326,24 +326,24 @@ const galleryData = {
         description: 'Designed a clean and responsive portfolio landing page that emphasizes usability, visual hierarchy, and brand consistency. The layout strategically guides users through key sections using structured spacing, typography, and call-to-action buttons while ensuring a seamless experience across different screen sizes.'
       },
       {
-        name: 'Relational Database Engineering',
+        name: 'Relational Database Development',
         src: 'images/backend.png',
-        description: 'Architected optimized MySQL database schemas with complex relational mapping to ensure data integrity and high-speed query performance for data-heavy applications.'
+        description: 'Library Management Database System Designed and implemented a relational database using SQLite to manage students, books, and loan records. Developed SQL queries involving JOIN operations to retrieve borrowing history, track book availability, and monitor return statuses. The project demonstrates practical skills in database design, data manipulation, query optimization, and structured data management using DB Browser for SQLite.'
       },
       {
         name: 'RESTful API Architecture',
         src: 'images/api.png',
-        description: 'Engineered secure backend APIs using Flask, implementing JSON-based endpoints for seamless data exchange between client-side interfaces and server-side logic.'
+        description: 'Developed a RESTful API to manage library resources, providing structured JSON responses for books, students, and loan records. Built endpoints to retrieve and organize library data, enabling seamless communication between the backend database and client applications. The project demonstrates backend development, API design, database integration, and efficient data serialization.'
       },
       {
         name: 'Cross-Platform Mobile Dev',
         src: 'images/App development.png',
-        description: 'Built and deployed a high-performance fitness application using React and TypeScript, leveraging Capacitor for native-like performance on both Android and iOS.'
+        description: 'Designed and developed a cross-platform fitness application featuring personalized workout plans, progress tracking, and user-friendly navigation. Integrated the application with Android Studio for native builds and testing, utilizing modern mobile development tools to ensure smooth deployment, responsive performance, and an intuitive user experience.'
       },
       {
-        name: 'Scalable Backend Systems',
+        name: 'Backend Systems',
         src: 'images/database.png',
-        description: 'Designed robust server-side architectures that handle complex data aggregation and user authentication while maintaining low latency under high traffic loads.'
+        description: 'Engineered the backend infrastructure for a Library Management System by designing and implementing a relational SQLite database. Built normalized schemas, managed data through SQL operations, and developed queries to handle book inventories, student records, and loan transactions. This project demonstrates backend development principles, database management, and efficient data processing for real-world applications.'
       }
     ]
   }
