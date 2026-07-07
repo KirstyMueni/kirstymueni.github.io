@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initScrollReveal();
     initSmoothScroll();
     setFooterYear();
+    addMobileLightboxGestures(); // Ensure mobile gestures are initialized
 });
 
 /* ===================== THEME ===================== */
@@ -163,7 +164,7 @@ const galleryData = {
       {
         name: 'Web Application Threat Analysis',
         src: 'images/threat.png',
-        description: 'I performed a web application vulnerability assessment using Nikto to identify security weaknesses on a target web server. The scan revealed missing security headers, exposed administrative directories, and configuration files that could increase the application's attack surface, helping me evaluate and document potential security risks.'
+        description: 'I performed a web application vulnerability assessment using Nikto to identify security weaknesses on a target web server. The scan revealed missing security headers, exposed administrative directories, and configuration files that could increase the application\'s attack surface, helping me evaluate and document potential security risks.'
       },
       {
         name: 'Firewall Hardening and Network Security Configuration',
@@ -283,7 +284,7 @@ const galleryData = {
       {
         name: 'Smart Conference Room',
         src: 'images/avsetup.jpg',
-        description: 'Integrated high-definition video conferencing systems with automated environmental controls to create a frictionless, professional meeting experience.'
+        description: 'Integrated high-definition video conferencing systems with automated environmental controls to create a frictionless, productive meeting environment. Features include one-touch controls for lighting, climate, and presentation displays, ensuring optimal conditions for collaboration and communication.'
       },
       {
         name: 'Control Systems',
@@ -372,6 +373,19 @@ function initGallery() {
             }
         }
     });
+
+    // Add event listeners for category filtering buttons within the gallery modal
+    const categoryFilterButtons = document.querySelectorAll('.gallery-filter-btn');
+    if (categoryFilterButtons.length) {
+        categoryFilterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filterCategory = button.dataset.category;
+                filterGalleryImages(filterCategory);
+                categoryFilterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    }
 }
 
 function openGallery(category) {
@@ -428,6 +442,46 @@ function openGallery(category) {
     document.body.style.overflow = "hidden";
 }
 
+function filterGalleryImages(category) {
+    const grid = document.getElementById("galleryImages");
+    if (!grid) {
+        console.error("Gallery images grid not found.");
+        return;
+    }
+    grid.innerHTML = ""; // Clear current images
+
+    const imagesToDisplay = galleryData[category] ? galleryData[category].images : [];
+
+    imagesToDisplay.forEach((image, index) => {
+        const card = document.createElement("div");
+        card.className = "gallery-image-card";
+        card.innerHTML = `
+            <div class="gallery-image-wrapper">
+                <img
+                    class="gallery-image"
+                    src="${image.src}"
+                    alt="${image.name}"
+                    loading="lazy">
+                <div class="gallery-image-overlay">
+                    <p class="gallery-image-description">
+                        ${image.description}
+                    </p>
+                    <span class="gallery-view-hint">
+                        Click to View
+                    </span>
+                </div>
+            </div>
+            <h4 class="gallery-image-name">
+                ${image.name}
+            </h4>
+        `;
+        card.addEventListener("click", () => {
+            openLightbox(index);
+        });
+        grid.appendChild(card);
+    });
+}
+
 function closeGalleryModal() { // Renamed to match existing HTML inline handler
     const modal = document.getElementById("galleryModal");
     if (!modal) return;
@@ -458,6 +512,7 @@ window.addEventListener("click", function (e) {
 
 /* ============================================================LIGHTBOX============================================================ */
 function initLightbox() {
+    // No specific initialization needed here, as event listeners are added globally or on elements directly.
 }
 
 function openLightbox(index) {
@@ -475,6 +530,7 @@ function openLightbox(index) {
         !description ||
         !counter
     ) {
+        console.error("One or more lightbox elements not found.");
         return;
     }
     updateLightbox();
@@ -495,6 +551,7 @@ function updateLightbox() {
         !description ||
         !counter
     ) {
+        console.error("One or more lightbox elements not found during update.");
         return;
     }
     image.src = imageData.src;
@@ -674,5 +731,4 @@ function addMobileLightboxGestures() {
     });
 }
 
-// Call the mobile gesture function on DOMContentLoaded
-document.addEventListener("DOMContentLoaded", addMobileLightboxGestures);
+
