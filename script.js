@@ -1,8 +1,7 @@
-
 /**
- ============================================================
- KIRSTY MUENI PORTFOLIO 
- ============================================================
+  ============================================================
+  KIRSTY MUENI PORTFOLIO 
+  ============================================================
  */
 document.addEventListener("DOMContentLoaded", () => {
     // Lucide Icons
@@ -249,7 +248,7 @@ const galleryData = {
       {
         name: 'Scratch Programming',
         src: 'images/Scratch.png',
-        description: 'Developed Math Quiz Challenge ; an interactive educational game developed in Scratch that helps learners strengthen their arithmetic skills through engaging, game-based learning. The application presents multiple mathematics questions, evaluates user responses in real time, provides immediate feedback, and tracks the learner\'s score using variables and conditional logic. Designed to promote computational thinking and digital literacy, the project demonstrates the use of Scratch programming to create an interactive and enjoyable classroom learning experience'
+        description: 'Developed Math Quiz Challenge ; an interactive educational game developed in Scratch that helps learners strengthen their arithmetic skills through engaging, game-based learning. The application presents multiple mathematics questions, evaluates user responses in real time, provides immediate feedback, and tracks the learner\\\'s score using variables and conditional logic. Designed to promote computational thinking and digital literacy, the project demonstrates the use of Scratch programming to create an interactive and enjoyable classroom learning experience'
       },
       {
         name: 'PhET Interactive Simulations',
@@ -362,7 +361,7 @@ function initGallery() {
         // Extract category from the onclick attribute
         const onclickAttr = button.getAttribute('onclick');
         if (onclickAttr) {
-            const match = onclickAttr.match(/openGalleryModal\(\'([^\']+)\'\)/);
+            const match = onclickAttr.match(/openGalleryModal\(\'([^\\\\]+)\'\)/);
             if (match && match[1]) {
                 const category = match[1];
                 button.addEventListener("click", function () {
@@ -404,7 +403,7 @@ function openGallery(category) {
                 <img
                     class="gallery-image"
                     src="${image.src}"
-                    alt="${image.title}"
+                    alt="${image.name}"
                     loading="lazy">
                 <div class="gallery-image-overlay">
                     <p class="gallery-image-description">
@@ -416,7 +415,7 @@ function openGallery(category) {
                 </div>
             </div>
             <h4 class="gallery-image-name">
-                ${image.title}
+                ${image.name}
             </h4>
         `;
         card.addEventListener("click", () => {
@@ -499,8 +498,8 @@ function updateLightbox() {
         return;
     }
     image.src = imageData.src;
-    image.alt = imageData.title;
-    title.textContent = imageData.title;
+    image.alt = imageData.name; // Corrected from imageData.title to imageData.name
+    title.textContent = imageData.name; // Corrected from imageData.title to imageData.name
     description.textContent =
         imageData.description;
     counter.textContent =
