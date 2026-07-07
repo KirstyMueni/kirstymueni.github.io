@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initScrollReveal();
     initSmoothScroll();
     setFooterYear();
-    addMobileLightboxGestures(); // Ensure mobile gestures are initialized
+    addMobileLightboxGestures();
 });
 
 /* ===================== THEME ===================== */
@@ -98,41 +98,39 @@ function initProjectButtons() {
     const sections =
         document.querySelectorAll(".project-category");
     if (!buttons.length || !sections.length) return;
-    // Hide every category first
+    
+    // Function to show specific category
+    const showCategory = (projectName) => {
+        sections.forEach(section => {
+            if (section.dataset.project === projectName) {
+                section.style.display = "block";
+                section.style.opacity = "0";
+                setTimeout(() => {
+                    section.style.opacity = "1";
+                    section.style.transition = "opacity 0.4s ease";
+                }, 10);
+            } else {
+                section.style.display = "none";
+            }
+        });
+    };
+
+    // Hide all first
     sections.forEach(section => {
         section.style.display = "none";
     });
-    // Show first category
-    const first =
-        buttons[0].dataset.project;
-    showProjectCategory(first);
+
+    // Show first category by default
+    const initialCategory = buttons[0].dataset.project;
     buttons[0].classList.add("active");
+    showCategory(initialCategory);
+
     buttons.forEach(button => {
         button.addEventListener("click", () => {
-            buttons.forEach(btn =>
-                btn.classList.remove("active")
-            );
+            buttons.forEach(btn => btn.classList.remove("active"));
             button.classList.add("active");
-            showProjectCategory(
-                button.dataset.project
-            );
+            showCategory(button.dataset.project);
         });
-    });
-}
-
-function showProjectCategory(projectName) {
-    const sections =
-        document.querySelectorAll(".project-category");
-    sections.forEach(section => {
-        if (
-            section.dataset.project === projectName
-        ) {
-            section.style.display = "block";
-            section.style.animation =
-                "fadeIn .4s ease";
-        } else {
-            section.style.display = "none";
-        }
     });
 }
 
@@ -144,32 +142,32 @@ const galleryData = {
       {
         name: 'Penetration Testing',
         src: 'images/pentest.png',
-        description: 'Performed SMB enumeration using Kali Linux to identify publicly accessible Samba shares on a target system during an authorized penetration testing lab. Leveraged the smbclient utility to enumerate available network shares, verify anonymous access, and gather information about shared resources. This exercise demonstrates practical skills in network enumeration, information gathering, and identifying potential security exposures within Windows and Linux file-sharing services.'
+        description: 'Performed SMB enumeration using Kali Linux to identify publicly accessible Samba shares on a target system during an authorized penetration testing lab.'
       },
       {
         name: 'Password Cracking and Hash Analysis',
         src: 'images/password.png',
-        description: 'Performed password cracking in a controlled penetration testing lab using John the Ripper on Kali Linux. Conducted offline dictionary attacks against MD5 password hashes with the RockYou wordlist to identify weak credentials and evaluate password security. The project demonstrates practical skills in password auditing, hash analysis, and credential security assessment while emphasizing the importance of strong password policies.'
+        description: 'Performed password cracking in a controlled penetration testing lab using John the Ripper on Kali Linux.'
       },
       {
         name: 'Vulnerability Assessment',
         src: 'images/vulnerability.png',
-        description: 'Performed a vulnerability assessment using Nmap NSE (Nmap Scripting Engine) to identify open ports, enumerate services, and detect known security vulnerabilities. The scan revealed HTTP and SMB services, checked for common web application vulnerabilities, and identified potential CVEs, demonstrating practical experience in reconnaissance and vulnerability analysis during penetration testing.'
+        description: 'Performed a vulnerability assessment using Nmap NSE (Nmap Scripting Engine) to identify open ports and services.'
       },
       {
         name: 'Network Security Monitoring',
         src: 'images/network security.png',
-        description: 'I performed network reconnaissance using Nmap to discover active hosts and enumerate open ports and running services. This process helped me gather critical information about the target network, forming the foundation for further penetration testing and vulnerability assessment.'
+        description: 'I performed network reconnaissance using Nmap to discover active hosts and enumerate open ports.'
       },
       {
         name: 'Web Application Threat Analysis',
         src: 'images/threat.png',
-        description: 'I performed a web application vulnerability assessment using Nikto to identify security weaknesses on a target web server. The scan revealed missing security headers, exposed administrative directories, and configuration files that could increase the application\'s attack surface, helping me evaluate and document potential security risks.'
+        description: 'I performed a web application vulnerability assessment using Nikto to identify security weaknesses.'
       },
       {
-        name: 'Firewall Hardening and Network Security Configuration',
+        name: 'Firewall Hardening',
         src: 'images/firewall.png',
-        description: 'Implemented firewall policies on Kali Linux to mitigate potential attack vectors by restricting unnecessary services and enforcing secure network access rules. This exercise demonstrates hands-on experience in port management, firewall administration and defensive cybersecurity practices.'
+        description: 'Implemented firewall policies on Kali Linux to mitigate potential attack vectors.'
       }
     ]
   },
@@ -179,32 +177,32 @@ const galleryData = {
       {
         name: 'Enterprise Network Topology Design',
         src: 'images/network topology.png',
-        description: 'Designed and simulated a secure enterprise network using Cisco Packet Tracer. The network topology incorporates a router, core switch, access switch, centralized server, and departmental workstations for Administration, Finance, and IT. The project demonstrates network segmentation, device interconnectivity, infrastructure planning, and scalable LAN design to support reliable communication and efficient resource sharing.'
+        description: 'Designed and simulated a secure enterprise network using Cisco Packet Tracer.'
       },
       {
-        name: 'VLAN Configuration and Network Segmentation',
+        name: 'VLAN Configuration',
         src: 'images/vlan configuration.png',
-        description: 'Configured and verified Virtual Local Area Networks (VLANs) on a Cisco switch using the Cisco IOS Command Line Interface (CLI). Created multiple VLANs to logically separate network traffic for different departments, improving network organization, security, and performance. Verified VLAN assignments and switch configuration using IOS commands to ensure proper implementation and connectivity.'
+        description: 'Configured and verified Virtual Local Area Networks (VLANs) on a Cisco switch.'
       },
       {
-        name: 'Trunking ',
+        name: 'Trunking',
         src: 'images/trunk configuration.png',
-        description: 'Configured and verified trunk links on a Cisco switch using the Cisco IOS Command Line Interface (CLI). Enabled IEEE 802.1Q trunking to allow multiple VLANs to communicate across interconnected switches while maintaining logical network segmentation. Verified trunk status, allowed VLANs, and interface configurations using Cisco diagnostic commands to ensure reliable and efficient network communication.'
+        description: 'Configured and verified trunk links on a Cisco switch using the Cisco IOS CLI.'
       },
       {
-        name: 'Inter-VLAN Routing Configuration',
+        name: 'Inter-VLAN Routing',
         src: 'images/router configuration.png',
-        description: 'Configured inter-VLAN routing using the Router-on-a-Stick architecture in Cisco Packet Tracer. Created router subinterfaces for multiple VLANs, assigned IP addresses as default gateways, and verified interface status using Cisco IOS CLI commands. This implementation enables seamless communication between segmented VLANs while maintaining a structured and secure enterprise network design.'
+        description: 'Configured inter-VLAN routing using the Router-on-a-Stick architecture.'
       },
       {
-        name: 'Network Troubleshooting & Diagnostics',
+        name: 'Network Troubleshooting',
         src: 'images/network troubleshooting.png',
-        description: 'Performed systematic network diagnostics and troubleshooting to resolve connectivity issues, utilizing command-line tools and network analysis techniques to restore optimal network functionality.'
+        description: 'Performed systematic network diagnostics and troubleshooting to resolve connectivity issues.'
       },
       {
         name: 'Wireless Network Deployment',
         src: 'images/wireless.png',
-        description: 'Deployed and configured secure wireless networks within Cisco Packet Tracer, integrating wireless routers and validating client connectivity through successful ping tests to ensure reliable access.'
+        description: 'Deployed and configured secure wireless networks within Cisco Packet Tracer.'
       }
     ]
   },
@@ -212,34 +210,34 @@ const galleryData = {
     title: 'Digital Literacy',
     images: [
       {
-        name: 'Kolibri Installation & Configuration',
+        name: 'Kolibri Installation',
         src: 'images/kolibri.png',
-        description: 'Configured and managed Kolibri offline learning servers, providing learners and teachers with access to interactive educational content and digital learning resources without internet access.'
+        description: 'Configured and managed Kolibri offline learning servers.'
       },
       {
-        name: 'Offline Educational Content Distribution',
+        name: 'Offline Content Distribution',
         src: 'images/phet.png',
-        description: 'Provided learners with access to offline digital learning resources through Kolibri, including interactive simulations and educational materials that support self-paced learning without internet access.'
+        description: 'Provided learners with access to offline digital learning resources.'
       },
       {
-        name: 'Resource Usage Monitoring & Learning Analytics',
+        name: 'Learning Analytics',
         src: 'images/areslogs.jpeg',
-        description: 'Analyzed platform usage data to understand learner engagement, identify popular content, and monitor the effectiveness of digital learning resources.'
+        description: 'Analyzed platform usage data to understand learner engagement.'
       },
       {
         name: 'Learner Device Engagement',
         src: 'images/digitalliteracy.png',
-        description: 'Supported technology-enabled learning environments where learners actively utilized digital devices to access educational content, complete learning activities, and build digital competencies.'
+        description: 'Supported technology-enabled learning environments.'
       },
       {
-        name: 'Computer Lab Setup & Digital Learning Environment',
+        name: 'Computer Lab Setup',
         src: 'images/lab.png',
-        description: 'Created a technology-enabled learning space that empowers students to access digital tools, educational resources and technology-enhanced learning opportunities.'
+        description: 'Created a technology-enabled learning space for students.'
       },
       {
         name: 'Digital Literacy Training',
         src: 'images/digital training.png',
-        description: 'Conducted hands-on ARES training sessions for learners and teachers, equipping them with practical digital skills and guiding them on how to access, manage, and utilize digital learning resources effectively.'
+        description: 'Conducted hands-on ARES training sessions for learners and teachers.'
       }
     ]
   },
@@ -249,32 +247,32 @@ const galleryData = {
       {
         name: 'Scratch Programming',
         src: 'images/Scratch.png',
-        description: 'Developed Math Quiz Challenge ; an interactive educational game developed in Scratch that helps learners strengthen their arithmetic skills through engaging, game-based learning. The application presents multiple mathematics questions, evaluates user responses in real time, provides immediate feedback, and tracks the learner\\\'s score using variables and conditional logic. Designed to promote computational thinking and digital literacy, the project demonstrates the use of Scratch programming to create an interactive and enjoyable classroom learning experience'
+        description: 'Developed Math Quiz Challenge, an interactive educational game in Scratch.'
       },
       {
-        name: 'PhET Interactive Simulations',
+        name: 'PhET Simulations',
         src: 'images/phet sim.png',
-        description: 'Integrated PhET Interactive Simulations into STEM to provide learners with virtual experiments in Physics, Chemistry, Biology, and Mathematics, enhancing conceptual understanding through inquiry-based and hands-on digital learning.'
+        description: 'Integrated PhET Interactive Simulations into STEM learning.'
       },
       {
         name: 'LED Traffic Light',
         src: 'images/arduino.png',
-        description: 'Designed and programmed an Arduino-based traffic light system using LEDs to simulate real-world traffic signal operation. The project applies embedded programming concepts such as digital outputs, timing sequences, and control logic to demonstrate the fundamentals of automation and intelligent traffic management systems.'
+        description: 'Designed and programmed an Arduino-based traffic light system.'
       },
       {
-        name: 'Autonomous Robot Brain Simulator',
+        name: 'Robot Brain Simulator',
         src: 'images/robot.png',
-        description: 'Designed and programmed an Arduino-based autonomous robot controller capable of detecting obstacles using an HC-SR04 ultrasonic sensor. The system continuously measures the distance to nearby objects and makes autonomous decisions to move forward, stop, or turn. LED indicators simulate robot actions, demonstrating the core principles of robotics, embedded systems, sensor integration, and autonomous decision-making.'
+        description: 'Designed and programmed an Arduino-based autonomous robot controller.'
       },
       {
         name: 'Student Grade Predictor',
         src: 'images/mlearning.png',
-        description: 'Developed a beginner-friendly machine learning application developed in Python that analyzes historical student performance data to predict final academic grades. Built using Pandas, Scikit-learn, and Matplotlib, the project demonstrates the complete machine learning workflow, including data preparation, model training, prediction, evaluation, and visualization. It highlights practical experience in predictive analytics and the application of artificial intelligence techniques to solve real-world educational challenges.'
+        description: 'Developed a machine learning application in Python to predict academic grades.'
       },
       {
-        name: 'Learning Platform',
+        name: '',
         src: '',
-        description: 'Interactive online learning platform'
+        description: ''
       }
     ]
   },
@@ -284,32 +282,32 @@ const galleryData = {
       {
         name: 'Smart Conference Room',
         src: 'images/avsetup.jpg',
-        description: 'Integrated high-definition video conferencing systems with automated environmental controls to create a frictionless, productive meeting environment. Features include one-touch controls for lighting, climate, and presentation displays, ensuring optimal conditions for collaboration and communication.'
+        description: 'Integrated high-definition video conferencing systems with automated controls.'
       },
       {
         name: 'Control Systems',
         src: 'images/control.jpeg',
-        description: 'Professional audio control and signal management solutions featuring wireless microphone systems, powered mixers, and integrated PA equipment for seamless sound distribution, real-time audio control, and reliable event communication.'
+        description: 'Professional audio control and signal management solutions.'
       },
       {
         name: 'Event Setup',
         src: 'images/setup.png',
-        description: 'Professional conference event setup featuring integrated projection, display, and sound systems, designed to deliver clear presentations, effective communication, and a seamless meeting experience in a premium venue environment.'
+        description: 'Professional conference event setup featuring integrated projection and sound.'
       },
       {
         name: 'Projection Systems',
         src: 'images/projector.jpeg',
-        description: 'Professional projector and interactive presentation system setup featuring high-definition projection, a VTouch smart podium, and integrated audiovisual equipment designed to deliver seamless presentations, training sessions, and conference experiences'
+        description: 'Professional projector and interactive presentation system setup.'
       },
       {
-        name: 'Interactive Presentation Solutions',
+        name: 'Interactive Presentation',
         src: 'images/presentation.png',
-        description: 'Deployment and configuration of smart presentation systems, including interactive digital podiums and touchscreen displays, designed to enhance presentations, meetings, conferences, and training sessions through seamless content delivery and user engagement.'
+        description: 'Deployment and configuration of smart presentation systems.'
       },
       {
-        name: 'Video Conferencing',
+        name: '',
         src: '',
-        description: 'Video conferencing room setup'
+        description: ''
       }
     ]
   },
@@ -319,32 +317,32 @@ const galleryData = {
       {
         name: 'Web Development',
         src: 'images/web.png',
-        description: 'Designed and developed a responsive personal portfolio website using HTML, CSS, and JavaScript. The project showcases my professional profile, technical skills, projects, certifications, and achievements while emphasizing clean design, accessibility, and a seamless user experience across all devices.'
+        description: 'Designed and developed a responsive personal portfolio website.'
       },
       {
-        name: 'User Experience (UX) Design',
+        name: 'UX Design',
         src: 'images/ui.png',
-        description: 'Designed a clean and responsive portfolio landing page that emphasizes usability, visual hierarchy, and brand consistency. The layout strategically guides users through key sections using structured spacing, typography, and call-to-action buttons while ensuring a seamless experience across different screen sizes.'
+        description: 'Designed a clean and responsive portfolio landing page.'
       },
       {
-        name: 'Relational Database Development',
+        name: 'Database Development',
         src: 'images/backend.png',
-        description: 'Library Management Database System Designed and implemented a relational database using SQLite to manage students, books, and loan records. Developed SQL queries involving JOIN operations to retrieve borrowing history, track book availability, and monitor return statuses. The project demonstrates practical skills in database design, data manipulation, query optimization, and structured data management using DB Browser for SQLite.'
+        description: 'Implemented a relational database using SQLite to manage library records.'
       },
       {
-        name: 'RESTful API Architecture',
+        name: 'RESTful API',
         src: 'images/api.png',
-        description: 'Developed a RESTful API to manage library resources, providing structured JSON responses for books, students, and loan records. Built endpoints to retrieve and organize library data, enabling seamless communication between the backend database and client applications. The project demonstrates backend development, API design, database integration, and efficient data serialization.'
+        description: 'Developed a RESTful API to manage library resources.'
       },
       {
-        name: 'Cross-Platform Mobile Dev',
+        name: 'Mobile Development',
         src: 'images/App development.png',
-        description: 'Designed and developed a cross-platform fitness application featuring personalized workout plans, progress tracking, and user-friendly navigation. Integrated the application with Android Studio for native builds and testing, utilizing modern mobile development tools to ensure smooth deployment, responsive performance, and an intuitive user experience.'
+        description: 'Designed and developed a cross-platform fitness application.'
       },
       {
         name: 'Backend Systems',
         src: 'images/database.png',
-        description: 'Engineered the backend infrastructure for a Library Management System by designing and implementing a relational SQLite database. Built normalized schemas, managed data through SQL operations, and developed queries to handle book inventories, student records, and loan transactions. This project demonstrates backend development principles, database management, and efficient data processing for real-world applications.'
+        description: 'Engineered the backend infrastructure for a Library Management System.'
       }
     ]
   }
@@ -359,52 +357,37 @@ function initGallery() {
     if (!buttons.length) return;
 
     buttons.forEach(button => {
-        // Extract category from the onclick attribute
-        const onclickAttr = button.getAttribute('onclick');
-        if (onclickAttr) {
-            const match = onclickAttr.match(/openGalleryModal\(\'([^\\\\]+)\'\)/);
-            if (match && match[1]) {
-                const category = match[1];
-                button.addEventListener("click", function () {
-                    openGallery(category);
-                });
-                // Remove the inline onclick handler
-                button.removeAttribute('onclick');
+        // Find category from data-manus_click_id or text or parent context
+        // But the most reliable is the original onclick mapping
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const text = button.parentElement.querySelector('h3').textContent.trim().toLowerCase();
+            let category = '';
+            if (text.includes('cybersecurity')) category = 'cybersecurity';
+            else if (text.includes('networking')) category = 'networking';
+            else if (text.includes('digital literacy')) category = 'digital-literacy';
+            else if (text.includes('edtech')) category = 'edtech-stem';
+            else if (text.includes('av integration')) category = 'av-integration';
+            else if (text.includes('development')) category = 'development';
+            
+            if (category) {
+                openGallery(category);
             }
-        }
-    });
-
-    // Add event listeners for category filtering buttons within the gallery modal
-    const categoryFilterButtons = document.querySelectorAll('.gallery-filter-btn');
-    if (categoryFilterButtons.length) {
-        categoryFilterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const filterCategory = button.dataset.category;
-                filterGalleryImages(filterCategory);
-                categoryFilterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-            });
         });
-    }
+        // Remove the inline onclick handler to prevent double execution
+        button.removeAttribute('onclick');
+    });
 }
 
 function openGallery(category) {
-    if (
-        typeof galleryData === "undefined" ||
-        !galleryData[category]
-    ) {
-        console.error("Gallery not found:", category);
-        return;
-    }
+    if (!galleryData[category]) return;
+    
     currentGallery = galleryData[category].images;
     const modal = document.getElementById("galleryModal");
     const modalTitle = document.getElementById("modalTitle");
-    const grid = document.getElementById("galleryImages"); // Changed from galleryImagesGrid
+    const grid = document.getElementById("galleryImages");
 
-    if (!modal || !modalTitle || !grid) {
-        console.error("One or more gallery modal elements not found.");
-        return;
-    }
+    if (!modal || !modalTitle || !grid) return;
 
     modalTitle.textContent = galleryData[category].title;
     grid.innerHTML = "";
@@ -414,27 +397,15 @@ function openGallery(category) {
         card.className = "gallery-image-card";
         card.innerHTML = `
             <div class="gallery-image-wrapper">
-                <img
-                    class="gallery-image"
-                    src="${image.src}"
-                    alt="${image.name}"
-                    loading="lazy">
+                <img class="gallery-image" src="${image.src}" alt="${image.name}" loading="lazy">
                 <div class="gallery-image-overlay">
-                    <p class="gallery-image-description">
-                        ${image.description}
-                    </p>
-                    <span class="gallery-view-hint">
-                        Click to View
-                    </span>
+                    <p class="gallery-image-description">${image.description}</p>
+                    <span class="gallery-view-hint">Click to View</span>
                 </div>
             </div>
-            <h4 class="gallery-image-name">
-                ${image.name}
-            </h4>
+            <h4 class="gallery-image-name">${image.name}</h4>
         `;
-        card.addEventListener("click", () => {
-            openLightbox(index);
-        });
+        card.addEventListener("click", () => openLightbox(index));
         grid.appendChild(card);
     });
 
@@ -442,293 +413,147 @@ function openGallery(category) {
     document.body.style.overflow = "hidden";
 }
 
-function filterGalleryImages(category) {
-    const grid = document.getElementById("galleryImages");
-    if (!grid) {
-        console.error("Gallery images grid not found.");
-        return;
-    }
-    grid.innerHTML = ""; // Clear current images
-
-    const imagesToDisplay = galleryData[category] ? galleryData[category].images : [];
-
-    imagesToDisplay.forEach((image, index) => {
-        const card = document.createElement("div");
-        card.className = "gallery-image-card";
-        card.innerHTML = `
-            <div class="gallery-image-wrapper">
-                <img
-                    class="gallery-image"
-                    src="${image.src}"
-                    alt="${image.name}"
-                    loading="lazy">
-                <div class="gallery-image-overlay">
-                    <p class="gallery-image-description">
-                        ${image.description}
-                    </p>
-                    <span class="gallery-view-hint">
-                        Click to View
-                    </span>
-                </div>
-            </div>
-            <h4 class="gallery-image-name">
-                ${image.name}
-            </h4>
-        `;
-        card.addEventListener("click", () => {
-            openLightbox(index);
-        });
-        grid.appendChild(card);
-    });
-}
-
-function closeGalleryModal() { // Renamed to match existing HTML inline handler
+function closeGalleryModal() {
     const modal = document.getElementById("galleryModal");
-    if (!modal) return;
-    modal.style.display = "none";
-    document.body.style.overflow = "";
+    if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+    }
 }
 
-/* Close Button */
-document.addEventListener("click", function (e) {
-    if (
-        e.target.classList.contains("modal-close")
-    ) {
+// Global modal close listeners
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("modal-close")) {
+        closeGalleryModal();
+    }
+    const modal = document.getElementById("galleryModal");
+    if (modal && e.target === modal) {
         closeGalleryModal();
     }
 });
 
-/* Click Outside */
-window.addEventListener("click", function (e) {
-    const modal =
-        document.getElementById("galleryModal");
-    if (
-        modal &&
-        e.target === modal
-    ) {
-        closeGalleryModal();
-    }
-});
-
-/* ============================================================LIGHTBOX============================================================ */
+/* ===================== LIGHTBOX ===================== */
 function initLightbox() {
-    // No specific initialization needed here, as event listeners are added globally or on elements directly.
+    const closeBtn = document.getElementById("lightboxClose");
+    const nextBtn = document.getElementById("lightboxNext");
+    const prevBtn = document.getElementById("lightboxPrev");
+    const lightbox = document.getElementById("galleryLightbox");
+
+    if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+    if (nextBtn) nextBtn.addEventListener("click", nextImage);
+    if (prevBtn) prevBtn.addEventListener("click", previousImage);
+    if (lightbox) {
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+    }
 }
 
 function openLightbox(index) {
     if (!currentGallery.length) return;
     currentGalleryIndex = index;
     const lightbox = document.getElementById("galleryLightbox");
-    const image = document.getElementById("lightboxImage");
-    const title = document.getElementById("lightboxTitle");
-    const description = document.getElementById("lightboxDescription");
-    const counter = document.getElementById("lightboxCounter");
-    if (
-        !lightbox ||
-        !image ||
-        !title ||
-        !description ||
-        !counter
-    ) {
-        console.error("One or more lightbox elements not found.");
-        return;
-    }
+    if (!lightbox) return;
+    
     updateLightbox();
     lightbox.style.display = "flex";
     document.body.style.overflow = "hidden";
 }
 
 function updateLightbox() {
-    if (!currentGallery.length) return;
     const imageData = currentGallery[currentGalleryIndex];
     const image = document.getElementById("lightboxImage");
     const title = document.getElementById("lightboxTitle");
-    const description = document.getElementById("lightboxDescription");
+    const desc = document.getElementById("lightboxDescription");
     const counter = document.getElementById("lightboxCounter");
-    if (
-        !image ||
-        !title ||
-        !description ||
-        !counter
-    ) {
-        console.error("One or more lightbox elements not found during update.");
-        return;
+
+    if (image) {
+        image.src = imageData.src;
+        image.alt = imageData.name;
     }
-    image.src = imageData.src;
-    image.alt = imageData.name; // Corrected from imageData.title to imageData.name
-    title.textContent = imageData.name; // Corrected from imageData.title to imageData.name
-    description.textContent =
-        imageData.description;
-    counter.textContent =
-        (currentGalleryIndex + 1) +
-        " / " +
-        currentGallery.length;
+    if (title) title.textContent = imageData.name;
+    if (desc) desc.textContent = imageData.description;
+    if (counter) counter.textContent = `${currentGalleryIndex + 1} / ${currentGallery.length}`;
 }
 
 function closeLightbox() {
-    const lightbox =
-        document.getElementById("galleryLightbox");
-    if (!lightbox) return;
-    lightbox.style.display = "none";
-    document.body.style.overflow = "";
+    const lightbox = document.getElementById("galleryLightbox");
+    if (lightbox) {
+        lightbox.style.display = "none";
+        document.body.style.overflow = "";
+    }
 }
 
 function nextImage() {
     if (!currentGallery.length) return;
-    currentGalleryIndex++;
-    if (currentGalleryIndex >= currentGallery.length) {
-        currentGalleryIndex = 0;
-    }
+    currentGalleryIndex = (currentGalleryIndex + 1) % currentGallery.length;
     updateLightbox();
 }
 
 function previousImage() {
     if (!currentGallery.length) return;
-    currentGalleryIndex--;
-    if (currentGalleryIndex < 0) {
-        currentGalleryIndex =
-            currentGallery.length - 1;
-    }
+    currentGalleryIndex = (currentGalleryIndex - 1 + currentGallery.length) % currentGallery.length;
     updateLightbox();
 }
 
-/* ===================================LIGHTBOX KEYBOARD SUPPORT========================================== */
-document.addEventListener("keydown", function (event) {
-    const lightbox =
-        document.getElementById("galleryLightbox");
-    if (
-        !lightbox ||
-        lightbox.style.display !== "flex"
-    ) {
-        return;
-    }
-    switch (event.key) {
-        case "Escape":
-            closeLightbox();
-            break;
-        case "ArrowRight":
-            nextImage();
-            break;
-        case "ArrowLeft":
-            previousImage();
-            break;
-    }
+/* ===================== KEYBOARD SUPPORT ===================== */
+document.addEventListener("keydown", (e) => {
+    const lightbox = document.getElementById("galleryLightbox");
+    if (!lightbox || lightbox.style.display !== "flex") return;
+
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") nextImage();
+    if (e.key === "ArrowLeft") previousImage();
 });
 
-/* ===================================LIGHTBOX BUTTONS ================================================== */
-const nextButton =
-    document.getElementById("lightboxNext");
-if (nextButton) {
-    nextButton.addEventListener(
-        "click",
-        nextImage
-    );
-}
-const previousButton =
-    document.getElementById("lightboxPrev");
-if (previousButton) {
-    previousButton.addEventListener(
-        "click",
-        previousImage
-    );
-}
-const closeButton =
-    document.getElementById("lightboxClose");
-if (closeButton) {
-    closeButton.addEventListener(
-        "click",
-        closeLightbox
-    );
-}
-const lightbox =
-    document.getElementById("galleryLightbox");
-if (lightbox) {
-    lightbox.addEventListener(
-        "click",
-        function (e) {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
-        }
-    );
-}
-
-/* ===================== INITIALIZATIONS ===================== */
-function initScrollReveal() {
-  const revealElements = document.querySelectorAll(".about-text, .skill-card, .tool-card, .project-variation, .gallery-card, .case-study-card, .cert-card, .testimonial-card, .blog-card");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-        entry.target.style.transition = `all 0.6s ease ${index * 0.1}s`;
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  revealElements.forEach(el => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(30px)";
-    observer.observe(el);
-  });
-}
-
-function initSmoothScroll() {
-  document.querySelectorAll("a[href^=\"#\"]").forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        const navHeight = document.querySelector(".navbar").offsetHeight;
-        window.scrollTo({
-          top: target.offsetTop - navHeight,
-          behavior: "smooth"
-        });
-      }
-    });
-  });
-}
-
-function setFooterYear() {
-  const yearEl = document.getElementById("footerYear");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-}
-
-// Alternative for keyboard support in mobile phones (swipe gestures)
+/* ===================== MOBILE GESTURES ===================== */
 function addMobileLightboxGestures() {
     const lightbox = document.getElementById("galleryLightbox");
     if (!lightbox) return;
 
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    lightbox.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-    });
-
-    lightbox.addEventListener('touchmove', (e) => {
-        touchEndX = e.touches[0].clientX;
-    });
-
-    lightbox.addEventListener('touchend', () => {
-        if (lightbox.style.display === "flex") { // Only act if lightbox is open
-            if (touchEndX < touchStartX - 50) { // Swiped left
-                nextImage();
-            } else if (touchEndX > touchStartX + 50) { // Swiped right
-                previousImage();
-            }
-        }
-        // Reset touch positions
-        touchStartX = 0;
-        touchEndX = 0;
-    });
-
-    // Close on tap outside image for mobile
-    lightbox.addEventListener('click', function(e) {
-        if (e.target === lightbox) {
-            closeLightbox();
-        }
+    let startX = 0;
+    lightbox.addEventListener('touchstart', (e) => startX = e.touches[0].clientX);
+    lightbox.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) nextImage();
+        else if (endX - startX > 50) previousImage();
     });
 }
 
+/* ===================== OTHER UTILS ===================== */
+function initScrollReveal() {
+    const elements = document.querySelectorAll(".about-text, .skill-card, .tool-card, .project-variation, .gallery-card, .case-study-card, .cert-card, .testimonial-card, .blog-card");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                entry.target.style.transition = `all 0.6s ease ${index * 0.1}s`;
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    elements.forEach(el => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(30px)";
+        observer.observe(el);
+    });
+}
 
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                const navHeight = document.querySelector(".navbar")?.offsetHeight || 0;
+                window.scrollTo({ top: target.offsetTop - navHeight, behavior: "smooth" });
+            }
+        });
+    });
+}
+
+function setFooterYear() {
+    const yearEl = document.getElementById("footerYear");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+}
