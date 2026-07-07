@@ -113,70 +113,174 @@ function showProjectCategory(project) {
 /* ===================== GALLERY DATA (EXACT ORIGINAL CONTENT) ===================== */
 const galleryData = {
   cybersecurity: {
-    title: 'Cybersecurity',
-    images: [
-      { name: 'Penetration Testing', src: 'images/pentest.png', description: 'Hands-on penetration testing in a controlled lab environment' },
-      { name: 'Password Cracking', src: 'images/password.png', description: 'Password security analysis and testing in a controlled lab environment' },
-      { name: 'Vulnerability Scanning', src: 'images/vulnerability.png', description: 'Systematic vulnerability scanning in a controlled lab environment' },
-      { name: 'Network Security', src: 'images/network security.png', description: 'Network security in a controlled lab environment' },
-      { name: 'Threat Analysis', src: 'images/threat.png', description: 'Security threat identification in a controlled lab environment' },
-      { name: 'Firewall Configuration', src: 'images/firewall.png', description: 'Firewall setup and management in a controlled lab environment' }
-    ]
-  },
-  networking: {
-  title: 'Networking',
+    title: cybersecurity: {
+  title: 'Cybersecurity',
   images: [
-    { name: 'Enterprise Topology Design', src: 'images/network topology.png', description: 'Engineered a scalable enterprise network architecture in Cisco Packet Tracer, incorporating redundancy and optimized routing protocols for high availability.' },
-    { name: 'VLAN Segmentation', src: 'images/vlan configuration.png', description: 'Implemented logical network segmentation through VLANs to enhance security and reduce broadcast traffic across departmental boundaries.' },
-    { name: 'Trunking & Link Aggregation', src: 'images/trunk configuration.png', description: 'Configured 802.1Q trunking and EtherChannel to maximize bandwidth and ensure seamless communication between core and distribution layer switches.' },
-    { name: 'Inter-VLAN Routing', src: 'images/router configuration.png', description: 'Optimized internal traffic flow using Router-on-a-Stick and Layer 3 switching techniques to provide secure, high-speed routing between isolated network segments.' },
-    { name: 'Network Troubleshooting', src: 'images/network troubleshooting.png', description: 'Diagnosed and resolved complex connectivity issues using a systematic OSI-model approach, minimizing downtime and improving overall network performance.' },
-    { name: 'Wireless Infrastructure', src: 'images/wireless.png', description: 'Deployed secure WPA3-protected wireless networks with optimized Access Point placement to ensure comprehensive coverage and seamless roaming for mobile users.' }
+    {
+      name: 'Penetration Testing',
+      src: 'images/pentest.png',
+      description: 'Executed targeted penetration tests using Kali Linux, performing anonymous SMB enumeration and service reconnaissance to identify exploitable vulnerabilities within network shares and services.'
+    },
+    {
+      name: 'Password Security Analysis',
+      src: 'images/password.png',
+      description: 'Conducted password hash cracking exercises using John the Ripper against various hash types, demonstrating the critical importance of strong password policies and multi-factor authentication.'
+    },
+    {
+      name: 'Vulnerability Assessment',
+      src: 'images/vulnerability.png',
+      description: 'Performed comprehensive vulnerability scans with Nmap, identifying critical exposures such as web server misconfigurations (e.g., Apache byte-range DoS) and SMB vulnerabilities, along with potential administrative access points.'
+    },
+    {
+      name: 'Network Security Monitoring',
+      src: 'images/network security.png',
+      description: 'Utilized Nmap for host discovery and service version detection across network segments, identifying open ports (e.g., SSH, HTTP, JDBC) and their associated software versions to assess potential attack surfaces.'
+    },
+    {
+      name: 'Web Application Threat Analysis',
+      src: 'images/threat.png',
+      description: 'Conducted web server vulnerability assessments using Nikto, uncovering critical misconfigurations (e.g., missing X-Frame-Options header) and identifying accessible administrative paths, which could lead to sensitive data exposure.'
+    },
+    {
+      name: 'Firewall Configuration & Management',
+      src: 'images/firewall.png',
+      description: 'Implemented and managed Uncomplicated Firewall (UFW) rules on Linux systems, configuring precise inbound/outbound traffic policies (e.g., allowing SSH, denying FTP/SMB) to establish robust host-based network defenses.'
+    }
   ]
 },
 
+  networking: {
+  title: 'Networking',
+  images: [
+    {
+      name: 'Enterprise Network Topology Design',
+      src: 'images/network topology.png',
+      description: 'Designed and simulated a multi-VLAN enterprise network topology in Cisco Packet Tracer, integrating routers, core switches, and departmental PCs (Admin, Finance, IT) with a central primary server for robust connectivity.'
+    },
+    {
+      name: 'VLAN Segmentation & Configuration',
+      src: 'images/vlan configuration.png',
+      description: 'Configured and verified VLANs (e.g., VLAN10, VLAN20, VLAN30) on Cisco switches within a simulated enterprise environment, ensuring logical separation of departmental traffic for enhanced security and performance.'
+    },
+    {
+      name: 'Trunking & Inter-VLAN Routing',
+      src: 'images/trunk configuration.png',
+      description: 'Implemented 802.1Q trunking protocols on switch interfaces and configured Router-on-a-Stick for efficient inter-VLAN routing, enabling seamless communication across segmented networks.'
+    },
+    {
+      name: 'Router Interface Management',
+      src: 'images/router configuration.png',
+      description: 'Managed and configured router interfaces, including assigning IP addresses and verifying operational status, to ensure proper routing and connectivity within complex network architectures.'
+    },
+    {
+      name: 'Network Troubleshooting & Diagnostics',
+      src: 'images/network troubleshooting.png',
+      description: 'Performed systematic network diagnostics and troubleshooting to resolve connectivity issues, utilizing command-line tools and network analysis techniques to restore optimal network functionality.'
+    },
+    {
+      name: 'Wireless Network Deployment',
+      src: 'images/wireless.png',
+      description: 'Deployed and configured secure wireless networks within Cisco Packet Tracer, integrating wireless routers and validating client connectivity through successful ping tests to ensure reliable access.'
+    }
+  ]
+},
   'digital-literacy': {
     title: 'Digital Literacy',
     images: [
-      { name: 'Kolibri Installation & Configuration', src: 'images/kolibri.png', description: 'Configured and managed Kolibri offline learning servers, providing learners and teachers with access to interactive educational content and digital learning resources without internet access.' },
-      { name: 'Offline Educational Content Distribution', src: 'images/phet.png', description: 'Provided learners with access to offline digital learning resources through Kolibri, including interactive simulations and educational materials that support self-paced learning without internet access.' },
-      { name: 'Resource Usage Monitoring & Learning Analytics', src: 'images/areslogs.jpeg', description: 'Analyzed platform usage data to understand learner engagement, identify popular content, and monitor the effectiveness of digital learning resources.' },
-      { name: 'Learner Device Engagement', src: 'images/digitalliteracy.png', description: 'Supported technology-enabled learning environments where learners actively utilized digital devices to access educational content, complete learning activities, and build digital competencies.' },
-      { name: 'Computer Lab Setup & Digital Learning Environment', src: 'images/lab.png', description: 'Created a technology-enabled learning space that empowers students to access digital tools, educational resources and technology-enhanced learning opportunities. ' },
-      { name: 'Digital Literacy Training', src: 'images/digital training.png', description: 'Conducted hands-on ARES training sessions for learners and teachers, equipping them with practical digital skills and guiding them on how to access, manage, and utilize digital learning resources effectively.' }
+      { name: 'Kolibri Installation & Configuration', 
+       src: 'images/kolibri.png', 
+       description: 'Configured and managed Kolibri offline learning servers, providing learners and teachers with access to interactive educational content and digital learning resources without internet access.'
+      },
+      { name: 'Offline Educational Content Distribution', 
+       src: 'images/phet.png', 
+       description: 'Provided learners with access to offline digital learning resources through Kolibri, including interactive simulations and educational materials that support self-paced learning without internet access.' 
+      },
+      { name: 'Resource Usage Monitoring & Learning Analytics',
+       src: 'images/areslogs.jpeg', 
+       description: 'Analyzed platform usage data to understand learner engagement, identify popular content, and monitor the effectiveness of digital learning resources.'
+      },
+      { name: 'Learner Device Engagement', 
+       src: 'images/digitalliteracy.png', 
+       description: 'Supported technology-enabled learning environments where learners actively utilized digital devices to access educational content, complete learning activities, and build digital competencies.'
+      },
+      { name: 'Computer Lab Setup & Digital Learning Environment', 
+       src: 'images/lab.png', 
+       description: 'Created a technology-enabled learning space that empowers students to access digital tools, educational resources and technology-enhanced learning opportunities. '
+      },
+      { name: 'Digital Literacy Training',
+       src: 'images/digital training.png',
+       description: 'Conducted hands-on ARES training sessions for learners and teachers, equipping them with practical digital skills and guiding them on how to access, manage, and utilize digital learning resources effectively.' 
+      }
     ]
   },
   'edtech-stem': {
     title: 'EdTech & STEM',
     images: [
-      { name: 'Scratch Programming', src: 'images/Scratch.png', description: 'Developed Math Quiz Challenge ; an interactive educational game developed in Scratch that helps learners strengthen their arithmetic skills through engaging, game-based learning. The application presents multiple mathematics questions, evaluates user responses in real time, provides immediate feedback, and tracks the learner\'s score using variables and conditional logic. Designed to promote computational thinking and digital literacy, the project demonstrates the use of Scratch programming to create an interactive and enjoyable classroom learning experience' },
-      { name: 'PhET Interactive Simulations', src: 'images/phet sim.png', description: 'Integrated PhET Interactive Simulations into STEM to provide learners with virtual experiments in Physics, Chemistry, Biology, and Mathematics, enhancing conceptual understanding through inquiry-based and hands-on digital learning.' },
-      { name: 'LED Traffic Light', src: 'images/arduino.png', description: 'Designed and programmed an Arduino-based traffic light system using LEDs to simulate real-world traffic signal operation. The project applies embedded programming concepts such as digital outputs, timing sequences, and control logic to demonstrate the fundamentals of automation and intelligent traffic management systems.' },
-      { name: 'Autonomous Robot Brain Simulator', src: 'images/robot.png', description: 'Designed and programmed an Arduino-based autonomous robot controller capable of detecting obstacles using an HC-SR04 ultrasonic sensor. The system continuously measures the distance to nearby objects and makes autonomous decisions to move forward, stop, or turn. LED indicators simulate robot actions, demonstrating the core principles of robotics, embedded systems, sensor integration, and autonomous decision-making.' },
-      { name: 'Student Grade Predictor', src: 'images/mlearning.png', description: 'Developed a beginner-friendly machine learning application developed in Python that analyzes historical student performance data to predict final academic grades. Built using Pandas, Scikit-learn, and Matplotlib, the project demonstrates the complete machine learning workflow, including data preparation, model training, prediction, evaluation, and visualization. It highlights practical experience in predictive analytics and the application of artificial intelligence techniques to solve real-world educational challenges.' },
-      { name: 'Learning Platform', src: '', description: 'Interactive online learning platform' }
+      { name: 'Scratch Programming', 
+       src: 'images/Scratch.png', 
+       description: 'Developed Math Quiz Challenge ; an interactive educational game developed in Scratch that helps learners strengthen their arithmetic skills through engaging, game-based learning. The application presents multiple mathematics questions, evaluates user responses in real time, provides immediate feedback, and tracks the learner's score using variables and conditional logic. Designed to promote computational thinking and digital literacy, the project demonstrates the use of Scratch programming to create an interactive and enjoyable classroom learning experience' 
+      },
+      { name: 'PhET Interactive Simulations', 
+       src: 'images/phet sim.png',  
+       description: 'Integrated PhET Interactive Simulations into STEM to provide learners with virtual experiments in Physics, Chemistry, Biology, and Mathematics, enhancing conceptual understanding through inquiry-based and hands-on digital learning.' },
+      { name: 'LED Traffic Light',
+       src: 'images/arduino.png', 
+       description: 'Designed and programmed an Arduino-based traffic light system using LEDs to simulate real-world traffic signal operation. The project applies embedded programming concepts such as digital outputs, timing sequences, and control logic to demonstrate the fundamentals of automation and intelligent traffic management systems.' },
+      { name: 'Autonomous Robot Brain Simulator', 
+       src: 'images/robot.png', 
+       description: 'Designed and programmed an Arduino-based autonomous robot controller capable of detecting obstacles using an HC-SR04 ultrasonic sensor. The system continuously measures the distance to nearby objects and makes autonomous decisions to move forward, stop, or turn. LED indicators simulate robot actions, demonstrating the core principles of robotics, embedded systems, sensor integration, and autonomous decision-making.' },
+      { name: 'Student Grade Predictor', 
+       src: 'images/mlearning.png', 
+       description: 'Developed a beginner-friendly machine learning application developed in Python that analyzes historical student performance data to predict final academic grades. Built using Pandas, Scikit-learn, and Matplotlib, the project demonstrates the complete machine learning workflow, including data preparation, model training, prediction, evaluation, and visualization. It highlights practical experience in predictive analytics and the application of artificial intelligence techniques to solve real-world educational challenges.' },
+      { name: 'Learning Platform', 
+       src: '',
+       description: 'Interactive online learning platform' }
     ]
   },
   'av-integration': {
     title: 'AV Integration',
     images: [
-      { name: 'Smart Conference Room', src: 'images/avsetup.jpg', description: 'Integrated high-definition video conferencing systems with automated environmental controls to create a frictionless, professional meeting experience.' },
-      { name: 'Control Systems', src: 'images/control.jpeg', description: 'Professional audio control and signal management solutions featuring wireless microphone systems, powered mixers, and integrated PA equipment for seamless sound distribution, real-time audio control, and reliable event communication.' },
-      { name: 'Event Setup', src: 'images/setup.png', description: 'Professional conference event setup featuring integrated projection, display, and sound systems, designed to deliver clear presentations, effective communication, and a seamless meeting experience in a premium venue environment.' },
-      { name: 'Projection Systems', src: 'images/projector.jpeg', description: 'Professional projector and interactive presentation system setup featuring high-definition projection, a VTouch smart podium, and integrated audiovisual equipment designed to deliver seamless presentations, training sessions, and conference experiences' },
-      { name: 'Interactive Presentation Solutions', src: 'images/presentation.png', description: 'Deployment and configuration of smart presentation systems, including interactive digital podiums and touchscreen displays, designed to enhance presentations, meetings, conferences, and training sessions through seamless content delivery and user engagement.' },
-      { name: 'Video Conferencing', src: '', description: 'Video conferencing room setup' }
+      { name: 'Smart Conference Room',
+       src: 'images/avsetup.jpg', 
+       description: 'Integrated high-definition video conferencing systems with automated environmental controls to create a frictionless, professional meeting experience.' },
+      { name: 'Control Systems', 
+       src: 'images/control.jpeg', 
+       description: 'Professional audio control and signal management solutions featuring wireless microphone systems, powered mixers, and integrated PA equipment for seamless sound distribution, real-time audio control, and reliable event communication.' },
+      { name: 'Event Setup', 
+       src: 'images/setup.png', 
+       description: 'Professional conference event setup featuring integrated projection, display, and sound systems, designed to deliver clear presentations, effective communication, and a seamless meeting experience in a premium venue environment.' },
+      { name: 'Projection Systems', 
+       src: 'images/projector.jpeg',
+       description: 'Professional projector and interactive presentation system setup featuring high-definition projection, a VTouch smart podium, and integrated audiovisual equipment designed to deliver seamless presentations, training sessions, and conference experiences' },
+      { name: 'Interactive Presentation Solutions',
+       src: 'images/presentation.png', 
+       description: 'Deployment and configuration of smart presentation systems, including interactive digital podiums and touchscreen displays, designed to enhance presentations, meetings, conferences, and training sessions through seamless content delivery and user engagement.' },
+      { name: 'Video Conferencing', 
+       src: '',
+       description: 'Video conferencing room setup' }
     ]
   },
  development: {
   title: 'Development',
   images: [
-    { name: 'Web Development', src: 'images/web.png', description: 'Developed responsive, user-centric web applications using modern JavaScript frameworks, focusing on performance, accessibility, and clean code architecture.' },
-    { name: 'User Experience (UX) Design', src: 'images/ui.png', description: 'Created intuitive user interfaces and interactive prototypes in Figma, prioritizing user-flow efficiency and consistent visual branding across all platforms.' },
-    { name: 'Relational Database Engineering', src: 'images/backend.png', description: 'Architected optimized MySQL database schemas with complex relational mapping to ensure data integrity and high-speed query performance for data-heavy applications.' },
-    { name: 'RESTful API Architecture', src: 'images/api.png', description: 'Engineered secure backend APIs using Flask, implementing JSON-based endpoints for seamless data exchange between client-side interfaces and server-side logic.' },
-    { name: 'Cross-Platform Mobile Dev', src: 'images/App development.png', description: 'Built and deployed a high-performance fitness application using React and TypeScript, leveraging Capacitor for native-like performance on both Android and iOS.' },
-    { name: 'Scalable Backend Systems', src: 'images/database.png', description: 'Designed robust server-side architectures that handle complex data aggregation and user authentication while maintaining low latency under high traffic loads.' }
+    { name: 'Web Development', 
+     src: 'images/web.png', 
+     description: 'Developed responsive, user-centric web applications using modern JavaScript frameworks, focusing on performance, accessibility, and clean code architecture.' },
+    { name: 'User Experience (UX) Design', 
+     src: 'images/ui.png', 
+     description: 'Created intuitive user interfaces and interactive prototypes in Figma, prioritizing user-flow efficiency and consistent visual branding across all platforms.' },
+    { name: 'Relational Database Engineering', 
+     src: 'images/backend.png', 
+     description: 'Architected optimized MySQL database schemas with complex relational mapping to ensure data integrity and high-speed query performance for data-heavy applications.' },
+    { name: 'RESTful API Architecture', 
+     src: 'images/api.png',
+     description: 'Engineered secure backend APIs using Flask, implementing JSON-based endpoints for seamless data exchange between client-side interfaces and server-side logic.' },
+    { name: 'Cross-Platform Mobile Dev', 
+     src: 'images/App development.png',
+     description: 'Built and deployed a high-performance fitness application using React and TypeScript, leveraging Capacitor for native-like performance on both Android and iOS.' },
+    { name: 'Scalable Backend Systems', 
+     src: 'images/database.png',
+     description: 'Designed robust server-side architectures that handle complex data aggregation and user authentication while maintaining low latency under high traffic loads.' }
   ]
 }
 };
