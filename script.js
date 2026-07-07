@@ -267,7 +267,7 @@ const galleryData = {
       {
         name: 'Student Grade Predictor',
         src: 'images/mlearning.png',
-        description: 'Developed a machine learning application in Python to predict academic grades.'
+        description: 'Developed a machine learning application built with Python and Scikit-learn that predicts student performance based on academic metrics and visualizes study patterns using Matplotlib.'
       },
       {
         name: '',
