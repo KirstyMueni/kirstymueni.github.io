@@ -178,22 +178,22 @@ const galleryData = {
       {
         name: 'Enterprise Network Topology Design',
         src: 'images/network topology.png',
-        description: 'Designed and simulated a multi-VLAN enterprise network topology in Cisco Packet Tracer, integrating routers, core switches, and departmental PCs (Admin, Finance, IT) with a central primary server for robust connectivity.'
+        description: 'Designed and simulated a secure enterprise network using Cisco Packet Tracer. The network topology incorporates a router, core switch, access switch, centralized server, and departmental workstations for Administration, Finance, and IT. The project demonstrates network segmentation, device interconnectivity, infrastructure planning, and scalable LAN design to support reliable communication and efficient resource sharing.'
       },
       {
-        name: 'VLAN Segmentation & Configuration',
+        name: 'VLAN Configuration and Network Segmentation',
         src: 'images/vlan configuration.png',
-        description: 'Configured and verified VLANs (e.g., VLAN10, VLAN20, VLAN30) on Cisco switches within a simulated enterprise environment, ensuring logical separation of departmental traffic for enhanced security and performance.'
+        description: 'Configured and verified Virtual Local Area Networks (VLANs) on a Cisco switch using the Cisco IOS Command Line Interface (CLI). Created multiple VLANs to logically separate network traffic for different departments, improving network organization, security, and performance. Verified VLAN assignments and switch configuration using IOS commands to ensure proper implementation and connectivity.'
       },
       {
-        name: 'Trunking & Inter-VLAN Routing',
+        name: 'Trunking ',
         src: 'images/trunk configuration.png',
-        description: 'Implemented 802.1Q trunking protocols on switch interfaces and configured Router-on-a-Stick for efficient inter-VLAN routing, enabling seamless communication across segmented networks.'
+        description: 'Configured and verified trunk links on a Cisco switch using the Cisco IOS Command Line Interface (CLI). Enabled IEEE 802.1Q trunking to allow multiple VLANs to communicate across interconnected switches while maintaining logical network segmentation. Verified trunk status, allowed VLANs, and interface configurations using Cisco diagnostic commands to ensure reliable and efficient network communication.'
       },
       {
-        name: 'Router Interface Management',
+        name: 'Inter-VLAN Routing Configuration',
         src: 'images/router configuration.png',
-        description: 'Managed and configured router interfaces, including assigning IP addresses and verifying operational status, to ensure proper routing and connectivity within complex network architectures.'
+        description: 'Configured inter-VLAN routing using the Router-on-a-Stick architecture in Cisco Packet Tracer. Created router subinterfaces for multiple VLANs, assigned IP addresses as default gateways, and verified interface status using Cisco IOS CLI commands. This implementation enables seamless communication between segmented VLANs while maintaining a structured and secure enterprise network design.'
       },
       {
         name: 'Network Troubleshooting & Diagnostics',
