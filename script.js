@@ -323,7 +323,7 @@ const galleryData = {
       {
         name: 'User Experience (UX) Design',
         src: 'images/ui.png',
-        description: 'Created intuitive user interfaces and interactive prototypes in Figma, prioritizing user-flow efficiency and consistent visual branding across all platforms.'
+        description: 'Designed a clean and responsive portfolio landing page that emphasizes usability, visual hierarchy, and brand consistency. The layout strategically guides users through key sections using structured spacing, typography, and call-to-action buttons while ensuring a seamless experience across different screen sizes.'
       },
       {
         name: 'Relational Database Engineering',
