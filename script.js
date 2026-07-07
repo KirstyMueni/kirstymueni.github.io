@@ -222,19 +222,28 @@ const galleryData = {
       },
       { name: 'PhET Interactive Simulations', 
        src: 'images/phet sim.png',  
-       description: 'Integrated PhET Interactive Simulations into STEM to provide learners with virtual experiments in Physics, Chemistry, Biology, and Mathematics, enhancing conceptual understanding through inquiry-based and hands-on digital learning.' },
+       description: 'Integrated PhET Interactive Simulations into STEM to provide learners with virtual experiments in Physics, Chemistry, Biology, and Mathematics, enhancing conceptual understanding through inquiry-based and hands-on digital learning.' 
+      },
+      
       { name: 'LED Traffic Light',
        src: 'images/arduino.png', 
-       description: 'Designed and programmed an Arduino-based traffic light system using LEDs to simulate real-world traffic signal operation. The project applies embedded programming concepts such as digital outputs, timing sequences, and control logic to demonstrate the fundamentals of automation and intelligent traffic management systems.' },
+       description: 'Designed and programmed an Arduino-based traffic light system using LEDs to simulate real-world traffic signal operation. The project applies embedded programming concepts such as digital outputs, timing sequences, and control logic to demonstrate the fundamentals of automation and intelligent traffic management systems.' 
+      },
+      
       { name: 'Autonomous Robot Brain Simulator', 
        src: 'images/robot.png', 
-       description: 'Designed and programmed an Arduino-based autonomous robot controller capable of detecting obstacles using an HC-SR04 ultrasonic sensor. The system continuously measures the distance to nearby objects and makes autonomous decisions to move forward, stop, or turn. LED indicators simulate robot actions, demonstrating the core principles of robotics, embedded systems, sensor integration, and autonomous decision-making.' },
+       description: 'Designed and programmed an Arduino-based autonomous robot controller capable of detecting obstacles using an HC-SR04 ultrasonic sensor. The system continuously measures the distance to nearby objects and makes autonomous decisions to move forward, stop, or turn. LED indicators simulate robot actions, demonstrating the core principles of robotics, embedded systems, sensor integration, and autonomous decision-making.' 
+      },
+
       { name: 'Student Grade Predictor', 
        src: 'images/mlearning.png', 
-       description: 'Developed a beginner-friendly machine learning application developed in Python that analyzes historical student performance data to predict final academic grades. Built using Pandas, Scikit-learn, and Matplotlib, the project demonstrates the complete machine learning workflow, including data preparation, model training, prediction, evaluation, and visualization. It highlights practical experience in predictive analytics and the application of artificial intelligence techniques to solve real-world educational challenges.' },
+       description: 'Developed a beginner-friendly machine learning application developed in Python that analyzes historical student performance data to predict final academic grades. Built using Pandas, Scikit-learn, and Matplotlib, the project demonstrates the complete machine learning workflow, including data preparation, model training, prediction, evaluation, and visualization. It highlights practical experience in predictive analytics and the application of artificial intelligence techniques to solve real-world educational challenges.'
+      },
+     
       { name: 'Learning Platform', 
        src: '',
-       description: 'Interactive online learning platform' }
+       description: 'Interactive online learning platform'
+      }
     ]
   },
   'av-integration': {
