@@ -143,32 +143,32 @@ const galleryData = {
       {
         name: 'Penetration Testing',
         src: 'images/pentest.png',
-        description: 'Executed targeted penetration tests using Kali Linux, performing anonymous SMB enumeration and service reconnaissance to identify exploitable vulnerabilities within network shares and services.'
+        description: 'Performed SMB enumeration using Kali Linux to identify publicly accessible Samba shares on a target system during an authorized penetration testing lab. Leveraged the smbclient utility to enumerate available network shares, verify anonymous access, and gather information about shared resources. This exercise demonstrates practical skills in network enumeration, information gathering, and identifying potential security exposures within Windows and Linux file-sharing services.'
       },
       {
-        name: 'Password Security Analysis',
+        name: 'Password Cracking and Hash Analysis',
         src: 'images/password.png',
-        description: 'Conducted password hash cracking exercises using John the Ripper against various hash types, demonstrating the critical importance of strong password policies and multi-factor authentication.'
+        description: 'Performed password cracking in a controlled penetration testing lab using John the Ripper on Kali Linux. Conducted offline dictionary attacks against MD5 password hashes with the RockYou wordlist to identify weak credentials and evaluate password security. The project demonstrates practical skills in password auditing, hash analysis, and credential security assessment while emphasizing the importance of strong password policies.'
       },
       {
         name: 'Vulnerability Assessment',
         src: 'images/vulnerability.png',
-        description: 'Performed comprehensive vulnerability scans with Nmap, identifying critical exposures such as web server misconfigurations (e.g., Apache byte-range DoS) and SMB vulnerabilities, along with potential administrative access points.'
+        description: 'Performed a vulnerability assessment using Nmap NSE (Nmap Scripting Engine) to identify open ports, enumerate services, and detect known security vulnerabilities. The scan revealed HTTP and SMB services, checked for common web application vulnerabilities, and identified potential CVEs, demonstrating practical experience in reconnaissance and vulnerability analysis during penetration testing.'
       },
       {
         name: 'Network Security Monitoring',
         src: 'images/network security.png',
-        description: 'Utilized Nmap for host discovery and service version detection across network segments, identifying open ports (e.g., SSH, HTTP, JDBC) and their associated software versions to assess potential attack surfaces.'
+        description: 'I performed network reconnaissance using Nmap to discover active hosts and enumerate open ports and running services. This process helped me gather critical information about the target network, forming the foundation for further penetration testing and vulnerability assessment.'
       },
       {
         name: 'Web Application Threat Analysis',
         src: 'images/threat.png',
-        description: 'Conducted web server vulnerability assessments using Nikto, uncovering critical misconfigurations (e.g., missing X-Frame-Options header) and identifying accessible administrative paths, which could lead to sensitive data exposure.'
+        description: 'I performed a web application vulnerability assessment using Nikto to identify security weaknesses on a target web server. The scan revealed missing security headers, exposed administrative directories, and configuration files that could increase the application's attack surface, helping me evaluate and document potential security risks.'
       },
       {
-        name: 'Firewall Configuration & Management',
+        name: 'Firewall Hardening and Network Security Configuration',
         src: 'images/firewall.png',
-        description: 'Implemented and managed Uncomplicated Firewall (UFW) rules on Linux systems, configuring precise inbound/outbound traffic policies (e.g., allowing SSH, denying FTP/SMB) to establish robust host-based network defenses.'
+        description: 'Implemented firewall policies on Kali Linux to mitigate potential attack vectors by restricting unnecessary services and enforcing secure network access rules. This exercise demonstrates hands-on experience in port management, firewall administration and defensive cybersecurity practices.'
       }
     ]
   },
