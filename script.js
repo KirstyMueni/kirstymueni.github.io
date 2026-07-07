@@ -1,113 +1,212 @@
 /**
  * ============================================================
- * KIRSTY MUENI PORTFOLIO 
+ * KIRSTY MUENI PORTFOLIO
  * ============================================================
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize Lucide icons
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
-  }
+document.addEventListener("DOMContentLoaded", () => {
 
-  initTheme();
-  initMobileMenu();
-  initProjectButtons();
-  initScrollReveal();
-  setFooterYear();
-  initSmoothScroll();
+    // Lucide Icons
+    if (typeof lucide !== "undefined") {
+        lucide.createIcons();
+    }
+
+    initTheme();
+    initMobileMenu();
+    initProjectButtons();
+
+    initGallery();
+    initLightbox();
+
+    initScrollReveal();
+    initSmoothScroll();
+    setFooterYear();
+
 });
+/* ===================== THEME ===================== */
 
-/* ===================== THEME TOGGLE ===================== */
 function initTheme() {
-  const html = document.documentElement;
-  const toggleBtn = document.getElementById('themeToggle');
-  const savedTheme = localStorage.getItem('km-theme') || 'light';
 
-  html.setAttribute('data-theme', savedTheme);
-  updateThemeIcon(toggleBtn, savedTheme);
+    const html = document.documentElement;
+    const toggleBtn = document.getElementById("themeToggle");
 
-  toggleBtn.addEventListener('click', () => {
-    const current = html.getAttribute('data-theme');
-    const next = current === 'light' ? 'dark' : 'light';
-    html.setAttribute('data-theme', next);
-    localStorage.setItem('km-theme', next);
-    updateThemeIcon(toggleBtn, next);
+    if (!toggleBtn) return;
 
-    if (typeof lucide !== 'undefined') {
-      lucide.createIcons();
-    }
-  });
-}
+    const savedTheme =
+        localStorage.getItem("km-theme") || "light";
 
-function updateThemeIcon(btn, theme) {
-  const icon = btn.querySelector('i');
-  if (icon) {
-    icon.setAttribute('data-lucide', theme === 'dark' ? 'sun' : 'moon');
-    if (typeof lucide !== 'undefined') {
-      lucide.createIcons();
-    }
-  }
-}
+    html.setAttribute("data-theme", savedTheme);
 
-/* ===================== MOBILE MENU ===================== */
-function initMobileMenu() {
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('navMenu');
-  const navLinks = document.querySelectorAll('.nav-link');
+    updateThemeIcon(toggleBtn, savedTheme);
 
-  if (!hamburger) return;
+    toggleBtn.addEventListener("click", () => {
 
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
-  });
+        const current =
+            html.getAttribute("data-theme");
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-      hamburger.classList.remove('active');
+        const next =
+            current === "light"
+                ? "dark"
+                : "light";
+
+        html.setAttribute("data-theme", next);
+
+        localStorage.setItem(
+            "km-theme",
+            next
+        );
+
+        updateThemeIcon(toggleBtn, next);
+
+        if (typeof lucide !== "undefined") {
+            lucide.createIcons();
+        }
+
     });
-  });
 
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.navbar-container')) {
-      navMenu.classList.remove('active');
-      hamburger.classList.remove('active');
+}
+
+function updateThemeIcon(button, theme) {
+
+    if (!button) return;
+
+    const icon = button.querySelector("i");
+
+    if (!icon) return;
+
+    icon.setAttribute(
+        "data-lucide",
+        theme === "dark"
+            ? "sun"
+            : "moon"
+    );
+
+    if (typeof lucide !== "undefined") {
+        lucide.createIcons();
     }
-  });
+
+}
+/* ===================== MOBILE MENU ===================== */
+
+function initMobileMenu() {
+
+    const hamburger =
+        document.getElementById("hamburger");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+    const navLinks =
+        document.querySelectorAll(".nav-link");
+
+    if (!hamburger || !navMenu) return;
+
+    hamburger.addEventListener("click", () => {
+
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+
+        });
+
+    });
+
+    document.addEventListener("click", e => {
+
+        if (
+            !e.target.closest(".navbar")
+        ) {
+
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+
+        }
+
+    });
+
 }
 
 /* ===================== PROJECT BUTTONS ===================== */
 function initProjectButtons() {
-  const projectBtns = document.querySelectorAll('.project-btn');
-  
-  if (projectBtns.length > 0) {
-    const firstProject = projectBtns[0].getAttribute('data-project');
-    projectBtns[0].classList.add('active');
-    showProjectCategory(firstProject);
-  }
 
-  projectBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const project = btn.getAttribute('data-project');
-      projectBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      showProjectCategory(project);
+    const buttons =
+        document.querySelectorAll(".project-btn");
+
+    const sections =
+        document.querySelectorAll(".project-category");
+
+    if (!buttons.length || !sections.length) return;
+
+    // Hide every category first
+
+    sections.forEach(section => {
+
+        section.style.display = "none";
+
     });
-  });
+
+    // Show first category
+
+    const first =
+        buttons[0].dataset.project;
+
+    showProjectCategory(first);
+
+    buttons[0].classList.add("active");
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            buttons.forEach(btn =>
+                btn.classList.remove("active")
+            );
+
+            button.classList.add("active");
+
+            showProjectCategory(
+                button.dataset.project
+            );
+
+        });
+
+    });
+
 }
 
-function showProjectCategory(project) {
-  const projectCategories = document.querySelectorAll('.project-category');
-  projectCategories.forEach(category => {
-    if (category.getAttribute('data-project') === project) {
-      category.style.display = 'block';
-      category.style.animation = 'fadeIn 0.5s ease';
-    } else {
-      category.style.display = 'none';
-    }
-  });
+function showProjectCategory(projectName) {
+
+    const sections =
+        document.querySelectorAll(".project-category");
+
+    sections.forEach(section => {
+
+        if (
+            section.dataset.project === projectName
+        ) {
+
+            section.style.display = "block";
+            section.style.animation =
+                "fadeIn .4s ease";
+
+        }
+
+        else {
+
+            section.style.display = "none";
+
+        }
+
+    });
+
 }
 
 /* ===================== GALLERY DATA===================== */
@@ -295,91 +394,384 @@ function showProjectCategory(project) {
 
 
 /* ===================== GALLERY MODAL ===================== */
-let currentGalleryImages = [];
-let currentLightboxIndex = 0;
 
-function openGalleryModal(category) {
-  const modal = document.getElementById('galleryModal');
-  const title = document.getElementById('modalTitle');
-  const container = document.getElementById('galleryImages');
-  
-  const data = galleryData[category];
-  if (!data) return;
+let currentGallery = [];
+let currentGalleryIndex = 0;
 
-  title.textContent = data.title;
-  container.innerHTML = '';
-  currentGalleryImages = data.images;
+/*
+Expected galleryData format
 
-  data.images.forEach((img, index) => {
-    const card = document.createElement('div');
-    card.className = 'gallery-image-card';
-    card.onclick = () => openLightbox(index);
-    
-    card.innerHTML = `
-      <div class="gallery-image-wrapper">
-        <img src="${img.src || 'images/placeholder.png'}" alt="${img.name}" class="gallery-image">
-        <div class="gallery-image-overlay">
-          <p class="gallery-image-description">${img.description}</p>
-          <span class="gallery-view-hint">Click to expand</span>
-        </div>
-      </div>
-      <h4 class="gallery-image-name">${img.name}</h4>
-    `;
-    container.appendChild(card);
-  });
+const galleryData = {
+    branding: [...],
+    uiux: [...],
+    print: [...]
+};
 
-  modal.style.display = 'block';
-  document.body.style.overflow = 'hidden';
+Each image should have
+
+{
+    src: "images/example.jpg",
+    title: "Example",
+    description: "Description"
+}
+*/
+
+function initGallery() {
+
+    const buttons = document.querySelectorAll(".gallery-btn");
+
+    if (!buttons.length) return;
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            const category =
+                this.dataset.gallery;
+
+            openGallery(category);
+
+        });
+
+    });
+
 }
 
-function closeGalleryModal() {
-  document.getElementById('galleryModal').style.display = 'none';
-  document.body.style.overflow = 'auto';
+function openGallery(category) {
+
+    if (
+        typeof galleryData === "undefined" ||
+        !galleryData[category]
+    ) {
+        console.error("Gallery not found:", category);
+        return;
+    }
+
+    currentGallery = galleryData[category];
+
+    const modal =
+        document.getElementById("galleryModal");
+
+    const title =
+        document.getElementById("galleryTitle");
+
+    const grid =
+        document.getElementById("galleryImagesGrid");
+
+    if (!modal || !title || !grid) return;
+
+    title.textContent =
+        category.replace(/-/g, " ");
+
+    grid.innerHTML = "";
+
+    currentGallery.forEach((image, index) => {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "gallery-image-card";
+
+        card.innerHTML = `
+
+            <div class="gallery-image-wrapper">
+
+                <img
+                    class="gallery-image"
+                    src="${image.src}"
+                    alt="${image.title}"
+                    loading="lazy">
+
+                <div class="gallery-image-overlay">
+
+                    <p class="gallery-image-description">
+
+                        ${image.description}
+
+                    </p>
+
+                    <span class="gallery-view-hint">
+
+                        Click to View
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <h4 class="gallery-image-name">
+
+                ${image.title}
+
+            </h4>
+
+        `;
+
+        card.addEventListener("click", () => {
+
+            openLightbox(index);
+
+        });
+
+        grid.appendChild(card);
+
+    });
+
+    modal.style.display = "block";
+
+    document.body.style.overflow = "hidden";
+
 }
 
-/* ===================== LIGHTBOX ===================== */
+function closeGallery() {
+
+    const modal =
+        document.getElementById("galleryModal");
+
+    if (!modal) return;
+
+    modal.style.display = "none";
+
+    document.body.style.overflow = "";
+
+}
+
+/* Close Button */
+
+document.addEventListener("click", function (e) {
+
+    if (
+        e.target.classList.contains("modal-close")
+    ) {
+
+        closeGallery();
+
+    }
+
+});
+
+/* Click Outside */
+
+window.addEventListener("click", function (e) {
+
+    const modal =
+        document.getElementById("galleryModal");
+
+    if (
+        modal &&
+        e.target === modal
+    ) {
+
+        closeGallery();
+
+    }
+
+});
+
+/* ============================================================LIGHTBOX============================================================ */
+
 function openLightbox(index) {
-  currentLightboxIndex = index;
-  updateLightbox();
-  document.getElementById('galleryLightbox').style.display = 'flex';
-  document.addEventListener('keydown', lightboxKeyHandler);
-}
 
-function closeLightbox() {
-  document.getElementById('galleryLightbox').style.display = 'none';
-  document.removeEventListener('keydown', lightboxKeyHandler);
+    if (!currentGallery.length) return;
+
+    currentGalleryIndex = index;
+
+    const lightbox = document.getElementById("galleryLightbox");
+    const image = document.getElementById("lightboxImage");
+    const title = document.getElementById("lightboxTitle");
+    const description = document.getElementById("lightboxDescription");
+    const counter = document.getElementById("lightboxCounter");
+
+    if (
+        !lightbox ||
+        !image ||
+        !title ||
+        !description ||
+        !counter
+    ) {
+        return;
+    }
+
+    updateLightbox();
+
+    lightbox.style.display = "flex";
+
+    document.body.style.overflow = "hidden";
+
 }
 
 function updateLightbox() {
-  const img = currentGalleryImages[currentLightboxIndex];
-  const lightboxImg = document.getElementById('lightboxImage');
-  const lightboxTitle = document.getElementById('lightboxTitle');
-  const lightboxDesc = document.getElementById('lightboxDescription');
-  const lightboxCounter = document.getElementById('lightboxCounter');
 
-  lightboxImg.src = img.src || 'images/placeholder.png';
-  lightboxTitle.textContent = img.name;
-  lightboxDesc.textContent = img.description;
-  lightboxCounter.textContent = `${currentLightboxIndex + 1} / ${currentGalleryImages.length}`;
+    if (!currentGallery.length) return;
+
+    const imageData = currentGallery[currentGalleryIndex];
+
+    const image = document.getElementById("lightboxImage");
+    const title = document.getElementById("lightboxTitle");
+    const description = document.getElementById("lightboxDescription");
+    const counter = document.getElementById("lightboxCounter");
+
+    if (
+        !image ||
+        !title ||
+        !description ||
+        !counter
+    ) {
+        return;
+    }
+
+    image.src = imageData.src;
+    image.alt = imageData.title;
+
+    title.textContent = imageData.title;
+
+    description.textContent =
+        imageData.description;
+
+    counter.textContent =
+        (currentGalleryIndex + 1) +
+        " / " +
+        currentGallery.length;
+
 }
 
-function lightboxNavigate(step) {
-  currentLightboxIndex = (currentLightboxIndex + step + currentGalleryImages.length) % currentGalleryImages.length;
-  updateLightbox();
+function closeLightbox() {
+
+    const lightbox =
+        document.getElementById("galleryLightbox");
+
+    if (!lightbox) return;
+
+    lightbox.style.display = "none";
+
+    document.body.style.overflow = "";
+
 }
 
-function lightboxKeyHandler(e) {
-  if (e.key === 'ArrowLeft') lightboxNavigate(-1);
-  else if (e.key === 'ArrowRight') lightboxNavigate(1);
-  else if (e.key === 'Escape') closeLightbox();
+function nextImage() {
+
+    if (!currentGallery.length) return;
+
+    currentGalleryIndex++;
+
+    if (currentGalleryIndex >= currentGallery.length) {
+
+        currentGalleryIndex = 0;
+
+    }
+
+    updateLightbox();
+
 }
 
-window.onclick = (event) => {
-  const modal = document.getElementById('galleryModal');
-  const lightbox = document.getElementById('galleryLightbox');
-  if (event.target === modal) closeGalleryModal();
-  if (event.target === lightbox) closeLightbox();
-};
+function previousImage() {
+
+    if (!currentGallery.length) return;
+
+    currentGalleryIndex--;
+
+    if (currentGalleryIndex < 0) {
+
+        currentGalleryIndex =
+            currentGallery.length - 1;
+
+    }
+
+    updateLightbox();
+
+}
+
+/* ===================================LIGHTBOX KEYBOARD SUPPORT========================================== */
+
+document.addEventListener("keydown", function (event) {
+
+    const lightbox =
+        document.getElementById("galleryLightbox");
+
+    if (
+        !lightbox ||
+        lightbox.style.display !== "flex"
+    ) {
+        return;
+    }
+
+    switch (event.key) {
+
+        case "Escape":
+            closeLightbox();
+            break;
+
+        case "ArrowRight":
+            nextImage();
+            break;
+
+        case "ArrowLeft":
+            previousImage();
+            break;
+
+    }
+
+});
+
+/* ===================================LIGHTBOX BUTTONS ================================================== */
+
+const nextButton =
+    document.getElementById("lightboxNext");
+
+if (nextButton) {
+
+    nextButton.addEventListener(
+        "click",
+        nextImage
+    );
+
+}
+
+const previousButton =
+    document.getElementById("lightboxPrev");
+
+if (previousButton) {
+
+    previousButton.addEventListener(
+        "click",
+        previousImage
+    );
+
+}
+
+const closeButton =
+    document.getElementById("lightboxClose");
+
+if (closeButton) {
+
+    closeButton.addEventListener(
+        "click",
+        closeLightbox
+    );
+
+}
+
+const lightbox =
+    document.getElementById("galleryLightbox");
+
+if (lightbox) {
+
+    lightbox.addEventListener(
+        "click",
+        function (e) {
+
+            if (e.target === lightbox) {
+
+                closeLightbox();
+
+            }
+
+        }
+    );
+
+}
 
 /* ===================== INITIALIZATIONS ===================== */
 function initScrollReveal() {
