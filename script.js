@@ -255,22 +255,22 @@ const galleryData = {
         description: 'Integrated PhET Interactive Simulations into STEM learning.'
       },
       {
-        name: 'LED Traffic Light',
-        src: 'images/arduino.png',
-        description: 'Designed and programmed an Arduino-based traffic light system.'
-      },
-      {
-        name: 'Robot Brain Simulator',
+        name: 'Arduino Simulation',
         src: 'images/robot.png',
         description: 'Designed and programmed an Arduino-based autonomous robot controller.'
       },
       {
-        name: 'Student Grade Predictor',
+        name: '3D Design & Modelling',
+        src: 'images/robot.png',
+        description: 'Designed a smart eco-friendly house that promotes sustainable living through innovative and environmentally friendly solutions.'
+      },
+      {
+        name: 'Machine Learning',
         src: 'images/mlearning.png',
         description: 'Developed a machine learning application built with Python and Scikit-learn that predicts student performance based on academic metrics and visualizes study patterns using Matplotlib.'
       },
       {
-        name: '',
+        name: 'Mobile App Development (MIT App Inventor)',
         src: '',
         description: ''
       }
