@@ -261,7 +261,7 @@ const galleryData = {
       },
       {
         name: '3D Design & Modelling',
-        src: 'images/robot.png',
+        src: 'images/3d.png',
         description: 'Designed a smart eco-friendly house that promotes sustainable living through innovative and environmentally friendly solutions.'
       },
       {
