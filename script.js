@@ -528,19 +528,12 @@ function initHeroTyping() {
     new Typed("#typed-text", {
 
         strings: [
-            "IT And Systems Support Specialist",
-            "Cybersecurity Practitioner",
-            "Cisco Ethical Hacking Certified",
-            "Digital Literacy Specialist",
-            "STEM And EDTECH Advocate"
-        ],
-
-        typeSpeed: 55,
-        backSpeed: 35,
-        backDelay: 1800,
-        loop: true,
-        showCursor: true,
-        cursorChar: "|"
+             "IT & Systems Support | Digital Literacy Specialist | Cybersecurity Practitioner (Cisco Ethical Hacking Certified) | STEM & EdTech Advocate"
+    ],
+    typeSpeed: 35,
+    backSpeed: 15,
+    backDelay: 2500,
+    loop: true
 
     });
 
