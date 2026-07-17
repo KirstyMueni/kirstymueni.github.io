@@ -2002,6 +2002,7 @@ body {
     max-width:1200px;
     margin:0 auto;
     padding:2rem 0;
+   padding-bottom:80px;
 }
 
 /* Vertical Line */
@@ -2020,7 +2021,7 @@ body {
 
     width:4px;
 
-     height:calc(100% - 100px);
+    height:calc(100% - 80px);
 
     background:#C4622D;
 
