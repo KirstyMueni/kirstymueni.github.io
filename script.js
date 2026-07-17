@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setFooterYear();
     addMobileLightboxGestures();
     initHeroTyping(); 
-    initBackToTop();
+    initBackToTopButton();
 });
 
 /* ===================== THEME ===================== */
