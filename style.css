@@ -1711,3 +1711,91 @@ body {
     font-size: 0.95rem;
   }
 }
+/* ==========================
+   BACK TO TOP BUTTON
+========================== */
+
+.back-to-top {
+
+    position: fixed;
+
+    bottom: 30px;
+    right: 30px;
+
+    width: 54px;
+    height: 54px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    background: var(--primary-color);
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.18),
+        0 0 20px rgba(37,99,235,.25);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+
+    z-index: 999;
+
+}
+
+/* Visible State */
+
+.back-to-top.show{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+/* Hover Animation */
+
+.back-to-top:hover{
+
+    transform:translateY(-6px) rotate(-8deg);
+
+    box-shadow:
+        0 14px 28px rgba(0,0,0,.22),
+        0 0 28px rgba(37,99,235,.45);
+
+}
+
+/* Click Effect */
+
+.back-to-top:active{
+
+    transform:scale(.92);
+
+}
+
+/* Lucide Icon */
+
+.back-to-top svg{
+
+    width:24px;
+    height:24px;
+
+    stroke-width:2.5;
+
+}
