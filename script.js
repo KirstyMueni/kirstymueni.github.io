@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initSmoothScroll();
     setFooterYear();
     addMobileLightboxGestures();
+    initHeroTyping(); 
 });
 
 /* ===================== THEME ===================== */
@@ -519,7 +520,31 @@ function addMobileLightboxGestures() {
         else if (endX - startX > 50) previousImage();
     });
 }
+/* ===================== HERO GESTURES ===================== */
+function initHeroTyping() {
 
+    if (typeof Typed === "undefined") return;
+
+    new Typed("#typed-text", {
+
+        strings: [
+            "IT & Systems Support Specialist",
+            "Digital Literacy Specialist",
+            "Cybersecurity Practitioner",
+            "Cisco Ethical Hacking Certified",
+            "STEM & EdTech Advocate"
+        ],
+
+        typeSpeed: 55,
+        backSpeed: 35,
+        backDelay: 1800,
+        loop: true,
+        showCursor: true,
+        cursorChar: "|"
+
+    });
+
+}
 /* ===================== OTHER UTILS ===================== */
 function initScrollReveal() {
     const elements = document.querySelectorAll(".about-text, .skill-card, .tool-card, .project-variation, .gallery-card, .case-study-card, .cert-card, .testimonial-card, .blog-card");
