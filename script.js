@@ -528,10 +528,10 @@ function initHeroTyping() {
     new Typed("#typed-text", {
 
         strings: [
-            "IT & Systems Support Specialist",
+            "IT And Systems Support Specialist",
             "Cybersecurity Practitioner(Cisco Ethical Hacking Certified)",
             "Digital Literacy Specialist",
-            "STEM & EDTECH Advocate"
+            "STEM And EDTECH Advocate"
         ],
 
         typeSpeed: 55,
