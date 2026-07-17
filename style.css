@@ -1736,12 +1736,16 @@ body {
 
     cursor: pointer;
 
-    background: var(--primary-color);
-    color: white;
+      background: linear-gradient(
+        135deg,
+        #D9783F,
+        #C4622D
+    );
+    color: #fff;
 
     box-shadow:
-        0 8px 20px rgba(0,0,0,.18),
-        0 0 20px rgba(37,99,235,.25);
+        0 10px 25px rgba(196, 98, 45, 0.35),
+        0 0 20px rgba(196, 98, 45, 0.25);
 
     opacity: 0;
     visibility: hidden;
@@ -1772,7 +1776,8 @@ body {
 /* Hover Animation */
 
 .back-to-top:hover{
-
+    background: #FDF3EC;
+    color: #A94F23;
     transform:translateY(-6px) rotate(-8deg);
 
     box-shadow:
