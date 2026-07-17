@@ -1736,7 +1736,7 @@ body {
 
     cursor: pointer;
 
-    background: #C4622D;
+    background: var(--primary-color);
     color: white;
 
     box-shadow:
