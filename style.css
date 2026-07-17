@@ -1321,7 +1321,24 @@ body {
   margin-bottom: 1.5rem;
   opacity: 0.95;
 }
+.cert-badge{
+    display:inline-block;
+    padding:8px 16px;
+    border-radius:50px;
+    font-size:.85rem;
+    font-weight:600;
+    margin:15px 0;
+}
 
+.completed{
+    background:#DDF6E5;
+    color:#1E7A39;
+}
+
+.progress{
+    background:#FFF0E5;
+    color:#C4622D;
+}
 .cert-link {
   color: #FFFFFF;
   text-decoration: none;
