@@ -1399,17 +1399,13 @@ body {
 
     margin-bottom:20px;
 
-    filter:grayscale(100%);
-
-    transition:all .4s ease;
+    transition:transform .4s ease;
 
 }
 
 /* Logo Animation */
 
 .partner-card:hover .partner-logo{
-
-    filter:grayscale(0%);
 
     transform:scale(1.08);
 
