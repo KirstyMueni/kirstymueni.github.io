@@ -1775,17 +1775,21 @@ body {
 
 /* Hover Animation */
 
-.back-to-top:hover{
-    background: #FDF3EC;
-    color: #A94F23;
-    transform:translateY(-6px) rotate(-8deg);
+.back-to-top:hover {
+
+    transform: translateY(-6px) rotate(-8deg);
+
+    background: linear-gradient(
+        135deg,
+        #E18652,
+        #D9783F
+    );
 
     box-shadow:
-        0 14px 28px rgba(0,0,0,.22),
-        0 0 28px rgba(37,99,235,.45);
+        0 16px 35px rgba(196, 98, 45, 0.45),
+        0 0 30px rgba(196, 98, 45, 0.40);
 
 }
-
 /* Click Effect */
 
 .back-to-top:active{
