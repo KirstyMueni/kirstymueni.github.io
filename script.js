@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setFooterYear();
     addMobileLightboxGestures();
     initHeroTyping(); 
+    initProficiencyBars();
     initBackToTopButton();
 });
 
@@ -537,6 +538,27 @@ function initHeroTyping() {
         loop: false
     });
 
+}
+/* ===================== PROFICIENCY BARS ANIMATION ===================== */
+function initProficiencyBars() {
+    const proficiencyItems = document.querySelectorAll(".proficiency-item");
+    if (!proficiencyItems.length) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const fill = entry.target.querySelector(".proficiency-fill");
+                if (fill && !fill.classList.contains("animated")) {
+                    fill.classList.add("animated");
+                    observer.unobserve(entry.target);
+                }
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    proficiencyItems.forEach(item => {
+        observer.observe(item);
+    });
 }
 
 /* ===================== BACK TO TOP BUTTON ===================== */
