@@ -1993,3 +1993,207 @@ body {
 .back-to-top:active {
   transform: translateY(-2px);
 }
+/* ==========================================================
+   PROFESSIONAL JOURNEY TIMELINE
+========================================================== */
+
+.timeline-container{
+    position:relative;
+    max-width:1200px;
+    margin:0 auto;
+    padding:2rem 0;
+}
+
+/* Vertical Line */
+
+.timeline-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    transform:translateX(-50%);
+
+    width:4px;
+
+    height:100%;
+
+    background:#C4622D;
+
+    border-radius:10px;
+
+}
+
+/* Timeline Item */
+
+.timeline-item{
+
+    position:relative;
+
+    width:50%;
+
+    margin-bottom:4rem;
+
+}
+
+/* Left */
+
+.timeline-item.left{
+
+    left:0;
+
+    padding-right:70px;
+
+}
+
+/* Right */
+
+.timeline-item.right{
+
+    left:50%;
+
+    padding-left:70px;
+
+}
+
+/* Orange Circle */
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:35px;
+
+    width:20px;
+
+    height:20px;
+
+    background:#C4622D;
+
+    border:5px solid #fff;
+
+    border-radius:50%;
+
+    box-shadow:0 0 15px rgba(196,98,45,.35);
+
+    z-index:2;
+
+}
+
+/* Left Circle */
+
+.timeline-item.left::before{
+
+    right:-10px;
+
+}
+
+/* Right Circle */
+
+.timeline-item.right::before{
+
+    left:-10px;
+
+}
+
+/* Card */
+
+.timeline-content{
+
+    background:#fff;
+
+    padding:2rem;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.35s ease;
+
+}
+
+/* Hover */
+
+.timeline-content:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.15);
+
+}
+
+/* Year Badge */
+
+.timeline-year{
+
+    display:inline-block;
+
+    padding:.45rem 1rem;
+
+    border-radius:50px;
+
+    background:#C4622D;
+
+    color:#fff;
+
+    font-weight:700;
+
+    margin-bottom:1rem;
+
+}
+
+/* Company */
+
+.timeline-company{
+
+    color:#C4622D;
+
+    font-weight:600;
+
+    margin-bottom:1rem;
+
+}
+
+/* Description */
+
+.timeline-content p{
+
+    line-height:1.8;
+
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.timeline-container::before{
+
+left:25px;
+
+}
+
+.timeline-item{
+
+width:100%;
+
+padding-left:70px;
+
+padding-right:0;
+
+left:0!important;
+
+}
+
+.timeline-item::before{
+
+left:15px;
+
+}
+
+}
