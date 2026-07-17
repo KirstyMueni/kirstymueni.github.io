@@ -533,7 +533,7 @@ function initHeroTyping() {
         ],
         typeSpeed: 35,
         showCursor: true,
-        cursorChar: "|",
+        cursorChar: "",
         loop: false
     });
 
