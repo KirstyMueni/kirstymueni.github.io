@@ -538,40 +538,26 @@ function initHeroTyping() {
     });
 
 }
-/* ===================== BACK TO TOP ===================== */
 
-function initBackToTop() {
-
-    const button = document.getElementById("backToTop");
-
-    if (!button) return;
-
+/* ===================== BACK TO TOP BUTTON ===================== */
+function initBackToTopButton() {
+    const backToTopBtn = document.getElementById("backToTopBtn");
+    if (!backToTopBtn) return;
+    
     window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 300) {
-
-            button.classList.add("show");
-
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add("show");
         } else {
-
-            button.classList.remove("show");
-
+            backToTopBtn.classList.remove("show");
         }
-
     });
-
-    button.addEventListener("click", () => {
-
+    
+    backToTopBtn.addEventListener("click", () => {
         window.scrollTo({
-
             top: 0,
-
             behavior: "smooth"
-
         });
-
     });
-
 }
 /* ===================== OTHER UTILS ===================== */
 function initScrollReveal() {
