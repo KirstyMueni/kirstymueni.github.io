@@ -529,7 +529,8 @@ function initHeroTyping() {
 
         strings: [
             "IT And Systems Support Specialist",
-            "Cybersecurity Practitioner(Cisco Ethical Hacking Certified)",
+            "Cybersecurity Practitioner",
+            "Cisco Ethical Hacking Certified",
             "Digital Literacy Specialist",
             "STEM And EDTECH Advocate"
         ],
