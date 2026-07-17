@@ -1346,7 +1346,9 @@ body {
 
 .logo-showcase{
 
-    margin-top:70px;
+    max-width:1200px;
+
+    margin:70px auto 0;
 
     display:flex;
 
@@ -1356,9 +1358,11 @@ body {
 
     align-items:center;
 
-    gap:70px 90px;
+    gap:60px 80px;   /* vertical | horizontal spacing */
 
 }
+
+/* Each logo */
 
 .logo-showcase a{
 
@@ -1370,38 +1374,28 @@ body {
 
     transition:.35s ease;
 
-    text-decoration:none;
-
 }
+
+/* Logo image */
 
 .partner-logo{
 
-    max-width:180px;
-
-    max-height:90px;
-
-    width:auto;
-
-    height:auto;
+    width:180px;      /* Increase logo size */
+    height:90px;
 
     object-fit:contain;
 
-    transition:transform .35s ease,
-               filter .35s ease,
-               opacity .35s ease;
-
-    opacity:.85;
+    transition:all .35s ease;
 
 }
+
+/* Hover */
 
 .logo-showcase a:hover .partner-logo{
 
     transform:scale(1.12);
 
-    opacity:1;
-
 }
-
 @media(max-width:768px){
 
 .logo-showcase{
