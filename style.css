@@ -315,64 +315,60 @@ body {
 /* ===================== SERVICES===================== */
 
 .services{
-
     padding:120px 0;
-
-    background:#FCFAF7;
-
+    background:linear-gradient(
+        180deg,
+        #FFFCF8 0%,
+        #FCFAF7 55%,
+        #F8F3EE 100%
+    );
 }
+
+/* Section Intro */
 
 .services .section-description{
-
     max-width:850px;
-
-    margin:0 auto 70px;
-
+    margin:0 auto 85px;
     text-align:center;
-
     color:#666;
-
     font-size:1.05rem;
-
     line-height:1.9;
-
 }
-
-/* Grid */
 
 .services-grid{
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:35px;
-
 }
-
-/* Card */
 
 .service-card{
 
     position:relative;
 
-    background:#fff;
+    background:#FFFEFC;
 
     padding:40px;
 
     border-radius:20px;
 
-    border:1px solid #EFE6DD;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.06);
-
-    transition:.35s ease;
+    border:1px solid rgba(196,98,45,.12);
 
     overflow:hidden;
 
+    backdrop-filter:blur(6px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.04),
+        0 20px 50px rgba(196,98,45,.05);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
 }
 
-/* Orange Hover Line */
+/* Orange Accent Line */
 
 .service-card::before{
 
@@ -394,7 +390,7 @@ body {
 
     transform-origin:left;
 
-    transition:.35s ease;
+    transition:transform .35s ease;
 
 }
 
@@ -408,31 +404,33 @@ body {
 
 .service-card:hover{
 
-    transform:translateY(-10px);
+    transform:translateY(-12px);
 
     border-color:#C4622D;
 
-    box-shadow:0 22px 45px rgba(196,98,45,.16);
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.06),
+        0 30px 70px rgba(196,98,45,.18);
 
 }
-
-/* Title */
 
 .service-card h3{
 
     font-family:'Cormorant Garamond', serif;
 
-    font-size:1.8rem;
+    font-size:1.85rem;
 
-    color:#222;
+    font-weight:700;
 
-    margin-bottom:18px;
+    color:#1F1F1F;
 
     line-height:1.3;
 
+    margin-bottom:18px;
+
 }
 
-/* Orange underline */
+/* Orange Underline */
 
 .service-card h3::after{
 
@@ -444,13 +442,13 @@ body {
 
     height:3px;
 
-    background:#C4622D;
-
     margin-top:14px;
+
+    background:#C4622D;
 
     border-radius:50px;
 
-    transition:.35s ease;
+    transition:width .35s ease;
 
 }
 
@@ -460,19 +458,17 @@ body {
 
 }
 
-/* Description */
-
 .service-card p{
 
     color:#555;
 
+    font-size:1rem;
+
     line-height:1.9;
 
-    margin-bottom:25px;
+    margin-bottom:28px;
 
 }
-
-/* Skill Tags */
 
 .service-tags{
 
@@ -480,81 +476,128 @@ body {
 
     flex-wrap:wrap;
 
-    gap:10px;
+    gap:12px;
 
 }
 
 .service-tags span{
 
-    background:#FCFAF7;
+    display:inline-flex;
 
-    color:#C4622D;
+    align-items:center;
 
-    border:1px solid #E8C9B6;
+    justify-content:center;
 
-    border-radius:30px;
-
-    padding:8px 16px;
-
-    font-size:.9rem;
-
-    font-weight:500;
-
-    transition:.3s ease;
-
-}
-
-.service-card:hover .service-tags span{
+    padding:9px 18px;
 
     background:#C4622D;
 
-    color:#fff;
+    color:#FFFFFF;
 
-    border-color:#C4622D;
+    border-radius:999px;
 
-}
+    font-size:.88rem;
 
-/* Tablet */
+    font-weight:600;
 
-@media(max-width:992px){
+    line-height:1.4;
 
-.services-grid{
+    white-space:nowrap;
 
-grid-template-columns:repeat(2,1fr);
+    box-shadow:0 4px 12px rgba(196,98,45,.18);
 
-}
-
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-.services{
-
-padding:90px 0;
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
 
 }
 
-.services-grid{
+/* Keep the same orange color */
 
-grid-template-columns:1fr;
+.service-tags span:hover{
 
-gap:25px;
+    transform:translateY(-3px);
 
-}
-
-.service-card{
-
-padding:30px;
+    box-shadow:0 8px 20px rgba(196,98,45,.28);
 
 }
 
-.service-card h3{
+@media (max-width:1100px){
 
-font-size:1.6rem;
+    .services-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
 
 }
+
+@media (max-width:768px){
+
+    .services{
+
+        padding:90px 0;
+
+    }
+
+    .services-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+    .service-card{
+
+        padding:30px;
+
+    }
+
+    .service-card h3{
+
+        font-size:1.6rem;
+
+    }
+
+    .services .section-description{
+
+        font-size:1rem;
+
+        margin-bottom:60px;
+
+    }
+
+}
+
+
+@media (max-width:480px){
+
+    .service-card{
+
+        padding:25px;
+
+    }
+
+    .service-card h3{
+
+        font-size:1.45rem;
+
+    }
+
+    .service-card p{
+
+        font-size:.95rem;
+
+    }
+
+    .service-tags span{
+
+        padding:8px 14px;
+
+        font-size:.8rem;
+
+    }
 
 }
 /* ===================== SKILLS SECTION ===================== */
