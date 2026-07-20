@@ -312,9 +312,7 @@ body {
   margin-bottom: 1.5rem;
   opacity: 0.95;
 }
-/* ==========================================================
-   SERVICES
-========================================================== */
+/* ===================== SERVICES===================== */
 
 .services{
 
@@ -334,13 +332,13 @@ body {
 
     color:#666;
 
-    line-height:1.9;
-
     font-size:1.05rem;
+
+    line-height:1.9;
 
 }
 
-/* GRID */
+/* Grid */
 
 .services-grid{
 
@@ -352,75 +350,81 @@ body {
 
 }
 
-/* CARD */
+/* Card */
 
 .service-card{
 
     position:relative;
 
-    background:#ffffff;
+    background:#fff;
 
-    padding:45px;
+    padding:40px;
 
-    border-radius:22px;
+    border-radius:20px;
 
     border:1px solid #EFE6DD;
 
-    overflow:hidden;
-
-    transition:all .35s ease;
-
     box-shadow:0 15px 35px rgba(0,0,0,.06);
 
-}
+    transition:.35s ease;
 
-/* HOVER */
-
-.service-card:hover{
-
-    transform:translateY(-12px);
-
-    border-color:#C4622D;
-
-    box-shadow:0 30px 60px rgba(196,98,45,.16);
+    overflow:hidden;
 
 }
 
-/* LARGE NUMBER */
+/* Orange Hover Line */
 
-.service-number{
+.service-card::before{
+
+    content:"";
 
     position:absolute;
 
-    bottom:18px;
+    top:0;
 
-    right:28px;
+    left:0;
 
-    font-family:'Cormorant Garamond', serif;
+    width:100%;
 
-    font-size:5rem;
+    height:4px;
 
-    font-weight:700;
+    background:#C4622D;
 
-    color:#C4622D;
+    transform:scaleX(0);
 
-    opacity:.08;
+    transform-origin:left;
 
-    pointer-events:none;
-
-    user-select:none;
+    transition:.35s ease;
 
 }
 
-/* TITLE */
+.service-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/* Hover */
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#C4622D;
+
+    box-shadow:0 22px 45px rgba(196,98,45,.16);
+
+}
+
+/* Title */
 
 .service-card h3{
 
     font-family:'Cormorant Garamond', serif;
 
-    font-size:1.75rem;
+    font-size:1.8rem;
 
-    color:#1f1f1f;
+    color:#222;
 
     margin-bottom:18px;
 
@@ -428,7 +432,7 @@ body {
 
 }
 
-/* Orange Line */
+/* Orange underline */
 
 .service-card h3::after{
 
@@ -444,9 +448,9 @@ body {
 
     margin-top:14px;
 
-    border-radius:30px;
+    border-radius:50px;
 
-    transition:.3s;
+    transition:.35s ease;
 
 }
 
@@ -456,45 +460,61 @@ body {
 
 }
 
-/* DESCRIPTION */
+/* Description */
 
 .service-card p{
 
     color:#555;
 
-    line-height:1.8;
+    line-height:1.9;
 
     margin-bottom:25px;
 
 }
 
-/* LIST */
+/* Skill Tags */
 
-.service-card ul{
+.service-tags{
 
-    margin:0;
+    display:flex;
 
-    padding-left:20px;
+    flex-wrap:wrap;
 
-}
-
-.service-card li{
-
-    margin-bottom:12px;
-
-    color:#444;
-
-    line-height:1.7;
+    gap:10px;
 
 }
 
-.service-card li::marker{
+.service-tags span{
+
+    background:#FCFAF7;
 
     color:#C4622D;
 
+    border:1px solid #E8C9B6;
+
+    border-radius:30px;
+
+    padding:8px 16px;
+
+    font-size:.9rem;
+
+    font-weight:500;
+
+    transition:.3s ease;
+
 }
 
-/* TABLET */
+.service-card:hover .service-tags span{
+
+    background:#C4622D;
+
+    color:#fff;
+
+    border-color:#C4622D;
+
+}
+
+/* Tablet */
 
 @media(max-width:992px){
 
@@ -506,7 +526,7 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
-/* MOBILE */
+/* Mobile */
 
 @media(max-width:768px){
 
@@ -526,13 +546,13 @@ gap:25px;
 
 .service-card{
 
-padding:35px;
+padding:30px;
 
 }
 
-.service-number{
+.service-card h3{
 
-font-size:4rem;
+font-size:1.6rem;
 
 }
 
