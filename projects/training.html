@@ -24,28 +24,20 @@
     .highlight-box strong { color: #9E4A1E; }
     .tools-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 20px; }
     .tools-row span { background: #C4622D; color: #fff; padding: 8px 16px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
-    .evidence-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin: 25px 0; }
+    .evidence-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin: 25px 0; }
     .evidence-grid figure { margin: 0; background: #fff8f3; border: 1px solid rgba(196,98,45,.18); border-radius: 12px; overflow: hidden; }
     .evidence-grid img { width: 100%; height: 200px; object-fit: contain; background: #fff; display: block; }
     .evidence-grid figcaption { padding: 12px 14px; font-size: .9rem; color: #555; }
     .back-row { margin-top: 55px; padding-top: 26px; border-top: 1px solid #e5e7eb; }
     .back-link { display: inline-block; color: #9E4A1E; font-weight: 700; text-decoration: none; cursor: pointer; }
     .back-link:hover { text-decoration: underline; }
-    @media (max-width: 600px) {
-      .hero-content, .project-content { padding: 35px 22px; }
-      .project-hero { min-height: 340px; }
-    }
+    @media (max-width: 600px) { .hero-content, .project-content { padding: 35px 22px; } .project-hero { min-height: 340px; } }
   </style>
 </head>
 <body>
   <main class="project-page">
     <header class="project-hero">
-      <img
-        src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1600&q=80"
-        alt="Learners in a digital literacy training session"
-        loading="eager"
-        onerror="this.onerror=null;this.src='https://placehold.co/1600x900/9E4A1E/ffffff?text=Digital+Literacy+Training';"
-      />
+      <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1600&q=80" alt="Learners in a digital literacy training session" loading="eager" onerror="this.onerror=null;this.src='https://placehold.co/1600x900/9E4A1E/ffffff?text=Digital+Literacy+Training';" />
       <div class="hero-content">
         <span class="project-category-tag">Digital Literacy</span>
         <h1>Digital Literacy Training &amp; Device Deployment Project</h1>
@@ -54,10 +46,13 @@
     </header>
 
     <article class="project-content">
-
       <h2>Project Overview</h2>
       <p>Supported digital literacy and educational technology initiatives under the African Ruggedized Education System (ARES) implementation at Ol Pejeta Conservancy.</p>
       <p>The project focused on digital skills training, educational device deployment, classroom technology support, and improving digital learning accessibility within underserved learning environments.</p>
+
+      <div class="highlight-box">
+        <strong>Key Focus:</strong> Empowering learners and educators through accessible digital education and technology support.
+      </div>
 
       <h2>Key Responsibilities</h2>
       <ul>
@@ -69,9 +64,15 @@
         <li>Promoted responsible and safe technology use.</li>
       </ul>
 
-      <div class="highlight-box">
-        <strong>Key Focus:</strong> Empowering learners and educators through accessible digital education and technology support.
-      </div>
+      <h2>Systems &amp; Technologies Deployed</h2>
+      <ul>
+        <li>ARES Educational Systems</li>
+        <li>Laptops &amp; Educational Tablets</li>
+        <li>Kolibri Learning Platform</li>
+        <li>Interactive Learning Platforms</li>
+        <li>Offline Learning Servers</li>
+        <li>Classroom Device Connectivity</li>
+      </ul>
 
       <h2>Tools &amp; Technologies Used</h2>
       <div class="tools-row">
@@ -82,6 +83,16 @@
         <span>Interactive Learning Platforms</span>
         <span>Google Workspace Tools</span>
       </div>
+
+      <h2>Training &amp; Deployment Activities</h2>
+      <ul>
+        <li>Setting up and configuring learning devices for classroom use</li>
+        <li>Delivering hands-on digital literacy sessions for learners and teachers</li>
+        <li>Guiding educators through device and platform use</li>
+        <li>Troubleshooting hardware and connectivity issues on-site</li>
+        <li>Reinforcing safe and responsible technology practices</li>
+        <li>Ensuring offline platforms remained accessible and functional</li>
+      </ul>
 
       <h2>Impact &amp; Outcomes</h2>
       <ul>
@@ -103,20 +114,28 @@
         </figure>
       </div>
 
+      <h2>Skills Demonstrated</h2>
+      <ul>
+        <li>Digital Literacy Training &amp; Facilitation</li>
+        <li>Device Deployment &amp; Configuration</li>
+        <li>Classroom Technology Integration</li>
+        <li>Technical Support &amp; Troubleshooting</li>
+        <li>Offline Platform Accessibility</li>
+        <li>User Guidance &amp; Safe-Use Education</li>
+      </ul>
+
+      <h2>Project Outcome</h2>
+      <p>This project strengthened practical experience in deploying educational technology and delivering digital literacy training in underserved environments. It also enhanced the ability to support educators and learners end-to-end, from device setup and platform access to hands-on training and ongoing technical assistance.</p>
+
       <div class="back-row">
         <a href="../index.html#projects" class="back-link">← Back to All Projects</a>
       </div>
     </article>
   </main>
-
   <script>
     (function () {
       var link = document.querySelector('.back-link');
-      if (link) {
-        link.addEventListener('click', function (e) {
-          if (history.length > 1) { e.preventDefault(); history.back(); }
-        });
-      }
+      if (link) { link.addEventListener('click', function (e) { if (history.length > 1) { e.preventDefault(); history.back(); } }); }
     })();
   </script>
 </body>
