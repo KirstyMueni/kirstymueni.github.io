@@ -1,260 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Threat Analysis & Response Project</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Threat Analysis & Response — Kirsty Mueni</title>
+  <meta name="description" content="Web application threat analysis with Nikto and defensive firewall hardening on Kali Linux to close identified attack vectors." />
   <style>
-    body{
-      font-family: Arial, sans-serif;
-      background:#f4f6f9;
-      margin:0;
-      padding:0;
-      color:#333;
-      line-height:1.7;
-    }
-
-    .container{
-      width:85%;
-      margin:40px auto;
-      background:white;
-      padding:40px;
-      border-radius:10px;
-      box-shadow:0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h1,h2,h3{
-      color:#1d3557;
-    }
-
-    h1{
-      text-align:center;
-      margin-bottom:40px;
-    }
-
-    ul{
-      padding-left:20px;
-    }
-
-    .section{
-      margin-bottom:40px;
-    }
-
-    code{
-      background:#eee;
-      padding:2px 6px;
-      border-radius:4px;
-    }
-
-    .highlight{
-      background:#eef5ff;
-      padding:15px;
-      border-left:5px solid #1d3557;
-      margin-top:15px;
-    }
-
-    .tag{
-      display:inline-block;
-      background:#1d3557;
-      color:white;
-      padding:6px 12px;
-      border-radius:20px;
-      margin:5px;
-      font-size:14px;
-    }
+    body { margin: 0; font-family: 'Nunito Sans', Arial, sans-serif; line-height: 1.7; color: #1f2937; background: #f8fafc; }
+    .project-page { max-width: 950px; margin: 0 auto; background: #ffffff; }
+    .project-hero { position: relative; width: 100%; min-height: 420px; display: flex; align-items: flex-end; color: #fff; overflow: hidden; background: #2E5339; }
+    .project-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+    .project-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(46,83,57,.95), rgba(46,83,57,.35)); z-index: 2; }
+    .hero-content { position: relative; z-index: 3; padding: 50px 35px; }
+    .project-category-tag { display: inline-block; background: #3E7B4F; color: #fff; font-weight: 700; padding: 6px 14px; border-radius: 999px; font-size: .85rem; margin-bottom: 18px; }
+    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; margin: 0 0 16px; }
+    .project-meta { color: #e3f3e8; font-size: .95rem; }
+    .project-content { padding: 45px 35px; }
+    .project-content h2 { font-family: 'Cormorant Garamond', Georgia, serif; color: #2E5339; margin-top: 42px; font-size: 1.7rem; line-height: 1.3; }
+    .project-content p { margin-bottom: 18px; font-size: 1.05rem; }
+    .project-content ul { padding-left: 22px; margin-bottom: 22px; }
+    .project-content li { margin-bottom: 10px; }
+    .highlight-box { background: #eef7f0; border-left: 5px solid #3E7B4F; padding: 22px; margin: 24px 0; border-radius: 10px; }
+    .highlight-box strong { color: #2E5339; }
+    .tools-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 20px; }
+    .tools-row span { background: #3E7B4F; color: #fff; padding: 8px 16px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
+    .evidence-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin: 25px 0; }
+    .evidence-grid figure { margin: 0; background: #f3faf5; border: 1px solid rgba(62,123,79,.18); border-radius: 12px; overflow: hidden; }
+    .evidence-grid img { width: 100%; height: 200px; object-fit: contain; background: #fff; display: block; }
+    .evidence-grid figcaption { padding: 12px 14px; font-size: .9rem; color: #555; }
+    .back-row { margin-top: 55px; padding-top: 26px; border-top: 1px solid #e5e7eb; }
+    .back-link { display: inline-block; color: #2E5339; font-weight: 700; text-decoration: none; cursor: pointer; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 600px) { .hero-content, .project-content { padding: 35px 22px; } .project-hero { min-height: 340px; } }
   </style>
-
 </head>
-
 <body>
+  <main class="project-page">
+    <header class="project-hero">
+      <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1600&q=80" alt="Threat analysis and security hardening" loading="eager" onerror="this.onerror=null;this.src='https://placehold.co/1600x900/2E5339/ffffff?text=Threat+Analysis';" />
+      <div class="hero-content">
+        <span class="project-category-tag">Cybersecurity</span>
+        <h1>Threat Analysis &amp; Response Project</h1>
+        <div class="project-meta">Cybersecurity · Nikto &amp; Firewall Hardening · Kali Linux</div>
+      </div>
+    </header>
 
-<div class="container">
+    <article class="project-content">
+      <h2>Project Overview</h2>
+      <p>Analyzed potential security threats and developed response strategies to strengthen organizational security posture. The work spanned web application assessment and defensive hardening: Nikto scanned a web application for misconfigurations and known weaknesses, and those findings then drove firewall policy work on Kali Linux to close the identified attack vectors.</p>
+      <p>This closed the loop between finding a weakness and actually reducing it, pairing offensive discovery with defensive response.</p>
 
-  <h1>Threat Analysis & Response Project</h1>
+      <div class="highlight-box">
+        <strong>Key Focus:</strong> Closing the loop between threat discovery and defensive response so findings become real risk reduction.
+      </div>
 
-  <div class="section">
-    <h2>Project Overview</h2>
+      <h2>Key Responsibilities</h2>
+      <ul>
+        <li>Performed a web application vulnerability assessment using Nikto.</li>
+        <li>Identified security weaknesses and misconfigurations in the web application.</li>
+        <li>Analyzed threats and mapped them to likely attack paths.</li>
+        <li>Implemented firewall policies on Kali Linux to mitigate attack vectors.</li>
+        <li>Developed and documented response strategies for the organization.</li>
+        <li>Verified that hardening reduced the exposed surface.</li>
+      </ul>
 
-    <p>
-      Conducted a comprehensive threat analysis and incident response project
-      focused on identifying potential cybersecurity threats, analyzing attack vectors,
-      and developing effective response strategies to strengthen organizational security posture.
-    </p>
+      <h2>Threats &amp; Controls Addressed</h2>
+      <ul>
+        <li>Web Application Misconfigurations (Nikto)</li>
+        <li>Known Web Vulnerabilities</li>
+        <li>Mapped Attack Paths</li>
+        <li>Firewall Hardening Policies</li>
+        <li>Mitigated Attack Vectors</li>
+        <li>Documented Response Strategies</li>
+      </ul>
 
-    <p>
-      The project simulated real-world security scenarios involving suspicious activities,
-      unauthorized access attempts, malware indicators, and network anomalies
-      within a controlled lab environment.
-    </p>
-  </div>
+      <h2>Tools &amp; Technologies Used</h2>
+      <div class="tools-row">
+        <span>Nikto</span>
+        <span>Kali Linux</span>
+        <span>Firewall (iptables / ufw)</span>
+        <span>Web Application Assessment</span>
+        <span>Threat Analysis</span>
+      </div>
 
-  <div class="section">
-    <h2>Objectives</h2>
+      <h2>Analysis &amp; Response Activities</h2>
+      <ul>
+        <li>Scanning the web application with Nikto</li>
+        <li>Reviewing and triaging reported weaknesses</li>
+        <li>Mapping weaknesses to realistic attack paths</li>
+        <li>Writing firewall rules to block or limit exposure</li>
+        <li>Testing that policies held without breaking legitimate use</li>
+        <li>Documenting the response strategy</li>
+      </ul>
 
-    <ul>
-      <li>Identify and analyze potential cybersecurity threats.</li>
-      <li>Investigate suspicious network and system activities.</li>
-      <li>Develop incident response and mitigation strategies.</li>
-      <li>Improve threat detection and response capabilities.</li>
-      <li>Strengthen organizational cybersecurity resilience.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Environment Setup</h2>
-
-    <h3>Systems & Infrastructure</h3>
-
-    <ul>
-      <li>Windows Workstations</li>
-      <li>Linux Servers</li>
-      <li>Simulated Corporate Network</li>
-      <li>Web Applications</li>
-      <li>Firewall & Router Configurations</li>
-    </ul>
-
-    <h3>Testing Environment</h3>
-
-    <ul>
-      <li>Kali Linux</li>
-      <li>VirtualBox</li>
-      <li>VMware Workstation</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Tools & Technologies Used</h2>
-
-    <ul>
-      <li>Wireshark</li>
-      <li>Splunk</li>
-      <li>Snort IDS/IPS</li>
-      <li>Security Onion</li>
-      <li>Nmap</li>
-      <li>Sysmon</li>
-      <li>VirusTotal</li>
-      <li>OpenVAS</li>
-      <li>Kali Linux</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Methodology</h2>
-
-    <h3>1. Threat Identification</h3>
-
-    <p>
-      Monitored systems and network traffic to identify suspicious activities
-      and potential indicators of compromise (IOCs).
-    </p>
-
-    <h3>2. Log Analysis</h3>
-
-    <p>
-      Analyzed system and network logs to detect:
-    </p>
-
-    <ul>
-      <li>Unauthorized login attempts</li>
-      <li>Abnormal traffic patterns</li>
-      <li>Malicious IP activity</li>
-      <li>Privilege escalation attempts</li>
-      <li>Suspicious file executions</li>
-    </ul>
-
-    <h3>3. Threat Investigation</h3>
-
-    <p>
-      Conducted investigations into suspicious events and correlated findings
-      across multiple systems and monitoring tools.
-    </p>
-
-    <ul>
-      <li>Network traffic inspection</li>
-      <li>Malware hash analysis</li>
-      <li>File integrity verification</li>
-      <li>Endpoint behavior monitoring</li>
-    </ul>
-
-    <h3>4. Incident Response Planning</h3>
-
-    <p>
-      Developed response strategies focused on:
-    </p>
-
-    <ul>
-      <li>Threat containment</li>
-      <li>System isolation</li>
-      <li>Evidence preservation</li>
-      <li>Recovery procedures</li>
-      <li>Security hardening</li>
-    </ul>
-
-    <h3>5. Reporting & Recommendations</h3>
-
-    <p>
-      Documented findings, attack indicators, and recommended mitigation strategies
-      to improve overall organizational security posture.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Threats Identified</h2>
-
-    <ul>
-      <li>Brute-force login attempts</li>
-      <li>Port scanning activities</li>
-      <li>Suspicious outbound traffic</li>
-      <li>Potential malware indicators</li>
-      <li>Weak authentication practices</li>
-      <li>Unauthorized privilege escalation attempts</li>
-      <li>Misconfigured security settings</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Response Strategies Implemented</h2>
-
-    <ul>
-      <li>Firewall rule enhancements</li>
-      <li>Network segmentation improvements</li>
-      <li>Implementation of stronger password policies</li>
-      <li>Endpoint monitoring configuration</li>
-      <li>Threat intelligence integration</li>
-      <li>Security awareness recommendations</li>
-      <li>Continuous log monitoring procedures</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Skills Demonstrated</h2>
-
-    <ul>
-      <li>Threat Analysis</li>
-      <li>Incident Response</li>
-      <li>Network Monitoring</li>
-      <li>Security Event Analysis</li>
-      <li>Cybersecurity Reporting</li>
-      <li>Log Analysis</li>
-      <li>Threat Detection</li>
-      <li>Digital Forensics Fundamentals</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Project Outcome</h2>
-
-    <p>
-      The project strengthened practical knowledge in cybersecurity monitoring,
-      threat detection, and incident response procedures. It also improved
-      understanding of proactive defense strategies and security operations
-      used to protect enterprise systems against evolving cyber threats.
-    </p>
-  </div>
-
- 
-</div>
-
-</body>
-</html>
+      <h2>Impact &amp; Outcomes</h2>
+      <ul>
+        <li>Web weaknesses identified and clearly understood.</li>
+        <li>Firewall policies reduced the practical attack 
