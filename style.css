@@ -18,14 +18,21 @@
   /* Section Colors */
   --hero-bg: #1B2A4A;
   --about-bg: #C4622D;
+  --timeline-bg: #FCFAF7;
   --skills-bg: #FFFFFF;
-  --projects-bg: #F8F6F3;
-  --gallery-bg: #FFFFFF;
-  --case-studies-bg: #F8F6F3;
+  --projects-bg: #FFFFFF;
+  --gallery-bg: #FCFAF7;
+  --case-studies-bg: #FFFFFF;
   --certifications-bg: #4A5240;
   --testimonials-bg: #FFFFFF;
   --blog-bg: #F8F6F3;
   --contact-bg: #1B2A4A;
+   /* Card Backgrounds */
+
+ --timeline-card-bg: #FFFFFF;
+ --project-card-bg: #FCFAF7;
+ --gallery-card-bg: #FFFFFF;
+ --case-study-card-bg: #FCFAF7;
 }
 
 [data-theme="dark"] {
@@ -48,6 +55,11 @@
   --testimonials-bg: #1A1A1A;
   --blog-bg: #2A2A2A;
   --contact-bg: #0D1829;
+  --timeline-bg: #2A2A2A;
+  --timeline-card-bg: #1A1A1A;
+  --project-card-bg: #2A2A2A;
+  --gallery-card-bg: #1A1A1A;
+  --case-study-card-bg: #2A2A2A;
 }
 
 * {
@@ -859,7 +871,7 @@ body {
 }
 
 .timeline-v2-content {
-  background: var(--bg-light);
+  background: var(--timeline-card-bg);
   padding: 2.5rem;
   border-radius: 12px;
   width: 100%;
@@ -1005,7 +1017,7 @@ body {
 }
 
 .project-variation {
-  background: var(--bg-light);
+  background:var(--project-card-bg);
   padding: 2rem;
   border-radius: 8px;
   border-left: 4px solid var(--primary);
@@ -1088,7 +1100,7 @@ body {
 
 /* Gallery Card */
 .gallery-card {
-  background: linear-gradient(135deg, #f9f7f4 0%, #f5f1eb 100%);
+  background:var(--gallery-card-bg);
   padding: 40px;
   border-radius: 12px;
   text-align: center;
@@ -1481,7 +1493,7 @@ body {
 }
 
 .case-study-card {
-  background: var(--bg-light);
+  background:var(--case-study-card-bg);
   padding: 2.5rem;
   border-radius: 8px;
   border-left: 4px solid var(--primary);
