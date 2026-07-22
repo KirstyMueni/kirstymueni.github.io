@@ -794,6 +794,8 @@ body {
 }
 
 .project-variation {
+  display: flex;                 
+  flex-direction: column;       
   background: var(--project-card-bg);
   padding: 2rem;
   border-radius: 8px;
@@ -834,6 +836,10 @@ body {
 .variation-btn:hover {
   background: var(--primary-dark);
   transform: translateY(-2px);
+}
+.project-variation .variation-btn {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 /* ===================== GALLERY SECTION ===================== */
