@@ -1,133 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scratch Programming & STEM Learning Initiative</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scratch Programming & Game-Based STEM Learning — Kirsty Mueni</title>
+  <meta name="description" content="Introducing Scratch programming and game-based learning, including the Math Quiz Challenge, to learners in Lewa-supported schools." />
   <style>
-    body{
-      font-family: Arial, sans-serif;
-      background:#f4f6f9;
-      margin:0;
-      padding:0;
-      line-height:1.7;
-      color:#333;
-    }
-
-    .container{
-      width:85%;
-      margin:40px auto;
-      background:white;
-      padding:40px;
-      border-radius:10px;
-      box-shadow:0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h1,h2,h3{
-      color:#166534;
-    }
-
-    h1{
-      text-align:center;
-      margin-bottom:40px;
-    }
-
-    ul{
-      padding-left:20px;
-    }
-
-    .section{
-      margin-bottom:40px;
-    }
-
-    .highlight{
-      background:#eefbf3;
-      padding:15px;
-      border-left:5px solid #166534;
-      margin-top:15px;
-    }
-
-    .tag{
-      display:inline-block;
-      background:#166534;
-      color:white;
-      padding:6px 12px;
-      border-radius:20px;
-      margin:5px;
-      font-size:14px;
-    }
+    body { margin: 0; font-family: 'Nunito Sans', Arial, sans-serif; line-height: 1.7; color: #1f2937; background: #f8fafc; }
+    .project-page { max-width: 950px; margin: 0 auto; background: #ffffff; }
+    .project-hero { position: relative; width: 100%; min-height: 420px; display: flex; align-items: flex-end; color: #fff; overflow: hidden; background: #9E4A1E; }
+    .project-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+    .project-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(158,74,30,.95), rgba(158,74,30,.35)); z-index: 2; }
+    .hero-content { position: relative; z-index: 3; padding: 50px 35px; }
+    .project-category-tag { display: inline-block; background: #C4622D; color: #fff; font-weight: 700; padding: 6px 14px; border-radius: 999px; font-size: .85rem; margin-bottom: 18px; }
+    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; margin: 0 0 16px; }
+    .project-meta { color: #ffe8d6; font-size: .95rem; }
+    .project-content { padding: 45px 35px; }
+    .project-content h2 { font-family: 'Cormorant Garamond', Georgia, serif; color: #9E4A1E; margin-top: 42px; font-size: 1.7rem; line-height: 1.3; }
+    .project-content p { margin-bottom: 18px; font-size: 1.05rem; }
+    .project-content ul { padding-left: 22px; margin-bottom: 22px; }
+    .project-content li { margin-bottom: 10px; }
+    .highlight-box { background: #fff5ee; border-left: 5px solid #C4622D; padding: 22px; margin: 24px 0; border-radius: 10px; }
+    .highlight-box strong { color: #9E4A1E; }
+    .tools-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 20px; }
+    .tools-row span { background: #C4622D; color: #fff; padding: 8px 16px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
+    .evidence-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin: 25px 0; }
+    .evidence-grid figure { margin: 0; background: #fff8f3; border: 1px solid rgba(196,98,45,.18); border-radius: 12px; overflow: hidden; }
+    .evidence-grid img { width: 100%; height: 200px; object-fit: contain; background: #fff; display: block; }
+    .evidence-grid figcaption { padding: 12px 14px; font-size: .9rem; color: #555; }
+    .back-row { margin-top: 55px; padding-top: 26px; border-top: 1px solid #e5e7eb; }
+    .back-link { display: inline-block; color: #9E4A1E; font-weight: 700; text-decoration: none; cursor: pointer; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 600px) { .hero-content, .project-content { padding: 35px 22px; } .project-hero { min-height: 340px; } }
   </style>
 </head>
-
 <body>
+  <main class="project-page">
+    <header class="project-hero">
+      <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1600&q=80" alt="Learners coding on laptops" loading="eager" onerror="this.onerror=null;this.src='https://placehold.co/1600x900/9E4A1E/ffffff?text=Scratch+Programming';" />
+      <div class="hero-content">
+        <span class="project-category-tag">EdTech & STEM</span>
+        <h1>Scratch Programming &amp; Game-Based STEM Learning Project</h1>
+        <div class="project-meta">EdTech & STEM · Scratch · Lewa Wildlife Conservancy</div>
+      </div>
+    </header>
 
-<div class="container">
+    <article class="project-content">
+      <h2>Project Overview</h2>
+      <p>Introduced Scratch programming to learners in Lewa-supported schools as a playful, low-barrier entry point into coding and computational thinking. The centrepiece was "Math Quiz Challenge," an interactive educational game built in Scratch that turned maths practice into something learners wanted to play.</p>
+      <p>By starting with block-based coding and a tangible, fun outcome, the project helped young learners see themselves as creators of technology rather than just consumers of it.</p>
 
-  <h1>Scratch Programming – Lewa Wildlife Conservancy</h1>
+      <h2>Key Responsibilities</h2>
+      <ul>
+        <li>Designed and delivered Scratch-based coding lessons for beginners.</li>
+        <li>Built "Math Quiz Challenge," an interactive Scratch educational game.</li>
+        <li>Taught block-based coding fundamentals: loops, conditions, variables, and events.</li>
+        <li>Guided learners to design, build, and share their own Scratch projects.</li>
+        <li>Used game-building to strengthen logic, sequencing, and problem-solving.</li>
+        <li>Showcased learner projects to build confidence and celebrate progress.</li>
+      </ul>
 
-  <div class="section">
+      <div class="highlight-box">
+        <strong>Key Focus:</strong> Making coding approachable and joyful so young learners discover they can build, not just use, technology.
+      </div>
 
-    <h2>Project Overview</h2>
+      <h2>Tools &amp; Technologies Used</h2>
+      <div class="tools-row">
+        <span>Scratch</span>
+        <span>Offline Scratch Editor</span>
+        <span>Projectors &amp; Displays</span>
+        <span>Kolibri / ARES</span>
+        <span>Google Workspace Tools</span>
+      </div>
 
-    <p>
-      Supported STEM learning initiatives at Lewa Wildlife Conservancy through
-      the introduction of Scratch programming to learners in supported schools.
-      The project focused on building foundational computational thinking,
-      creativity, and problem-solving skills through interactive and beginner-friendly coding activities.
-    </p>
+      <h2>Impact &amp; Outcomes</h2>
+      <ul>
+        <li>Learners produced working interactive games of their own design.</li>
+        <li>Programming became approachable, demystifying code for beginners.</li>
+        <li>Strengthened logical thinking, creativity, and persistence.</li>
+        <li>Sparked early interest in STEM and computing pathways.</li>
+      </ul>
 
-    <div class="highlight">
-      <strong>Key Focus:</strong><br><br>
-      Introducing learners to coding, computational thinking, and STEM concepts
-      through engaging and project-based digital learning experiences.
-    </div>
+      <h2>Project Evidence</h2>
+      <div class="evidence-grid">
+        <figure>
+          <img src="../images/Scratch.png" alt="Math Quiz Challenge built in Scratch" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fff8f3/C4622D?text=Scratch';" />
+          <figcaption>"Math Quiz Challenge," an interactive educational game developed in Scratch.</figcaption>
+        </figure>
+      </div>
 
-  </div>
-
-  <div class="section">
-
-    <h2>Key Responsibilities</h2>
-
-    <ul>
-      <li>Introduced learners to Scratch visual programming concepts.</li>
-      <li>Facilitated beginner coding and STEM learning sessions.</li>
-      <li>Guided students in creating animations, games, and interactive projects.</li>
-      <li>Supported computational thinking and logical reasoning development.</li>
-      <li>Encouraged creativity and innovation through project-based learning.</li>
-    </ul>
-
-  </div>
-
-  <div class="section">
-
-    <h2>Skills & Technologies Used</h2>
-
-    <ul>
-      <li>Scratch Programming</li>
-      <li>STEM Education</li>
-      <li>Computational Thinking</li>
-      <li>Digital Literacy</li>
-      <li>Project-Based Learning</li>
-      <li>Educational Technology</li>
-    </ul>
-
-  </div>
-
-  <div class="section">
-
-    <h2>Impact & Outcomes</h2>
-
-    <ul>
-      <li>Improved learner engagement in STEM-related activities.</li>
-      <li>Introduced foundational coding skills to young learners.</li>
-      <li>Enhanced creativity and logical problem-solving abilities.</li>
-      <li>Increased exposure to digital and computational learning tools.</li>
-    </ul>
-
-  </div>
-
-</div>
-
+      <div class="back-row">
+        <a href="../index.html#projects" class="back-link">← Back to All Projects</a>
+      </div>
+    </article>
+  </main>
+  <script>
+    (function () {
+      var link = document.querySelector('.back-link');
+      if (link) { link.addEventListener('click', function (e) { if (history.length > 1) { e.preventDefault(); history.back(); } }); }
+    })();
+  </script>
 </body>
 </html>
