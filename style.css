@@ -827,12 +827,10 @@ body {
   color: var(--text-light);
 }
 
-/* ==========================================================
-   PROFESSIONAL JOURNEY
-========================================================== */
+/* ===================== PROFESSIONAL JOURNEY ===================== */
 
 .journey{
-    background:#FCFAF7;
+    background:#FCFAF7;  
     padding:120px 0;
 }
 
