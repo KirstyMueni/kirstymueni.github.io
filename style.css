@@ -907,20 +907,25 @@ body {
 /* Card */
 
    .timeline-content{
-    background:#FFFFFF !important;
+    position:relative;
+    background:#FFFFFF;
     padding:2rem;
     border-radius:20px;
     border:1px solid rgba(196,98,45,.12);
+    border-left:5px solid #C4622D;
     box-shadow:0 15px 40px rgba(0,0,0,.08);
     transition:.35s ease;
+
 }
 
 /* Hover */
 
-.timeline-content:hover{
+   .timeline-content:hover{
     transform:translateY(-10px);
     box-shadow:0 25px 50px rgba(0,0,0,.15);
-    border-color:#C4622D;
+    border-color:rgba(196,98,45,.18);
+    border-left:5px solid #C4622D;
+
 }
 
 /* Year Badge */
