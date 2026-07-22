@@ -1,99 +1,141 @@
-<!-- ========================= -->
-<!-- PROJECT 3 -->
-<!-- Troubleshooting Project -->
-<!-- ========================= -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Network Troubleshooting Project</title>
-
-<style>
-body{
-    font-family: Arial, sans-serif;
-    background:#f5f7fa;
-    margin:0;
-    padding:20px;
-}
-
-.container{
-    max-width:1000px;
-    margin:auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-h1{
-    color:#1a237e;
-}
-
-h2{
-    color:#3949ab;
-    border-bottom:2px solid #ddd;
-    padding-bottom:5px;
-    margin-top:25px;
-}
-
-ul{
-    margin-left:20px;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network Troubleshooting — Kirsty Mueni</title>
+  <meta name="description" content="First-level network support: systematic diagnostics and troubleshooting of connectivity issues, including verifying inter-VLAN routing." />
+  <style>
+    body { margin: 0; font-family: 'Nunito Sans', Arial, sans-serif; line-height: 1.7; color: #1f2937; background: #f8fafc; }
+    .project-page { max-width: 950px; margin: 0 auto; background: #ffffff; }
+    .project-hero { position: relative; width: 100%; min-height: 420px; display: flex; align-items: flex-end; color: #fff; overflow: hidden; background: #9E4A1E; }
+    .project-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+    .project-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(158,74,30,.95), rgba(158,74,30,.35)); z-index: 2; }
+    .hero-content { position: relative; z-index: 3; padding: 50px 35px; }
+    .project-category-tag { display: inline-block; background: #C4622D; color: #fff; font-weight: 700; padding: 6px 14px; border-radius: 999px; font-size: .85rem; margin-bottom: 18px; }
+    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; margin: 0 0 16px; }
+    .project-meta { color: #ffe8d6; font-size: .95rem; }
+    .project-content { padding: 45px 35px; }
+    .project-content h2 { font-family: 'Cormorant Garamond', Georgia, serif; color: #9E4A1E; margin-top: 42px; font-size: 1.7rem; line-height: 1.3; }
+    .project-content p { margin-bottom: 18px; font-size: 1.05rem; }
+    .project-content ul { padding-left: 22px; margin-bottom: 22px; }
+    .project-content li { margin-bottom: 10px; }
+    .highlight-box { background: #fff5ee; border-left: 5px solid #C4622D; padding: 22px; margin: 24px 0; border-radius: 10px; }
+    .highlight-box strong { color: #9E4A1E; }
+    .tools-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 20px; }
+    .tools-row span { background: #C4622D; color: #fff; padding: 8px 16px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
+    .evidence-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin: 25px 0; }
+    .evidence-grid figure { margin: 0; background: #fff8f3; border: 1px solid rgba(196,98,45,.18); border-radius: 12px; overflow: hidden; }
+    .evidence-grid img { width: 100%; height: 200px; object-fit: contain; background: #fff; display: block; }
+    .evidence-grid figcaption { padding: 12px 14px; font-size: .9rem; color: #555; }
+    .back-row { margin-top: 55px; padding-top: 26px; border-top: 1px solid #e5e7eb; }
+    .back-link { display: inline-block; color: #9E4A1E; font-weight: 700; text-decoration: none; cursor: pointer; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 600px) { .hero-content, .project-content { padding: 35px 22px; } .project-hero { min-height: 340px; } }
+  </style>
 </head>
-
 <body>
+  <main class="project-page">
+    <header class="project-hero">
+      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80" alt="Technician diagnosing network connectivity on a laptop" loading="eager" onerror="this.onerror=null;this.src='https://placehold.co/1600x900/9E4A1E/ffffff?text=Network+Troubleshooting';" />
+      <div class="hero-content">
+        <span class="project-category-tag">Networking</span>
+        <h1>Network Troubleshooting Project</h1>
+        <div class="project-meta">Networking · Diagnostics &amp; Inter-VLAN Routing · First-Level Support</div>
+      </div>
+    </header>
 
-<div class="container">
+    <article class="project-content">
+      <h2>Project Overview</h2>
+      <p>Provided first-level network support by diagnosing and resolving common connectivity issues affecting users within the organization. Troubleshooting followed a systematic path — physical layer, configuration, then routing — and where connectivity between VLANs was the problem, that meant verifying inter‑VLAN routing using the Router‑on‑a‑Stick architecture.</p>
+      <p>The work paired methodical diagnostics with the configuration knowledge to fix what was found, restoring access quickly and explaining the cause so issues were less likely to recur.</p>
 
-<h1>Network Troubleshooting & IT Support</h1>
+      <div class="highlight-box">
+        <strong>Key Focus:</strong> Resolving connectivity issues through systematic, layer-by-layer diagnostics and verified routing configuration.
+      </div>
 
-<h2>Overview</h2>
-<p>
-Provided first-level network support by diagnosing and resolving common connectivity issues affecting users
-within the organization.
-</p>
+      <h2>Key Responsibilities</h2>
+      <ul>
+        <li>Performed systematic network diagnostics and troubleshooting to resolve connectivity issues.</li>
+        <li>Configured and verified inter‑VLAN routing using the Router‑on‑a‑Stick architecture.</li>
+        <li>Tested reachability across subnets and VLANs.</li>
+        <li>Checked cabling, ports, IP configuration, and device status.</li>
+        <li>Provided first-level support to affected users.</li>
+        <li>Documented issues and resolutions for the support record.</li>
+      </ul>
 
-<h2>Responsibilities</h2>
-<ul>
-<li>Diagnosed internet connectivity problems</li>
-<li>Fixed IP conflicts and cable faults</li>
-<li>Used ping and traceroute for diagnostics</li>
-<li>Assisted users with network access</li>
-<li>Monitored device connectivity</li>
-<li>Escalated major issues to senior engineers</li>
-</ul>
+      <h2>Issues &amp; Configurations Addressed</h2>
+      <ul>
+        <li>Device &amp; User Connectivity Failures</li>
+        <li>Inter‑VLAN Routing (Router‑on‑a‑Stick)</li>
+        <li>Subnet Reachability Problems</li>
+        <li>IP &amp; Port Misconfiguration</li>
+        <li>Physical Layer &amp; Cabling Faults</li>
+        <li>Documented Incident Resolutions</li>
+      </ul>
 
-<h2>Skills Demonstrated</h2>
-<ul>
-<li>Network Troubleshooting</li>
-<li>Technical Support</li>
-<li>Connectivity Testing</li>
-<li>Problem Solving</li>
-<li>Network Diagnostics</li>
-</ul>
+      <h2>Tools &amp; Technologies Used</h2>
+      <div class="tools-row">
+        <span>Cisco IOS CLI</span>
+        <span>Router-on-a-Stick</span>
+        <span>Ping &amp; Traceroute</span>
+        <span>Show Commands</span>
+        <span>Cable &amp; Port Testing</span>
+      </div>
 
-<h2>Recommendations</h2>
-<ul>
-<li>Implement centralized monitoring tools</li>
-<li>Label network cables and ports</li>
-<li>Schedule routine maintenance</li>
-<li>Train users on basic troubleshooting</li>
-<li>Maintain updated documentation</li>
-</ul>
+      <h2>Diagnostics &amp; Resolution Activities</h2>
+      <ul>
+        <li>Isolating faults layer by layer, from cable to routing</li>
+        <li>Verifying subinterfaces and encapsulation on the router</li>
+        <li>Confirming inter‑VLAN routing with cross‑subnet ping tests</li>
+        <li>Correcting IP, port, and configuration errors</li>
+        <li>Restoring connectivity and confirming with users</li>
+        <li>Logging causes and fixes for future reference</li>
+      </ul>
 
-<h2>Outcomes</h2>
-<ul>
-<li>Faster issue resolution</li>
-<li>Reduced downtime</li>
-<li>Improved user support experience</li>
-<li>Better network monitoring</li>
-<li>Improved troubleshooting skills</li>
-</ul>
+      <h2>Impact &amp; Outcomes</h2>
+      <ul>
+        <li>Restored connectivity for users affected by network faults.</li>
+        <li>Working inter‑VLAN routing enabling communication across subnets.</li>
+        <li>Faster resolution through a repeatable diagnostic method.</li>
+        <li>A support record that reduced repeat incidents.</li>
+      </ul>
 
-</div>
+      <h2>Project Evidence</h2>
+      <div class="evidence-grid">
+        <figure>
+          <img src="../images/network troubleshooting.png" alt="Systematic network diagnostics and troubleshooting" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fff8f3/C4622D?text=Diagnostics';" />
+          <figcaption>Systematic diagnostics performed to identify and resolve connectivity issues.</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/router configuration.png" alt="Inter-VLAN routing using Router-on-a-Stick" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fff8f3/C4622D?text=Routing';" />
+          <figcaption>Inter‑VLAN routing configured and verified using Router‑on‑a‑Stick.</figcaption>
+        </figure>
+      </div>
 
+      <h2>Skills Demonstrated</h2>
+      <ul>
+        <li>Systematic Network Troubleshooting</li>
+        <li>Inter‑VLAN Routing (Router‑on‑a‑Stick)</li>
+        <li>First-Level Technical Support</li>
+        <li>Cisco IOS Diagnostics</li>
+        <li>Physical &amp; Logical Fault Isolation</li>
+        <li>Incident Documentation</li>
+      </ul>
+
+      <h2>Project Outcome</h2>
+      <p>This project strengthened practical experience in diagnosing and resolving real connectivity problems, from the physical layer up to inter‑VLAN routing. It also enhanced the ability to provide calm, methodical first-level support that restores access quickly and leaves a clear record, reducing the chance of the same issue disrupting users again.</p>
+
+      <div class="back-row">
+        <a href="../index.html#projects" class="back-link">← Back to All Projects</a>
+      </div>
+    </article>
+  </main>
+  <script>
+    (function () {
+      var link = document.querySelector('.back-link');
+      if (link) { link.addEventListener('click', function (e) { if (history.length > 1) { e.preventDefault(); history.back(); } }); }
+    })();
+  </script>
 </body>
 </html>
