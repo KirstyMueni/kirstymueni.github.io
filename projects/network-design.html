@@ -1,117 +1,141 @@
-<!-- ========================= -->
-<!-- PROJECT 1 -->
-<!-- Enterprise Network Design -->
-<!-- ========================= -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enterprise Network Design Project</title>
-
-<style>
-body{
-    font-family: Arial, sans-serif;
-    background:#f4f6f9;
-    margin:0;
-    padding:20px;
-    color:#333;
-}
-
-.container{
-    max-width:1000px;
-    margin:auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-h1{
-    color:#0b3d91;
-}
-
-h2{
-    color:#1f5fbf;
-    border-bottom:2px solid #ddd;
-    padding-bottom:5px;
-    margin-top:30px;
-}
-
-ul{
-    margin-left:20px;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:15px;
-}
-
-table th, table td{
-    border:1px solid #ccc;
-    padding:10px;
-}
-
-table th{
-    background:#0b3d91;
-    color:white;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network Design & Support — Kirsty Mueni</title>
+  <meta name="description" content="Designing and simulating a secure enterprise network in Cisco Packet Tracer, including VLAN segmentation, during attachment at Rasmilink Limited." />
+  <style>
+    body { margin: 0; font-family: 'Nunito Sans', Arial, sans-serif; line-height: 1.7; color: #1f2937; background: #f8fafc; }
+    .project-page { max-width: 950px; margin: 0 auto; background: #ffffff; }
+    .project-hero { position: relative; width: 100%; min-height: 420px; display: flex; align-items: flex-end; color: #fff; overflow: hidden; background: #1B2A4A; }
+    .project-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+    .project-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,42,74,.95), rgba(27,42,74,.35)); z-index: 2; }
+    .hero-content { position: relative; z-index: 3; padding: 50px 35px; }
+    .project-category-tag { display: inline-block; background: #2C5282; color: #fff; font-weight: 700; padding: 6px 14px; border-radius: 999px; font-size: .85rem; margin-bottom: 18px; }
+    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; margin: 0 0 16px; }
+    .project-meta { color: #dbe6f7; font-size: .95rem; }
+    .project-content { padding: 45px 35px; }
+    .project-content h2 { font-family: 'Cormorant Garamond', Georgia, serif; color: #1B2A4A; margin-top: 42px; font-size: 1.7rem; line-height: 1.3; }
+    .project-content p { margin-bottom: 18px; font-size: 1.05rem; }
+    .project-content ul { padding-left: 22px; margin-bottom: 22px; }
+    .project-content li { margin-bottom: 10px; }
+    .highlight-box { background: #eef3fb; border-left: 5px solid #2C5282; padding: 22px; margin: 24px 0; border-radius: 10px; }
+    .highlight-box strong { color: #1B2A4A; }
+    .tools-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 20px; }
+    .tools-row span { background: #2C5282; color: #fff; padding: 8px 16px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
+    .evidence-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin: 25px 0; }
+    .evidence-grid figure { margin: 0; background: #f4f7fc; border: 1px solid rgba(44,82,130,.18); border-radius: 12px; overflow: hidden; }
+    .evidence-grid img { width: 100%; height: 200px; object-fit: contain; background: #fff; display: block; }
+    .evidence-grid figcaption { padding: 12px 14px; font-size: .9rem; color: #555; }
+    .back-row { margin-top: 55px; padding-top: 26px; border-top: 1px solid #e5e7eb; }
+    .back-link { display: inline-block; color: #1B2A4A; font-weight: 700; text-decoration: none; cursor: pointer; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 600px) { .hero-content, .project-content { padding: 35px 22px; } .project-hero { min-height: 340px; } }
+  </style>
 </head>
-
 <body>
+  <main class="project-page">
+    <header class="project-hero">
+      <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1600&q=80" alt="Structured network cabling and patch panel" loading="eager" onerror="this.onerror=null;this.src='https://placehold.co/1600x900/1B2A4A/ffffff?text=Network+Design';" />
+      <div class="hero-content">
+        <span class="project-category-tag">Networking</span>
+        <h1>Network Design &amp; Support Project</h1>
+        <div class="project-meta">Networking · Cisco Packet Tracer · Rasmilink Limited</div>
+      </div>
+    </header>
 
-<div class="container">
+    <article class="project-content">
+      <h2>Project Overview</h2>
+      <p>Assisted in designing and maintaining a basic enterprise network during attachment at Rasmilink Limited. The work combined real-world support with simulated design in Cisco Packet Tracer, modelling a secure, scalable topology and segmenting it with VLANs so that traffic could be organised and controlled from the start.</p>
+      <p>The goal was a network that was not only connected, but logically structured — easy to understand, easy to extend, and easier to troubleshoot when something went wrong.</p>
 
-<h1>Enterprise Network Design & Support</h1>
+      <div class="highlight-box">
+        <strong>Key Focus:</strong> Designing a secure, scalable, well-segmented enterprise network that is reliable and easy to maintain.
+      </div>
 
-<h2>Overview</h2>
-<p>
-Assisted in designing and maintaining a basic enterprise network during attachment at Rasmilink Limited.
-Participated in configuring routers and switches, implementing VLANs, troubleshooting connectivity issues,
-and supporting secure communication across departments.
-</p>
+      <h2>Key Responsibilities</h2>
+      <ul>
+        <li>Designed and simulated a secure enterprise network topology in Cisco Packet Tracer.</li>
+        <li>Configured and verified Virtual Local Area Networks (VLANs) on a Cisco switch.</li>
+        <li>Assigned ports and segmented traffic by department and function.</li>
+        <li>Assisted with structured connectivity and hardware configuration on site.</li>
+        <li>Documented the topology for handover and future maintenance.</li>
+        <li>Supported ongoing network stability during the attachment.</li>
+      </ul>
 
-<h2>Responsibilities</h2>
-<ul>
-<li>Configured switches and routers</li>
-<li>Assisted in VLAN setup</li>
-<li>Troubleshot network connectivity issues</li>
-<li>Configured wireless access points</li>
-<li>Tested network communication</li>
-<li>Monitored internet connectivity</li>
-</ul>
+      <h2>Systems &amp; Components Designed</h2>
+      <ul>
+        <li>Enterprise Network Topology (Packet Tracer)</li>
+        <li>VLAN Segmentation Scheme</li>
+        <li>Switch Port Assignment Plan</li>
+        <li>Structured Connectivity Layout</li>
+        <li>Router &amp; Switch Configuration Baseline</li>
+        <li>Network Documentation</li>
+      </ul>
 
-<h2>Skills Demonstrated</h2>
-<ul>
-<li>Routing and Switching</li>
-<li>VLAN Configuration</li>
-<li>Network Troubleshooting</li>
-<li>Wireless Networking</li>
-<li>Basic Network Security</li>
-</ul>
+      <h2>Tools &amp; Technologies Used</h2>
+      <div class="tools-row">
+        <span>Cisco Packet Tracer</span>
+        <span>Cisco IOS CLI</span>
+        <span>Cisco Switches &amp; Routers</span>
+        <span>Structured Cabling</span>
+        <span>Network Documentation</span>
+      </div>
 
-<h2>Recommendations</h2>
-<ul>
-<li>Upgrade network devices regularly</li>
-<li>Implement regular network monitoring</li>
-<li>Increase network segmentation</li>
-<li>Conduct configuration backups</li>
-<li>Improve wireless coverage</li>
-</ul>
+      <h2>Design &amp; Configuration Activities</h2>
+      <ul>
+        <li>Modelling routers, switches, and end devices in Packet Tracer</li>
+        <li>Creating and naming VLANs for logical segmentation</li>
+        <li>Assigning switch ports to the correct VLANs</li>
+        <li>Verifying VLAN configuration with show commands</li>
+        <li>Assisting with physical connectivity and device setup</li>
+        <li>Documenting the design for handover</li>
+      </ul>
 
-<h2>Outcomes</h2>
-<ul>
-<li>Improved communication between departments</li>
-<li>Reduced network downtime</li>
-<li>Better organization of network traffic</li>
-<li>Enhanced internet connectivity</li>
-<li>Improved networking knowledge</li>
-</ul>
+      <h2>Impact &amp; Outcomes</h2>
+      <ul>
+        <li>A clear, simulated enterprise topology ready to guide real deployment.</li>
+        <li>Logical traffic segmentation improving security and manageability.</li>
+        <li>Documented design that simplified maintenance and future growth.</li>
+        <li>Practical, hands-on experience bridging simulation and live support.</li>
+      </ul>
 
-</div>
+      <h2>Project Evidence</h2>
+      <div class="evidence-grid">
+        <figure>
+          <img src="../images/network topology.png" alt="Enterprise network topology designed in Cisco Packet Tracer" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f4f7fc/2C5282?text=Topology';" />
+          <figcaption>A secure enterprise network topology designed and simulated in Cisco Packet Tracer.</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/vlan configuration.png" alt="VLAN configuration on a Cisco switch" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f4f7fc/2C5282?text=VLANs';" />
+          <figcaption>VLANs configured and verified on a Cisco switch to segment traffic.</figcaption>
+        </figure>
+      </div>
 
+      <h2>Skills Demonstrated</h2>
+      <ul>
+        <li>Enterprise Network Design</li>
+        <li>Cisco Packet Tracer Simulation</li>
+        <li>VLAN Configuration</li>
+        <li>Cisco IOS CLI</li>
+        <li>Structured Cabling &amp; Connectivity</li>
+        <li>Network Documentation</li>
+      </ul>
+
+      <h2>Project Outcome</h2>
+      <p>This project strengthened practical experience in designing and segmenting an enterprise network, from simulated topology to live support at Rasmilink Limited. It also enhanced the ability to plan a network that is secure, scalable, and well-documented, laying a structured foundation for reliable connectivity and easier future maintenance.</p>
+
+      <div class="back-row">
+        <a href="../index.html#projects" class="back-link">← Back to All Projects</a>
+      </div>
+    </article>
+  </main>
+  <script>
+    (function () {
+      var link = document.querySelector('.back-link');
+      if (link) { link.addEventListener('click', function (e) { if (history.length > 1) { e.preventDefault(); history.back(); } }); }
+    })();
+  </script>
 </body>
 </html>
