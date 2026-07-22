@@ -2030,3 +2030,28 @@ body {
 .back-to-top:active {
   transform: translateY(-2px);
 }
+/* ===================== MOBILE STACKING FIX ===================== */
+@media (max-width: 768px) {
+  /* Service tag pills → strict vertical list (one per row) */
+  .service-tags {
+    flex-direction: column;
+    align-items: stretch;     /* full-width rows, reads like a list */
+    gap: 10px;
+  }
+  .service-tags span {
+    width: 100%;
+    white-space: normal;      /* long labels wrap inside the pill */
+    text-align: center;
+  }
+
+  /* Guarantee the Skills <ul> always stacks top-to-bottom */
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .skill-list li {
+    display: block;
+    width: 100%;
+    white-space: normal;
+  }
+}
