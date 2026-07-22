@@ -1,99 +1,141 @@
-<!-- ========================= -->
-<!-- PROJECT 2 -->
-<!-- Wireless Network Project -->
-<!-- ========================= -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wireless Network Deployment Project</title>
-
-<style>
-body{
-    font-family: Arial, sans-serif;
-    background:#eef2f7;
-    margin:0;
-    padding:20px;
-}
-
-.container{
-    max-width:1000px;
-    margin:auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-h1{
-    color:#0066cc;
-}
-
-h2{
-    color:#004c99;
-    border-bottom:2px solid #ddd;
-    padding-bottom:5px;
-    margin-top:25px;
-}
-
-ul{
-    margin-left:20px;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wi-Fi Deployment & Optimization — Kirsty Mueni</title>
+  <meta name="description" content="Deploying and optimizing secure wireless networks, including trunk links that carry wireless VLAN traffic, to improve coverage and reliability." />
+  <style>
+    body { margin: 0; font-family: 'Nunito Sans', Arial, sans-serif; line-height: 1.7; color: #1f2937; background: #f8fafc; }
+    .project-page { max-width: 950px; margin: 0 auto; background: #ffffff; }
+    .project-hero { position: relative; width: 100%; min-height: 420px; display: flex; align-items: flex-end; color: #fff; overflow: hidden; background: #2E5339; }
+    .project-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+    .project-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(46,83,57,.95), rgba(46,83,57,.35)); z-index: 2; }
+    .hero-content { position: relative; z-index: 3; padding: 50px 35px; }
+    .project-category-tag { display: inline-block; background: #3E7B4F; color: #fff; font-weight: 700; padding: 6px 14px; border-radius: 999px; font-size: .85rem; margin-bottom: 18px; }
+    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; margin: 0 0 16px; }
+    .project-meta { color: #e3f3e8; font-size: .95rem; }
+    .project-content { padding: 45px 35px; }
+    .project-content h2 { font-family: 'Cormorant Garamond', Georgia, serif; color: #2E5339; margin-top: 42px; font-size: 1.7rem; line-height: 1.3; }
+    .project-content p { margin-bottom: 18px; font-size: 1.05rem; }
+    .project-content ul { padding-left: 22px; margin-bottom: 22px; }
+    .project-content li { margin-bottom: 10px; }
+    .highlight-box { background: #eef7f0; border-left: 5px solid #3E7B4F; padding: 22px; margin: 24px 0; border-radius: 10px; }
+    .highlight-box strong { color: #2E5339; }
+    .tools-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 20px; }
+    .tools-row span { background: #3E7B4F; color: #fff; padding: 8px 16px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
+    .evidence-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin: 25px 0; }
+    .evidence-grid figure { margin: 0; background: #f3faf5; border: 1px solid rgba(62,123,79,.18); border-radius: 12px; overflow: hidden; }
+    .evidence-grid img { width: 100%; height: 200px; object-fit: contain; background: #fff; display: block; }
+    .evidence-grid figcaption { padding: 12px 14px; font-size: .9rem; color: #555; }
+    .back-row { margin-top: 55px; padding-top: 26px; border-top: 1px solid #e5e7eb; }
+    .back-link { display: inline-block; color: #2E5339; font-weight: 700; text-decoration: none; cursor: pointer; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 600px) { .hero-content, .project-content { padding: 35px 22px; } .project-hero { min-height: 340px; } }
+  </style>
 </head>
-
 <body>
+  <main class="project-page">
+    <header class="project-hero">
+      <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=1600&q=80" alt="Person using a laptop on a wireless network" loading="eager" onerror="this.onerror=null;this.src='https://placehold.co/1600x900/2E5339/ffffff?text=Wi-Fi+Deployment';" />
+      <div class="hero-content">
+        <span class="project-category-tag">Networking</span>
+        <h1>Wi-Fi Deployment &amp; Optimization Project</h1>
+        <div class="project-meta">Networking · Wireless &amp; Trunking · Cisco Packet Tracer / Cisco IOS</div>
+      </div>
+    </header>
 
-<div class="container">
+    <article class="project-content">
+      <h2>Project Overview</h2>
+      <p>Assisted in setting up and optimizing wireless connectivity for users to improve internet access, coverage, and network reliability. The work covered deploying secure wireless networks and the switching behind them — including trunk links that carry wireless VLAN traffic between switches and access points so each SSID reaches the right network segment.</p>
+      <p>Good Wi‑Fi is more than signal strength; it is also about how wireless traffic is carried, separated, and delivered once it lands on the wired network.</p>
 
-<h1>Office Wi-Fi Deployment & Optimization</h1>
+      <div class="highlight-box">
+        <strong>Key Focus:</strong> Delivering secure, reliable wireless coverage backed by properly trunked, well-segmented switching.
+      </div>
 
-<h2>Overview</h2>
-<p>
-Assisted in setting up and optimizing wireless connectivity for office users to improve internet access,
-coverage, and network reliability.
-</p>
+      <h2>Key Responsibilities</h2>
+      <ul>
+        <li>Deployed and configured secure wireless networks in Cisco Packet Tracer.</li>
+        <li>Configured and verified trunk links on a Cisco switch using the Cisco IOS CLI.</li>
+        <li>Mapped wireless SSIDs to VLANs carried across trunk ports.</li>
+        <li>Optimized wireless coverage, channel use, and signal reliability.</li>
+        <li>Tested client connectivity and roaming behaviour.</li>
+        <li>Documented wireless and trunk configuration for support.</li>
+      </ul>
 
-<h2>Responsibilities</h2>
-<ul>
-<li>Installed wireless access points</li>
-<li>Configured Wi-Fi security settings</li>
-<li>Tested signal strength and coverage</li>
-<li>Resolved wireless connectivity issues</li>
-<li>Set up guest Wi-Fi access</li>
-<li>Supported users with Wi-Fi connection problems</li>
-</ul>
+      <h2>Systems &amp; Components Deployed</h2>
+      <ul>
+        <li>Secure Wireless Networks (Packet Tracer)</li>
+        <li>SSID-to-VLAN Mapping</li>
+        <li>802.1Q Trunk Links</li>
+        <li>Wireless Access Configuration</li>
+        <li>Coverage &amp; Channel Optimization</li>
+        <li>Wireless Configuration Documentation</li>
+      </ul>
 
-<h2>Skills Demonstrated</h2>
-<ul>
-<li>Wireless Networking</li>
-<li>Wi-Fi Security</li>
-<li>Access Point Configuration</li>
-<li>Network Optimization</li>
-<li>Technical Support</li>
-</ul>
+      <h2>Tools &amp; Technologies Used</h2>
+      <div class="tools-row">
+        <span>Cisco Packet Tracer</span>
+        <span>Cisco IOS CLI</span>
+        <span>Wireless Access Points</span>
+        <span>802.1Q Trunking</span>
+        <span>VLANs</span>
+      </div>
 
-<h2>Recommendations</h2>
-<ul>
-<li>Add more access points in weak signal areas</li>
-<li>Upgrade to WPA3 security</li>
-<li>Perform regular wireless assessments</li>
-<li>Separate guest and office traffic</li>
-<li>Monitor bandwidth usage</li>
-</ul>
+      <h2>Deployment &amp; Optimization Activities</h2>
+      <ul>
+        <li>Configuring secure wireless networks and SSIDs</li>
+        <li>Setting up trunk ports to carry multiple wireless VLANs</li>
+        <li>Verifying allowed VLANs and trunk status via show commands</li>
+        <li>Tuning coverage and channels for reliable connectivity</li>
+        <li>Testing client association and end-to-end access</li>
+        <li>Recording configuration for ongoing support</li>
+      </ul>
 
-<h2>Outcomes</h2>
-<ul>
-<li>Improved Wi-Fi coverage</li>
-<li>More stable wireless connections</li>
-<li>Reduced connectivity complaints</li>
-<li>Enhanced wireless security</li>
-<li>Better internet accessibility</li>
-</ul>
+      <h2>Impact &amp; Outcomes</h2>
+      <ul>
+        <li>Improved wireless coverage, access, and reliability for users.</li>
+        <li>Secure separation of wireless traffic through VLANs and trunks.</li>
+        <li>Stable connectivity with correctly carried SSID traffic.</li>
+        <li>Documented wireless setup that simplified future changes.</li>
+      </ul>
 
-</div>
+      <h2>Project Evidence</h2>
+      <div class="evidence-grid">
+        <figure>
+          <img src="../images/wireless.png" alt="Secure wireless network deployed in Cisco Packet Tracer" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f3faf5/3E7B4F?text=Wireless';" />
+          <figcaption>A secure wireless network deployed and configured in Cisco Packet Tracer.</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/trunk configuration.png" alt="Trunk link configuration on a Cisco switch" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f3faf5/3E7B4F?text=Trunking';" />
+          <figcaption>Trunk links configured and verified to carry wireless VLAN traffic.</figcaption>
+        </figure>
+      </div>
 
+      <h2>Skills Demonstrated</h2>
+      <ul>
+        <li>Wireless Network Deployment</li>
+        <li>802.1Q Trunk Configuration</li>
+        <li>SSID &amp; VLAN Mapping</li>
+        <li>Cisco IOS CLI</li>
+        <li>Coverage &amp; Channel Optimization</li>
+        <li>Wireless Troubleshooting &amp; Testing</li>
+      </ul>
+
+      <h2>Project Outcome</h2>
+      <p>This project strengthened practical experience in deploying and optimizing wireless networks, including the trunking that carries wireless traffic across the wired core. It also enhanced the ability to deliver secure, reliable Wi‑Fi that performs well for users while keeping traffic properly segmented and documented.</p>
+
+      <div class="back-row">
+        <a href="../index.html#projects" class="back-link">← Back to All Projects</a>
+      </div>
+    </article>
+  </main>
+  <script>
+    (function () {
+      var link = document.querySelector('.back-link');
+      if (link) { link.addEventListener('click', function (e) { if (history.length > 1) { e.preventDefault(); history.back(); } }); }
+    })();
+  </script>
 </body>
 </html>
