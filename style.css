@@ -906,11 +906,11 @@ body {
 
 /* Card */
 
-.timeline-content{
-    background:#FFFFFF;
+   .timeline-content{
+    background:#FFFFFF !important;
     padding:2rem;
     border-radius:20px;
-    border:1px solid rgba(196,98,45,.12); /* keep orange outline */
+    border:1px solid rgba(196,98,45,.12);
     box-shadow:0 15px 40px rgba(0,0,0,.08);
     transition:.35s ease;
 }
