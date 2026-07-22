@@ -24,28 +24,20 @@
     .highlight-box strong { color: #2E5339; }
     .tools-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 20px; }
     .tools-row span { background: #3E7B4F; color: #fff; padding: 8px 16px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
-    .evidence-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin: 25px 0; }
+    .evidence-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin: 25px 0; }
     .evidence-grid figure { margin: 0; background: #f3faf5; border: 1px solid rgba(62,123,79,.18); border-radius: 12px; overflow: hidden; }
     .evidence-grid img { width: 100%; height: 200px; object-fit: contain; background: #fff; display: block; }
     .evidence-grid figcaption { padding: 12px 14px; font-size: .9rem; color: #555; }
     .back-row { margin-top: 55px; padding-top: 26px; border-top: 1px solid #e5e7eb; }
     .back-link { display: inline-block; color: #2E5339; font-weight: 700; text-decoration: none; cursor: pointer; }
     .back-link:hover { text-decoration: underline; }
-    @media (max-width: 600px) {
-      .hero-content, .project-content { padding: 35px 22px; }
-      .project-hero { min-height: 340px; }
-    }
+    @media (max-width: 600px) { .hero-content, .project-content { padding: 35px 22px; } .project-hero { min-height: 340px; } }
   </style>
 </head>
 <body>
   <main class="project-page">
     <header class="project-hero">
-      <img
-        src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80"
-        alt="Offline digital learning in a classroom"
-        loading="eager"
-        onerror="this.onerror=null;this.src='https://placehold.co/1600x900/2E5339/ffffff?text=Offline+Learning';"
-      />
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80" alt="Offline digital learning in a classroom" loading="eager" onerror="this.onerror=null;this.src='https://placehold.co/1600x900/2E5339/ffffff?text=Offline+Learning';" />
       <div class="hero-content">
         <span class="project-category-tag">Digital Literacy</span>
         <h1>Curated Digital Curriculum Development &amp; Offline Learning Project</h1>
@@ -54,10 +46,13 @@
     </header>
 
     <article class="project-content">
-
       <h2>Project Overview</h2>
       <p>In the remote schools around Lewa Wildlife Conservancy, a fast internet connection is a luxury rather than a given. This project put learning first and connectivity second by building an offline‑first digital curriculum on the Kolibri platform, so that quality educational content remained available whether or not the network was.</p>
       <p>My role sat at the intersection of content and classroom: selecting, organising, and packaging resources that teachers could actually use, then making sure the platform delivered them smoothly on low‑spec devices with no internet dependency.</p>
+
+      <div class="highlight-box">
+        <strong>Key Focus:</strong> Making quality learning accessible anywhere by designing education that works without the internet, not despite its absence.
+      </div>
 
       <h2>Key Responsibilities</h2>
       <ul>
@@ -68,9 +63,15 @@
         <li>Coached teachers on locating, assigning, and reusing digital content in class.</li>
       </ul>
 
-      <div class="highlight-box">
-        <strong>Key Focus:</strong> Making quality learning accessible anywhere by designing education that works without the internet, not despite its absence.
-      </div>
+      <h2>Content &amp; Platforms Curated</h2>
+      <ul>
+        <li>Kolibri Offline Learning Library</li>
+        <li>STEM &amp; Digital Literacy Resources</li>
+        <li>Interactive Educational Content</li>
+        <li>Structured Channels &amp; Lessons</li>
+        <li>Offline Learning Servers</li>
+        <li>Teacher-Facing Resource Guides</li>
+      </ul>
 
       <h2>Tools &amp; Technologies Used</h2>
       <div class="tools-row">
@@ -80,6 +81,16 @@
         <span>Digital Educational Resources</span>
         <span>Google Workspace Tools</span>
       </div>
+
+      <h2>Curation &amp; Configuration Activities</h2>
+      <ul>
+        <li>Selecting and reviewing content for relevance and quality</li>
+        <li>Installing and configuring Kolibri servers for offline use</li>
+        <li>Organising resources into channels, topics, and lessons</li>
+        <li>Packaging interactive content for low-spec devices</li>
+        <li>Coaching teachers on assigning and reusing content</li>
+        <li>Iterating the library based on classroom feedback</li>
+      </ul>
 
       <h2>Impact &amp; Outcomes</h2>
       <ul>
@@ -101,20 +112,28 @@
         </figure>
       </div>
 
+      <h2>Skills Demonstrated</h2>
+      <ul>
+        <li>Offline Curriculum Curation</li>
+        <li>Kolibri Server Configuration</li>
+        <li>Content Organisation &amp; Structuring</li>
+        <li>STEM &amp; EdTech Integration</li>
+        <li>Teacher Coaching &amp; Support</li>
+        <li>Offline-First Solution Design</li>
+      </ul>
+
+      <h2>Project Outcome</h2>
+      <p>This project strengthened practical experience in building offline-first learning systems, from content curation and server configuration to classroom-ready organisation. It also enhanced the ability to deliver quality digital education in connectivity-poor environments, ensuring learners and teachers in Lewa-supported schools could rely on a structured, accessible curriculum regardless of internet availability.</p>
+
       <div class="back-row">
         <a href="../index.html#projects" class="back-link">← Back to All Projects</a>
       </div>
     </article>
   </main>
-
   <script>
     (function () {
       var link = document.querySelector('.back-link');
-      if (link) {
-        link.addEventListener('click', function (e) {
-          if (history.length > 1) { e.preventDefault(); history.back(); }
-        });
-      }
+      if (link) { link.addEventListener('click', function (e) { if (history.length > 1) { e.preventDefault(); history.back(); } }); }
     })();
   </script>
 </body>
