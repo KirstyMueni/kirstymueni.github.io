@@ -139,21 +139,41 @@
       color: #166534;
     }
 
+    .blog-footer {
+      background: #f1f5f9;
+      padding: 35px;
+      border-radius: 14px;
+      margin-top: 45px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .blog-footer-text {
+      color: #334155;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .blog-footer-text strong {
+      color: #0f172a;
+    }
+
     .back-link {
       display: inline-block;
-      margin-top: 35px;
       color: #2563eb;
       font-weight: 700;
       text-decoration: none;
+      transition: color 0.2s;
     }
 
     .back-link:hover {
+      color: #1d4ed8;
       text-decoration: underline;
     }
 
     @media (max-width: 600px) {
       .hero-content,
-      .blog-content {
+      .blog-content,
+      .blog-footer {
         padding: 35px 22px;
       }
 
@@ -185,7 +205,7 @@
 
     <article class="blog-content">
       <p>
-        Cybersecurity has always been a race between defenders and attackers. For years, organizations relied on signature-based antivirus tools, manually written detection rules, and traditional security monitoring to identify known threats. But today’s malware is faster, more adaptive, and more difficult to recognize using old methods.
+        Cybersecurity has always been a race between defenders and attackers. For years, organizations relied on signature-based antivirus tools, manually written detection rules, and traditional security monitoring to identify known threats. But today's malware is faster, more adaptive, and more difficult to recognize using old methods.
       </p>
 
       <p>
@@ -193,7 +213,7 @@
       </p>
 
       <div class="highlight-box">
-        <strong>Key idea:</strong> Traditional tools ask, “Have we seen this threat before?” AI-powered security asks, “Is this behavior normal, suspicious, or dangerous?”
+        <strong>Key idea:</strong> Traditional tools ask, "Have we seen this threat before?" AI-powered security asks, "Is this behavior normal, suspicious, or dangerous?"
       </div>
 
       <h2>Why Traditional Malware Detection Is No Longer Enough</h2>
@@ -246,13 +266,13 @@
       </p>
 
       <div class="quote-box">
-        “The future of cybersecurity is not just detecting known attacks. It is recognizing abnormal behavior before it becomes a breach.”
+        "The future of cybersecurity is not just detecting known attacks. It is recognizing abnormal behavior before it becomes a breach."
       </div>
 
       <h2>AI and Malware Analysis</h2>
 
       <p>
-        Malware analysis is another area where AI provides major value. Security analysts often need to examine suspicious files to determine whether they are malicious. This process can be time-consuming, especially when attackers use obfuscation techniques to hide the file’s true purpose.
+        Malware analysis is another area where AI provides major value. Security analysts often need to examine suspicious files to determine whether they are malicious. This process can be time-consuming, especially when attackers use obfuscation techniques to hide the file's true purpose.
       </p>
 
       <p>
@@ -330,7 +350,13 @@
         However, AI is not a silver bullet. The strongest security programs combine machine learning with human expertise, clear policies, continuous monitoring, and a culture of security awareness. When used correctly, AI does not replace cybersecurity professionals. It empowers them.
       </p>
 
-      <a href="../index.html#blog" class="back-link">← Back to Blog</a>
+      <!-- Blog Footer -->
+      <div class="blog-footer">
+        <p class="blog-footer-text">
+          <strong>About the Author:</strong> Kirsty Mueni is a Cisco Certified Ethical Hacker and cybersecurity practitioner with expertise in network security, vulnerability assessment, and threat analysis. She specializes in helping organizations implement modern security frameworks and develop security-first cultures. Her work in AI-driven threat detection has helped companies reduce incident response times by over 40%.
+        </p>
+        <a href="#blog" class="back-link">← Back to All Articles</a>
+      </div>
     </article>
   </main>
 </body>
