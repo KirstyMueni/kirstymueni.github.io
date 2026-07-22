@@ -5,7 +5,6 @@
 :root {
   --primary: #C4622D;
   --primary-dark: #9E4A1E;
-  --accent: #C4622D;
   --bg-light: #FFFFFF;
   --bg-light-alt: #F8F6F3;
   --text-dark: #1A1A1A;
@@ -50,7 +49,6 @@
   --projects-bg: #2A2A2A;
   --gallery-bg: #1A1A1A;
   --case-studies-bg: #2A2A2A;
-  --case-study-heading: #FFFFFF;
   --certifications-bg: #2A2E24;
   --testimonials-bg: #1A1A1A;
   --blog-bg: #2A2A2A;
@@ -445,42 +443,6 @@ body {
 @media (max-width: 1100px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .services {
-    padding: 90px 0;
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  .service-card {
-    padding: 30px;
-  }
-  .service-card h3 {
-    font-size: 1.6rem;
-  }
-  .services .section-description {
-    font-size: 1rem;
-    margin-bottom: 60px;
-  }
-}
-
-@media (max-width: 480px) {
-  .service-card {
-    padding: 25px;
-  }
-  .service-card h3 {
-    font-size: 1.45rem;
-  }
-  .service-card p {
-    font-size: .95rem;
-  }
-  .service-tags span {
-    padding: 8px 14px;
-    font-size: .8rem;
   }
 }
 
@@ -1239,22 +1201,6 @@ body {
   letter-spacing: 1px;
 }
 
-@media (max-width: 768px) {
-  .lightbox-prev { left: 0.5rem; }
-  .lightbox-next { right: 0.5rem; }
-  .lightbox-nav {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 2rem;
-    background: rgba(0, 0, 0, 0.5);
-  }
-  .lightbox-image,
-  .lightbox-image-wrapper {
-    max-width: 95vw;
-    max-height: 60vh;
-  }
-}
-
 /* ===================== CASE STUDIES SECTION ===================== */
 .case-studies {
   background: var(--case-studies-bg);
@@ -1453,16 +1399,6 @@ body {
 
 .logo-showcase a:hover .partner-logo {
   transform: scale(1.12);
-}
-
-@media (max-width: 768px) {
-  .logo-showcase {
-    gap: 45px;
-  }
-  .partner-logo {
-    max-width: 140px;
-    max-height: 70px;
-  }
 }
 
 /* ===================== TESTIMONIALS SECTION ===================== */
@@ -1876,6 +1812,70 @@ body {
   .category-title {
     font-size: 1.5rem;
   }
+
+  /* Services: stack to one column + stack tag pills vertically */
+  .services {
+    padding: 90px 0;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .service-card {
+    padding: 30px;
+  }
+  .service-card h3 {
+    font-size: 1.6rem;
+  }
+  .services .section-description {
+    font-size: 1rem;
+    margin-bottom: 60px;
+  }
+  .service-tags {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .service-tags span {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Guarantee the Skills list always stacks top-to-bottom */
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .skill-list li {
+    display: block;
+    width: 100%;
+    white-space: normal;
+  }
+
+  /* Lightbox tweaks */
+  .lightbox-prev { left: 0.5rem; }
+  .lightbox-next { right: 0.5rem; }
+  .lightbox-nav {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .lightbox-image,
+  .lightbox-image-wrapper {
+    max-width: 95vw;
+    max-height: 60vh;
+  }
+
+  /* Partners */
+  .logo-showcase {
+    gap: 45px;
+  }
+  .partner-logo {
+    max-width: 140px;
+    max-height: 70px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1941,6 +1941,19 @@ body {
   .blog-card,
   .project-variation {
     padding: 1.5rem;
+  }
+  .service-card {
+    padding: 25px;
+  }
+  .service-card h3 {
+    font-size: 1.45rem;
+  }
+  .service-card p {
+    font-size: .95rem;
+  }
+  .service-tags span {
+    padding: 8px 14px;
+    font-size: .8rem;
   }
   .projects-buttons {
     flex-direction: column;
@@ -2029,29 +2042,4 @@ body {
 
 .back-to-top:active {
   transform: translateY(-2px);
-}
-/* ===================== MOBILE STACKING FIX ===================== */
-@media (max-width: 768px) {
-  /* Service tag pills → strict vertical list (one per row) */
-  .service-tags {
-    flex-direction: column;
-    align-items: stretch;     /* full-width rows, reads like a list */
-    gap: 10px;
-  }
-  .service-tags span {
-    width: 100%;
-    white-space: normal;      /* long labels wrap inside the pill */
-    text-align: center;
-  }
-
-  /* Guarantee the Skills <ul> always stacks top-to-bottom */
-  .skill-list {
-    display: flex;
-    flex-direction: column;
-  }
-  .skill-list li {
-    display: block;
-    width: 100%;
-    white-space: normal;
-  }
 }
