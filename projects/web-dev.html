@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Application Development — Kirsty Mueni</title>
+  <meta name="description" content="Designing and developing responsive, secure, user-centered web applications, including a from-scratch personal portfolio website." />
+  <style>
+    body { margin: 0; font-family: 'Nunito Sans', Arial, sans-serif; line-height: 1.7; color: #1f2937; background: #f8fafc; }
+    .project-page { max-width: 950px; margin: 0 auto; background: #ffffff; }
+    .project-hero { position: relative; width: 100%; min-height: 420px; display: flex; align-items: flex-end; color: #fff; overflow: hidden; background: #9E4A1E; }
+    .project-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+    .project-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(158,74,30,.95), rgba(158,74,30,.35)); z-index: 2; }
+    .hero-content { position: relative; z-index: 3; padding: 50px 35px; }
+    .project-category-tag { display: inline-block; background: #C4622D; color: #fff; font-weight: 700; padding: 6px 14px; border-radius: 999px; font-size: .85rem; margin-bottom: 18px; }
+    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; margin: 0 0 16px; }
+    .project-meta { color: #ffe8d6; font-size: .95rem; }
+    .project-content { padding: 45px 35px; }
+    .project-content h2 { font-family: 'Cormorant Garamond', Georgia, serif; color: #9E4A1E; margin-top: 42px; font-size: 1.7rem; line-height: 1.3; }
+    .project-content p { margin-bottom: 18px; font-size: 1.05rem; }
+    .project-content ul { padding-left: 22px; margin-bottom: 22px; }
+    .project-content li { margin-bottom: 10px; }
+    .highlight-box { background: #fff5ee; border-left: 5px solid #C4622D; padding: 22px; margin: 24px 0; border-radius: 10px; }
+    .highlight-box strong { color: #9E4A1E; }
+    .tools-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 20px; }
+    .tools-row span { background: #C4622D; color: #fff; padding: 8px 16px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
+    .evidence-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin: 25px 0; }
+    .evidence-grid figure { margin: 0; background: #fff8f3; border: 1px solid rgba(196,98,45,.18); border-radius: 12px; overflow: hidden; }
+    .evidence-grid img { width: 100%; height: 200px; object-fit: contain; background: #fff; display: block; }
+    .evidence-grid figcaption { padding: 12px 14px; font-size: .9rem; color: #555; }
+    .back-row { margin-top: 55px; padding-top: 26px; border-top: 1px solid #e5e7eb; }
+    .back-link { display: inline-block; color: #9E4A1E; font-weight: 700; text-decoration: none; cursor: pointer; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 600px) { .hero-content, .project-content { padding: 35px 22px; } .project-hero { min-height: 340px; } }
+  </style>
+</head>
+<body>
+  <main class="project-page">
+    <header class="project-hero">
+      <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1600&q=80" alt="Responsive web application on multiple devices" loading="eager" onerror="this.onerror=null;this.src='https://placehold.co/1600x900/9E4A1E/ffffff?text=Web+Development';" />
+      <div class="hero-content">
+        <span class="project-category-tag">Development</span>
+        <h1>Web Application Development Project</h1>
+        <div class="project-meta">Development · Responsive Front-End · HTML / CSS / JavaScript</div>
+      </div>
+    </header>
+
+    <article class="project-content">
+      <h2>Project Overview</h2>
+      <p>Developing responsive and secure web applications using modern technologies and best practices. The flagship build is this personal portfolio website, designed and developed from scratch with semantic HTML, modern CSS, and vanilla JavaScript — combining clean design, strong performance, and intuitive user experience.</p>
+      <p>The work spans the full front-end lifecycle: designing the layout and design system, building interactive components, and refining responsiveness so the site feels polished on every screen size.</p>
+
+      <div class="highlight-box">
+        <strong>Key Focus:</strong> Building responsive, secure, user-centered web experiences with clean, maintainable front-end code.
+      </div>
+
+      <h2>Key Responsibilities</h2>
+      <ul>
+        <li>Designed responsive, mobile-first layouts and a consistent design system.</li>
+        <li>Implemented a theme-aware interface with a light/dark mode toggle.</li>
+        <li>Built interactive components: project filters, gallery modal, and image lightbox.</li>
+        <li>Wrote semantic, accessible HTML and well-structured CSS.</li>
+        <li>Optimized performance through lazy loading and lean assets.</li>
+        <li>Tested and refined the experience across devices and browsers.</li>
+      </ul>
+
+      <h2>Pages &amp; Features Built</h2>
+      <ul>
+        <li>Responsive Personal Portfolio Website</li>
+        <li>Theme-Aware Design System (CSS Variables)</li>
+        <li>Interactive Project Filters</li>
+        <li>Image Gallery with Lightbox Navigation</li>
+        <li>Static Blog &amp; Project Writeups</li>
+        <li>Smooth Scroll &amp; Back-to-Top Controls</li>
+      </ul>
+
+      <h2>Tools &amp; Technologies Used</h2>
+      <div class="tools-row">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>VS Code</span>
+        <span>Git</span>
+        <span>Figma</span>
+      </div>
+
+      <h2>Design &amp; Development Activities</h2>
+      <ul>
+        <li>Wireframing layouts and UX flows in Figma</li>
+        <li>Building mobile-first responsive layouts</li>
+        <li>Implementing theming with CSS custom properties</li>
+        <li>Writing vanilla JavaScript for interactive components</li>
+        <li>Testing across phones, tablets, and desktops</li>
+        <li>Iterating on accessibility and performance</li>
+      </ul>
+
+      <h2>Impact &amp; Outcomes</h2>
+      <ul>
+        <li>A fast, accessible, fully responsive portfolio website.</li>
+        <li>A reusable design system keeping the site visually consistent.</li>
+        <li>Interactive showcases for projects, gallery, and blog.</li>
+        <li>A clean, maintainable codebase built on web standards.</li>
+      </ul>
+
+      <h2>Project Evidence</h2>
+      <div class="evidence-grid">
+        <figure>
+          <img src="../images/web.png" alt="Responsive personal portfolio website" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fff8f3/C4622D?text=Web+App';" />
+          <figcaption>The responsive personal portfolio website, designed and developed from scratch.</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/ui.png" alt="Clean responsive portfolio landing page design" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fff8f3/C4622D?text=UX+Design';" />
+          <figcaption>A clean, responsive landing page designed with the user experience in mind.</figcaption>
+        </figure>
+      </div>
+
+      <h2>Skills Demonstrated</h2>
+      <ul>
+        <li>Responsive Web Design</li>
+        <li>Modern Front-End Development</li>
+        <li>UX / UI Design</li>
+        <li>CSS Theming &amp; Design Systems</li>
+        <li>Vanilla JavaScript</li>
+        <li>Web Accessibility</li>
+        <li>Performance Optimization</li>
+      </ul>
+
+      <h2>Project Outcome</h2>
+      <p>This project strengthened practical experience across the full front-end lifecycle, from design and layout to interactive behaviour and deployment. It also enhanced the ability to deliver responsive, accessible, and performant web applications using clean, standards-based code that remains easy to maintain and extend.</p>
+
+      <div class="back-row">
+        <a href="../index.html#projects" class="back-link">← Back to All Projects</a>
+      </div>
+    </article>
+  </main>
+  <script>
+    (function () {
+      var link = document.querySelector('.back-link');
+      if (link) { link.addEventListener('click', function (e) { if (history.length > 1) { e.preventDefault(); history.back(); } }); }
+    })();
+  </script>
+</body>
+</html>
