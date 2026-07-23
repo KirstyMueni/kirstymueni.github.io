@@ -530,7 +530,7 @@ function initHeroTyping() {
     new Typed("#typed-text", {
 
         strings: [
-             "IT &amp; Systems Support | Digital Literacy Specialist | Cybersecurity Practitioner (Cisco Ethical Hacking Certified) | STEM &amp; EdTech Advocate"
+             "IT &amp; Systems Support | Cybersecurity Practitioner (Cisco Ethical Hacking Certified) | Digital Literacy Specialist | STEM &amp; EdTech Advocate"
         ],
         typeSpeed: 35,
         showCursor: true,
