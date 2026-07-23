@@ -612,6 +612,21 @@ body {
   from { width: 0%; }
   to   { width: var(--proficiency, 0%); }
 }
+.proficiency-value.level {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: .78rem;
+  letter-spacing: .3px;
+}
+.proficiency-value.level-foundational { background: #E5E7EB; color: #374151; }
+.proficiency-value.level-intermediate { background: #FFF0E5; color: #C4622D; }
+.proficiency-value.level-advanced     { background: #DDF6E5; color: #1E7A39; }
+
+.proficiency-fill.fill-foundational { background: #9CA3AF; box-shadow: none; }
+.proficiency-fill.fill-intermediate { background: linear-gradient(90deg, #C4622D, #9E4A1E); }
+.proficiency-fill.fill-advanced     { background: linear-gradient(90deg, #3E7B4F, #2E5339); box-shadow: 0 0 10px rgba(62,123,79,.3);
+                                    }
 
 /* ===================== PROFESSIONAL JOURNEY ===================== */
 .journey {
