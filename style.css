@@ -1618,7 +1618,13 @@ body {
   color: #a85a2a;
   transform: translateX(4px);
 }
-
+.project-variation h4,
+.case-study-card h3,
+.cert-card h3,
+.timeline-content h3,
+.testimonial-header h4 {
+  font-family: 'Cormorant Garamond', serif;
+}
 /* ===================== CONTACT SECTION ===================== */
 .contact {
   background: var(--contact-bg);
