@@ -273,9 +273,9 @@ const galleryData = {
         description: 'Developed a machine learning application built with Python and Scikit-learn that predicts student performance based on academic metrics and visualizes study patterns using Matplotlib.'
       },
       {
-        name: 'Mobile App Development (MIT App Inventor)',
-        src: '',
-        description: ''
+        name: 'Autonomous Smart Navigation Robot',
+        src: 'images/robotics.jpg',
+        description: 'Designed and developed an autonomous mobile robot capable of obstacle detection, line tracking, and intelligent navigation using embedded sensors and microcontroller-based control.'
       }
     ]
   },
